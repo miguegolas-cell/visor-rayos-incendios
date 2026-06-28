@@ -1,0 +1,24 @@
+{
+  "bounds": [
+    [
+      38.6,
+      -1.7
+    ],
+    [
+      40.25,
+      0.05
+    ]
+  ],
+  "leaflet": "L.imageOverlay(url, bounds)",
+  "bbox": {
+    "lon_min": -1.7,
+    "lat_min": 38.6,
+    "lon_max": 0.05,
+    "lat_max": 40.25
+  },
+  "image_size": {
+    "width": 992,
+    "height": 936
+  },
+  "actualizado_utc": "2026-06-28T21:12:28+00:00"
+}
