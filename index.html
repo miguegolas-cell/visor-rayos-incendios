@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MetVlc · Rayos e incendios</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <div class="title">MetVlc · Visor de rayos e incendios</div>
+      <div class="subtitle">
+        Rayos AEMET · Modelo de combustible · Pendiente · NDMI
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="toolbar-title">Periodo de rayos</div>
+
+      <div class="buttons">
+        <button class="time-btn active" data-hours="24">Últimas 24 h</button>
+        <button class="time-btn" data-hours="48">Últimas 48 h</button>
+        <button class="time-btn" data-hours="72">Últimas 72 h</button>
+      </div>
+
+      <div id="infoRayos" class="info-rayos">
+        Cargando rayos...
+      </div>
+    </section>
+
+    <div id="map"></div>
+
+    <section class="footer">
+      <strong>Fuente rayos:</strong> AEMET · 
+      <strong>Visualización:</strong> MetVlc · 
+      Datos orientativos para seguimiento meteorológico y análisis territorial.
+    </section>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/visor.js"></script>
+</body>
+</html>
