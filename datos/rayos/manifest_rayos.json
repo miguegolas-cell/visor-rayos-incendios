@@ -1,8 +1,8 @@
 {
   "producto": "Rayos AEMET raster GeoTIFF",
-  "fuente": "https://www.aemet.es/es/geojson/download/rayos/descargar_rayos_1782680467.tar.gz",
+  "fuente": "https://www.aemet.es/es/geojson/download/rayos/descargar_rayos_1782684066.tar.gz",
   "region_token": "PB_LOCL",
-  "actualizado_utc": "2026-06-28T21:12:28+00:00",
+  "actualizado_utc": "2026-06-28T22:10:40+00:00",
   "bbox_valencia": {
     "lon_min": -1.7,
     "lat_min": 38.6,
@@ -10,8 +10,8 @@
     "lat_max": 40.25
   },
   "geotiff_procesados_en_esta_ejecucion": 25,
-  "geotiff_con_pixeles_visibles_valencia": 10,
-  "historico_horas_guardadas": 25,
+  "geotiff_con_pixeles_visibles_valencia": 11,
+  "historico_horas_guardadas": 26,
   "image_size": {
     "width": 992,
     "height": 936
@@ -21,19 +21,19 @@
       "horas": 24,
       "archivo": "rayos_24h.png",
       "imagenes_usadas": 23,
-      "pixeles_visibles_acumulados": 234706
+      "pixeles_visibles_acumulados": 235627
     },
     "48h": {
       "horas": 48,
       "archivo": "rayos_48h.png",
-      "imagenes_usadas": 25,
-      "pixeles_visibles_acumulados": 234706
+      "imagenes_usadas": 26,
+      "pixeles_visibles_acumulados": 235627
     },
     "72h": {
       "horas": 72,
       "archivo": "rayos_72h.png",
-      "imagenes_usadas": 25,
-      "pixeles_visibles_acumulados": 234706
+      "imagenes_usadas": 26,
+      "pixeles_visibles_acumulados": 235627
     }
   },
   "archivos_para_leaflet": [
