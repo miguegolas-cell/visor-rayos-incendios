@@ -1,0 +1,14 @@
+{
+  "fuente": "https://www.aemet.es/es/geojson/download/rayos/descargar_rayos_1782676866.tar.gz",
+  "actualizado_utc": "2026-06-28T20:40:35+00:00",
+  "filtro_bbox_valencia": true,
+  "rayos_nuevos_descarga": 0,
+  "rayos_24h": 0,
+  "rayos_48h": 0,
+  "rayos_72h": 0,
+  "archivos": [
+    "rayos_24h.geojson",
+    "rayos_48h.geojson",
+    "rayos_72h.geojson"
+  ]
+}
