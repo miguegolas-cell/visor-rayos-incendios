@@ -1,0 +1,43 @@
+name: Actualizar rayos AEMET
+
+on:
+  schedule:
+    # Cada hora, en minuto 7 UTC
+    - cron: "7 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-rayos-aemet
+  cancel-in-progress: true
+
+env:
+  AEMET_RAYOS_URL: "https://www.aemet.es/es/geojson/download/rayos/descargar_rayos_1782676866.tar.gz"
+  FILTER_VALENCIA_BBOX: "1"
+
+jobs:
+  actualizar-rayos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Descargar y actualizar histórico de rayos
+        run: python scripts/actualizar_rayos_aemet.py
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add datos/rayos
+          git commit -m "Actualizar rayos AEMET 24-48-72h" || echo "Sin cambios"
+          git push
