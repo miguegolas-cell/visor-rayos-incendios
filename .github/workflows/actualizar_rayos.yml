@@ -2,7 +2,7 @@ name: Actualizar rayos AEMET
 
 on:
   schedule:
-    # Cada hora, en minuto 7 UTC
+    # Cada hora, minuto 7 UTC
     - cron: "7 * * * *"
 
   workflow_dispatch:
@@ -16,7 +16,9 @@ concurrency:
 
 env:
   AEMET_RAYOS_URL: "https://www.aemet.es/es/geojson/download/rayos/descargar_rayos_1782676866.tar.gz"
-  FILTER_VALENCIA_BBOX: "1"
+  AEMET_RAYOS_REGION: "PB_LOCL"
+  BUSCAR_URL_AUTOMATICA: "1"
+  VALENCIA_BBOX: "-1.70,38.60,0.05,40.25"
 
 jobs:
   actualizar-rayos:
@@ -31,7 +33,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Descargar y actualizar histórico de rayos
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pillow rasterio
+
+      - name: Descargar y actualizar raster de rayos
         run: python scripts/actualizar_rayos_aemet.py
 
       - name: Guardar cambios
@@ -39,5 +46,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add datos/rayos
-          git commit -m "Actualizar rayos AEMET 24-48-72h" || echo "Sin cambios"
+          git commit -m "Actualizar rayos AEMET raster 24-48-72h" || echo "Sin cambios"
           git push
