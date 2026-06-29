@@ -61,10 +61,10 @@ const baseLayers = {
 // GRUPOS DE CAPAS
 // ===============================
 
+const pendienteLayer = L.layerGroup().addTo(map);
+const ndmiLayer = L.layerGroup().addTo(map);
+const combustibleLayer = L.layerGroup().addTo(map);
 const rayosLayer = L.layerGroup().addTo(map);
-const combustibleLayer = L.layerGroup();
-const pendienteLayer = L.layerGroup();
-const ndmiLayer = L.layerGroup();
 
 const overlayLayers = {
   "Rayos SIGIF/GVA": rayosLayer,
