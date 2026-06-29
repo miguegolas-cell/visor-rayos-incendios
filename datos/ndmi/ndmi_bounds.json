@@ -1,0 +1,26 @@
+{
+  "bounds": [
+    [
+      38.68655366688531,
+      -1.52891558510685
+    ],
+    [
+      40.21168266876426,
+      -0.02479523737455949
+    ]
+  ],
+  "leaflet": "L.imageOverlay(url, bounds)",
+  "bbox": {
+    "lon_min": -1.52891558510685,
+    "lat_min": 38.68655366688531,
+    "lon_max": -0.02479523737455949,
+    "lat_max": 40.21168266876426
+  },
+  "crs": "EPSG:4326",
+  "image_size": {
+    "width": 1009,
+    "height": 1024
+  },
+  "nota": "NDMI aportado por el usuario. Se le asignan los límites del SHP de provincia de Valencia.",
+  "tipo": "ndmi_png_aportado"
+}
