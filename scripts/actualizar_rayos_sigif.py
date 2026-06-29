@@ -581,6 +581,7 @@ def merge_historico(old_features, new_features, capture_time):
             old_props = merged[key].setdefault("properties", {})
             new_props = feat.get("properties") or {}
 
+            # Conservamos la primera hora y actualizamos la última vez visto
             old_props["metvlc_last_seen_utc"] = iso_utc(capture_time)
 
             # Si antes no tenía hora real y ahora sí, actualizamos
@@ -590,7 +591,7 @@ def merge_historico(old_features, new_features, capture_time):
             ):
                 old_props["metvlc_time_utc"] = new_props.get("metvlc_time_utc")
                 old_props["metvlc_time_source"] = new_props.get("metvlc_time_source")
-                old_props                old_props["metvlc_time["metvlc_has_real_time"] = True
+                old_props["metvlc_has_real_time"] = True
 
             repetidos += 1
 
