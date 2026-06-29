@@ -1,6 +1,6 @@
 // ===============================
 // METVLC · VISOR RAYOS INCENDIOS
-// Rayos AEMET como imagen raster PNG
+// Rayos SIGIF/GVA como puntos GeoJSON
 // ===============================
 
 console.log("visor.js cargado correctamente");
@@ -51,7 +51,7 @@ const pendienteLayer = L.layerGroup();
 const ndmiLayer = L.layerGroup();
 
 const overlayLayers = {
-  "Rayos AEMET": rayosLayer,
+  "Rayos SIGIF/GVA": rayosLayer,
   "Modelo de combustible": combustibleLayer,
   "Pendiente": pendienteLayer,
   "Último NDMI": ndmiLayer
@@ -65,22 +65,18 @@ L.control.layers(baseLayers, overlayLayers, {
 // RUTAS
 // ===============================
 
-const RAYOS_IMAGES = {
-  24: "datos/rayos/rayos_24h.png",
-  48: "datos/rayos/rayos_48h.png",
-  72: "datos/rayos/rayos_72h.png"
+const RAYOS_FILES = {
+  24: "datos/rayos/rayos_24h.geojson",
+  48: "datos/rayos/rayos_48h.geojson",
+  72: "datos/rayos/rayos_72h.geojson"
 };
 
-const RAYOS_BOUNDS = "datos/rayos/rayos_bounds.json";
 const RAYOS_MANIFEST = "datos/rayos/manifest_rayos.json";
 
 const COMBUSTIBLE_GEOJSON = "datos/combustible/modelo_combustible.geojson";
 const PENDIENTE_GEOJSON = "datos/pendiente/pendiente.geojson";
-
 const NDMI_IMAGE = "datos/ndmi/ultimo_ndmi.png";
 
-// Bounds provisionales del NDMI.
-// Cuando subas el NDMI definitivo, ajustamos estos límites.
 const NDMI_BOUNDS = [
   [38.60, -1.70],
   [40.25, 0.05]
@@ -90,9 +86,6 @@ const NDMI_BOUNDS = [
 // VARIABLES
 // ===============================
 
-let rayosOverlay = null;
-let rayosBounds = null;
-let rayosOpacity = 0.85;
 let primeraCargaRayos = true;
 
 // ===============================
@@ -105,9 +98,11 @@ function urlNoCache(url) {
 
 function setInfoRayos(texto) {
   const info = document.getElementById("infoRayos");
+
   if (info) {
     info.textContent = texto;
   }
+
   console.log(texto);
 }
 
@@ -123,62 +118,132 @@ async function cargarJSON(url) {
   return await response.json();
 }
 
-// ===============================
-// CARGAR BOUNDS RAYOS
-// ===============================
+function parseFechaUTC(value) {
+  if (!value) return null;
 
-async function cargarBoundsRayos() {
-  if (rayosBounds) {
-    return rayosBounds;
+  const d = new Date(value);
+
+  if (isNaN(d.getTime())) {
+    return null;
   }
 
-  const data = await cargarJSON(RAYOS_BOUNDS);
+  return d;
+}
 
-  console.log("rayos_bounds.json:", data);
+function edadHoras(feature) {
+  const props = feature.properties || {};
+  const fecha = parseFechaUTC(props.metvlc_time_utc);
 
-  if (!data.bounds || !Array.isArray(data.bounds)) {
-    throw new Error("rayos_bounds.json no contiene bounds válidos");
-  }
+  if (!fecha) return null;
 
-  rayosBounds = L.latLngBounds(data.bounds);
+  return (new Date() - fecha) / 1000 / 3600;
+}
 
-  if (!rayosBounds.isValid()) {
-    throw new Error("Bounds de rayos no válidos");
-  }
+function colorPorEdad(horas) {
+  if (horas === null) return "#666666";
+  if (horas <= 6) return "#ff0000";
+  if (horas <= 24) return "#ff8c00";
+  if (horas <= 48) return "#ffd400";
+  if (horas <= 72) return "#7a7a7a";
+  return "#b0b0b0";
+}
 
-  return rayosBounds;
+function radioPorEdad(horas) {
+  if (horas === null) return 8;
+  if (horas <= 6) return 10;
+  if (horas <= 24) return 9;
+  if (horas <= 48) return 8;
+  return 7;
+}
+
+function formatearFecha(value) {
+  const d = parseFechaUTC(value);
+
+  if (!d) return "Sin fecha";
+
+  return d.toLocaleString("es-ES", {
+    timeZone: "Europe/Madrid",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+function crearPopupRayo(feature) {
+  const props = feature.properties || {};
+  const coords = feature.geometry?.coordinates || [];
+
+  const lon = coords[0];
+  const lat = coords[1];
+
+  const h = edadHoras(feature);
+  const antiguedad = h !== null ? `${h.toFixed(1)} h` : "No disponible";
+
+  const nombre = props.name || "Rayo SIGIF/GVA";
+  const descripcion = props.description || "";
+
+  return `
+    <div style="min-width:230px">
+      <strong>${nombre}</strong><br>
+      <hr style="margin:6px 0">
+      <strong>Fecha:</strong> ${formatearFecha(props.metvlc_time_utc)}<br>
+      <strong>Antigüedad:</strong> ${antiguedad}<br>
+      <strong>Fuente:</strong> ${props.metvlc_fuente || "SIGIF/GVA"}<br>
+      <strong>Lat/Lon:</strong> ${lat?.toFixed(5)}, ${lon?.toFixed(5)}
+      ${descripcion ? `<hr style="margin:6px 0"><div>${descripcion}</div>` : ""}
+    </div>
+  `;
 }
 
 // ===============================
-// CARGAR RAYOS 24 / 48 / 72 H
+// CARGAR RAYOS
 // ===============================
 
 async function cargarRayos(horas = 24) {
   try {
-    setInfoRayos(`Cargando rayos AEMET · últimas ${horas} h...`);
+    setInfoRayos(`Cargando rayos SIGIF/GVA · últimas ${horas} h...`);
 
     rayosLayer.clearLayers();
 
-    const bounds = await cargarBoundsRayos();
-    const imageUrl = urlNoCache(RAYOS_IMAGES[horas]);
+    const data = await cargarJSON(RAYOS_FILES[horas]);
+    const features = data.features || [];
 
-    console.log("Cargando imagen de rayos:", imageUrl);
-    console.log("Bounds:", bounds);
+    console.log(`Rayos cargados ${horas}h:`, features.length);
 
-    rayosOverlay = L.imageOverlay(imageUrl, bounds, {
-      opacity: rayosOpacity,
-      interactive: false,
-      attribution: "Rayos AEMET"
+    const geojson = L.geoJSON(data, {
+      pointToLayer: function (feature, latlng) {
+        const h = edadHoras(feature);
+
+        return L.circleMarker(latlng, {
+          radius: radioPorEdad(h),
+          color: "#111111",
+          weight: 1.6,
+          fillColor: colorPorEdad(h),
+          fillOpacity: 0.90,
+          opacity: 1
+        });
+      },
+
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(crearPopupRayo(feature));
+      }
     });
 
-    rayosOverlay.addTo(rayosLayer);
+    geojson.addTo(rayosLayer);
 
-    if (primeraCargaRayos) {
-      map.fitBounds(bounds.pad(0.08));
+    if (features.length > 0 && primeraCargaRayos) {
+      const bounds = geojson.getBounds();
+
+      if (bounds.isValid()) {
+        map.fitBounds(bounds.pad(0.22));
+      }
+
       primeraCargaRayos = false;
     }
 
-    await cargarManifestRayos(horas);
+    await cargarManifestRayos(horas, features.length);
 
   } catch (error) {
     console.error("ERROR cargando rayos:", error);
@@ -190,15 +255,9 @@ async function cargarRayos(horas = 24) {
 // MANIFEST RAYOS
 // ===============================
 
-async function cargarManifestRayos(horasSeleccionadas) {
+async function cargarManifestRayos(horasSeleccionadas, totalFeatures) {
   try {
     const manifest = await cargarJSON(RAYOS_MANIFEST);
-
-    console.log("manifest_rayos.json:", manifest);
-
-    const salida = manifest.salidas?.[`${horasSeleccionadas}h`];
-
-    const imagenesUsadas = salida?.imagenes_usadas ?? "sin dato";
 
     const actualizado = manifest.actualizado_utc
       ? new Date(manifest.actualizado_utc).toLocaleString("es-ES", {
@@ -212,12 +271,12 @@ async function cargarManifestRayos(horasSeleccionadas) {
       : "sin fecha";
 
     setInfoRayos(
-      `Rayos AEMET · ${horasSeleccionadas} h · imágenes usadas: ${imagenesUsadas} · actualizado: ${actualizado}`
+      `Rayos SIGIF/GVA · ${horasSeleccionadas} h · ${totalFeatures} impactos · actualizado: ${actualizado}`
     );
 
   } catch (error) {
     console.warn("No se pudo cargar manifest_rayos.json", error);
-    setInfoRayos(`Rayos AEMET · últimas ${horasSeleccionadas} h`);
+    setInfoRayos(`Rayos SIGIF/GVA · ${horasSeleccionadas} h · ${totalFeatures} impactos`);
   }
 }
 
@@ -237,51 +296,6 @@ document.querySelectorAll(".time-btn").forEach(btn => {
     cargarRayos(horas);
   });
 });
-
-// ===============================
-// CONTROL DE OPACIDAD RAYOS
-// ===============================
-
-const opacityControl = L.control({
-  position: "topright"
-});
-
-opacityControl.onAdd = function () {
-  const div = L.DomUtil.create("div", "legend");
-
-  div.innerHTML = `
-    <div class="legend-title">Opacidad rayos</div>
-    <input 
-      id="rayosOpacity" 
-      type="range" 
-      min="0" 
-      max="1" 
-      step="0.05" 
-      value="${rayosOpacity}"
-      style="width:130px;"
-    >
-  `;
-
-  L.DomEvent.disableClickPropagation(div);
-
-  setTimeout(() => {
-    const input = document.getElementById("rayosOpacity");
-
-    if (input) {
-      input.addEventListener("input", e => {
-        rayosOpacity = Number(e.target.value);
-
-        if (rayosOverlay) {
-          rayosOverlay.setOpacity(rayosOpacity);
-        }
-      });
-    }
-  }, 300);
-
-  return div;
-};
-
-opacityControl.addTo(map);
 
 // ===============================
 // MODELO DE COMBUSTIBLE
@@ -403,12 +417,29 @@ legend.onAdd = function () {
   const div = L.DomUtil.create("div", "legend");
 
   div.innerHTML = `
-    <div class="legend-title">Capas</div>
+    <div class="legend-title">Antigüedad rayos</div>
 
     <div class="legend-item">
       <span class="legend-dot" style="background:#ff0000"></span>
-      Rayos AEMET
+      0 - 6 h
     </div>
+
+    <div class="legend-item">
+      <span class="legend-dot" style="background:#ff8c00"></span>
+      6 - 24 h
+    </div>
+
+    <div class="legend-item">
+      <span class="legend-dot" style="background:#ffd400"></span>
+      24 - 48 h
+    </div>
+
+    <div class="legend-item">
+      <span class="legend-dot" style="background:#7a7a7a"></span>
+      48 - 72 h
+    </div>
+
+    <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
 
     <div class="legend-item">
       <span class="legend-dot" style="background:#c17f35"></span>
@@ -418,11 +449,6 @@ legend.onAdd = function () {
     <div class="legend-item">
       <span class="legend-dot" style="background:#8d8d8d"></span>
       Pendiente
-    </div>
-
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#4f8f4f"></span>
-      NDMI
     </div>
   `;
 
@@ -438,4 +464,4 @@ legend.addTo(map);
 cargarRayos(24);
 cargarCombustible();
 cargarPendiente();
-// cargarNDMI(); // Lo dejamos desactivado hasta subir el NDMI real
+// cargarNDMI(); // Lo activaremos cuando subas la imagen NDMI real
