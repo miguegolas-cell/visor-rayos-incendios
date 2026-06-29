@@ -2,8 +2,11 @@ import json
 import os
 import re
 import html
+import gzip
+import zipfile
 import hashlib
 import xml.etree.ElementTree as ET
+from io import BytesIO
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
@@ -35,13 +38,22 @@ VALENCIA_BBOX = os.environ.get("VALENCIA_BBOX", "-1.70,38.60,0.05,40.25")
 LON_MIN, LAT_MIN, LON_MAX, LAT_MAX = map(float, VALENCIA_BBOX.split(","))
 
 TIME_KEYS = [
-    "fecha", "fecha_hora", "fechahora", "datetime", "date",
-    "time", "hora", "timestamp", "ts", "fint", "fh"
+    "fecha",
+    "fecha_hora",
+    "fechahora",
+    "datetime",
+    "date",
+    "time",
+    "hora",
+    "timestamp",
+    "ts",
+    "fint",
+    "fh"
 ]
 
 
 # ==========================================================
-# UTILIDADES
+# UTILIDADES GENERALES
 # ==========================================================
 
 def now_utc():
@@ -114,6 +126,158 @@ def write_json(path, data):
 
 
 # ==========================================================
+# DESCARGA KMZ / KML
+# ==========================================================
+
+def descargar_kmz_o_kml():
+    print("Descargando archivo SIGIF/GVA...")
+    print(SIGIF_KML_URL)
+
+    req = Request(
+        SIGIF_KML_URL,
+        headers={
+            "User-Agent": "Mozilla/5.0 MetVlc GitHub Action",
+            "Accept": (
+                "application/vnd.google-earth.kmz,"
+                "application/vnd.google-earth.kml+xml,"
+                "application/xml,text/xml,*/*"
+            )
+        }
+    )
+
+    with urlopen(req, timeout=120) as response:
+        content = response.read()
+        content_type = response.headers.get("Content-Type", "")
+
+    print(f"Contenido descargado: {len(content) / 1024:.1f} KB")
+    print(f"Content-Type: {content_type}")
+    print(f"Primeros bytes: {content[:20]!r}")
+
+    return content
+
+
+def normalizar_kml_content(content):
+    """
+    Convierte la respuesta descargada en KML limpio.
+
+    Admite:
+    - KMZ/ZIP con un .kml dentro
+    - KML directo
+    - GZIP
+    - KML con caracteres antes de <kml>
+    - HTML de error, avisando claramente
+    """
+
+    raw = content
+
+    # GZIP
+    if raw[:2] == b"\x1f\x8b":
+        print("Detectado GZIP. Descomprimiendo...")
+        raw = gzip.decompress(raw)
+
+    # KMZ / ZIP
+    if raw[:4] == b"PK\x03\x04":
+        print("Detectado KMZ/ZIP. Buscando archivo .kml dentro...")
+
+        with zipfile.ZipFile(BytesIO(raw)) as z:
+            nombres = z.namelist()
+
+            print("Archivos dentro del KMZ:")
+            for nombre in nombres:
+                print(f" - {nombre}")
+
+            kmls = [
+                nombre for nombre in nombres
+                if nombre.lower().endswith(".kml")
+            ]
+
+            if not kmls:
+                raise RuntimeError("El KMZ no contiene ningún archivo .kml")
+
+            # Normalmente será doc.kml
+            kml_name = kmls[0]
+            raw = z.read(kml_name)
+
+            print(f"KML extraído del KMZ: {kml_name}")
+
+    # Decodificación
+    texto = None
+
+    for enc in ["utf-8-sig", "utf-16", "latin-1"]:
+        try:
+            prueba = raw.decode(enc)
+
+            # Evita decodificaciones malas llenas de nulos
+            if prueba.count("\x00") > 10:
+                continue
+
+            texto = prueba
+            print(f"Decodificación usada: {enc}")
+            break
+
+        except Exception:
+            continue
+
+    if texto is None:
+        raise RuntimeError("No se pudo decodificar el contenido como KML")
+
+    texto_limpio = texto.strip()
+    inicio_lower = texto_limpio[:600].lower()
+
+    if "<html" in inicio_lower or "<!doctype html" in inicio_lower:
+        print("La respuesta parece HTML, no KML/KMZ.")
+        print("Vista previa:")
+        print(texto_limpio[:1000])
+        raise RuntimeError("SIGIF ha devuelto HTML en lugar de KML/KMZ")
+
+    # Por si viniera como cadena JSON con el KML dentro
+    if (
+        (texto_limpio.startswith('"') and texto_limpio.endswith('"'))
+        or (texto_limpio.startswith("'") and texto_limpio.endswith("'"))
+    ):
+        try:
+            texto_limpio = json.loads(texto_limpio)
+            print("Detectado KML dentro de cadena JSON.")
+        except Exception:
+            pass
+
+    # Buscar inicio real del XML/KML
+    posibles_inicios = []
+
+    idx_xml = texto_limpio.find("<?xml")
+    idx_kml = texto_limpio.find("<kml")
+
+    if idx_xml >= 0:
+        posibles_inicios.append(idx_xml)
+
+    if idx_kml >= 0:
+        posibles_inicios.append(idx_kml)
+
+    if not posibles_inicios:
+        print("No se ha encontrado etiqueta <?xml ni <kml.")
+        print("Vista previa:")
+        print(texto_limpio[:1000])
+        raise RuntimeError("La respuesta descargada no contiene KML reconocible")
+
+    inicio = min(posibles_inicios)
+
+    if inicio > 0:
+        print(f"Eliminando {inicio} caracteres antes del inicio del KML.")
+        texto_limpio = texto_limpio[inicio:]
+
+    # Cortar basura posterior tras </kml>
+    cierre = texto_limpio.lower().rfind("</kml>")
+
+    if cierre >= 0:
+        texto_limpio = texto_limpio[:cierre + len("</kml>")]
+
+    print("KML normalizado correctamente.")
+    print(f"Tamaño KML limpio: {len(texto_limpio) / 1024:.1f} KB")
+
+    return texto_limpio
+
+
+# ==========================================================
 # FECHAS
 # ==========================================================
 
@@ -125,6 +289,7 @@ def parse_datetime(value):
         try:
             if value > 10_000_000_000:
                 value = value / 1000
+
             return datetime.fromtimestamp(value, tz=timezone.utc)
         except Exception:
             return None
@@ -141,9 +306,12 @@ def parse_datetime(value):
     # ISO directo
     try:
         dt = datetime.fromisoformat(s)
+
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=ZoneInfo("Europe/Madrid"))
+
         return dt.astimezone(timezone.utc)
+
     except Exception:
         pass
 
@@ -164,6 +332,7 @@ def parse_datetime(value):
             dt = datetime.strptime(s, fmt)
             dt = dt.replace(tzinfo=ZoneInfo("Europe/Madrid"))
             return dt.astimezone(timezone.utc)
+
         except Exception:
             continue
 
@@ -181,14 +350,17 @@ def extraer_fecha_de_texto(texto):
         r"\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2}",
         r"\d{2}-\d{2}-\d{4}\s+\d{2}:\d{2}:\d{2}",
         r"\d{2}-\d{2}-\d{4}\s+\d{2}:\d{2}",
-        r"\d{12,14}",
+        r"\d{14}",
+        r"\d{12}",
         r"\d{10}",
     ]
 
     for patron in patrones:
         m = re.search(patron, texto)
+
         if m:
             dt = parse_datetime(m.group(0))
+
             if dt:
                 return dt
 
@@ -209,52 +381,31 @@ def detectar_fecha_feature(props, capture_time):
         for hk in posibles_horas:
             if fk in props_lower and hk in props_lower:
                 dt = parse_datetime(f"{props_lower[fk]} {props_lower[hk]}")
+
                 if dt:
                     return dt, f"{fk}+{hk}", True
 
-    # Campos de fecha/hora completos
+    # Campo completo de fecha/hora
     for key in TIME_KEYS:
         if key in props_lower:
             dt = parse_datetime(props_lower[key])
+
             if dt:
                 return dt, key, True
 
-    # Buscar dentro de nombre y descripción
+    # Buscar dentro de name / description
     texto = " ".join(
         str(props.get(k, ""))
         for k in ["name", "description", "descripcion", "descripción"]
     )
 
     dt = extraer_fecha_de_texto(texto)
+
     if dt:
         return dt, "texto_kml", True
 
-    # Si el KML no trae hora, usamos la hora de captura.
-    # En duplicados se conserva la primera hora vista.
+    # Si no trae hora individual, usamos la hora de captura.
     return capture_time, "metvlc_captura_utc", False
-
-
-# ==========================================================
-# DESCARGAR KML
-# ==========================================================
-
-def descargar_kml():
-    print("Descargando KML SIGIF/GVA...")
-    print(SIGIF_KML_URL)
-
-    req = Request(
-        SIGIF_KML_URL,
-        headers={
-            "User-Agent": "Mozilla/5.0 MetVlc GitHub Action"
-        }
-    )
-
-    with urlopen(req, timeout=120) as response:
-        content = response.read()
-
-    print(f"KML descargado: {len(content) / 1024:.1f} KB")
-
-    return content
 
 
 # ==========================================================
@@ -263,8 +414,10 @@ def descargar_kml():
 
 def get_text(parent, tag_name):
     el = parent.find(f".//{{*}}{tag_name}")
+
     if el is None or el.text is None:
         return ""
+
     return el.text.strip()
 
 
@@ -294,6 +447,8 @@ def parse_coordinates(coord_text):
         return None
 
     coord_text = coord_text.strip()
+
+    # En KML puede haber varias coordenadas; usamos la primera
     first = coord_text.split()[0]
     parts = first.split(",")
 
@@ -304,13 +459,16 @@ def parse_coordinates(coord_text):
         lon = float(parts[0])
         lat = float(parts[1])
         alt = float(parts[2]) if len(parts) >= 3 else None
+
         return lon, lat, alt
+
     except Exception:
         return None
 
 
 def parse_kml_to_features(kml_content, capture_time):
-    root = ET.fromstring(kml_content)
+    kml_limpio = normalizar_kml_content(kml_content)
+    root = ET.fromstring(kml_limpio)
 
     features = []
 
@@ -351,9 +509,10 @@ def parse_kml_to_features(kml_content, capture_time):
         props["metvlc_has_real_time"] = has_real_time
         props["metvlc_captura_utc"] = iso_utc(capture_time)
         props["metvlc_last_seen_utc"] = iso_utc(capture_time)
-        props["metvlc_fuente"] = "SIGIF/GVA Rayos 24h KML"
+        props["metvlc_fuente"] = "SIGIF/GVA Rayos 24h KMZ"
 
         geometry_coords = [lon, lat]
+
         if alt is not None:
             geometry_coords.append(alt)
 
@@ -402,6 +561,7 @@ def feature_key(feature):
         }
 
     text = json.dumps(raw, ensure_ascii=False, sort_keys=True)
+
     return hashlib.sha1(text.encode("utf-8")).hexdigest()
 
 
@@ -418,19 +578,22 @@ def merge_historico(old_features, new_features, capture_time):
         key = feature_key(feat)
 
         if key in merged:
-            # Conservamos la primera hora, actualizamos última vez visto
             old_props = merged[key].setdefault("properties", {})
             new_props = feat.get("properties") or {}
 
             old_props["metvlc_last_seen_utc"] = iso_utc(capture_time)
 
             # Si antes no tenía hora real y ahora sí, actualizamos
-            if not old_props.get("metvlc_has_real_time") and new_props.get("metvlc_has_real_time"):
+            if (
+                not old_props.get("metvlc_has_real_time")
+                and new_props.get("metvlc_has_real_time")
+            ):
                 old_props["metvlc_time_utc"] = new_props.get("metvlc_time_utc")
                 old_props["metvlc_time_source"] = new_props.get("metvlc_time_source")
-                old_props["metvlc_has_real_time"] = True
+                old_props                old_props["metvlc_time["metvlc_has_real_time"] = True
 
             repetidos += 1
+
         else:
             merged[key] = feat
             nuevos += 1
@@ -460,7 +623,7 @@ def filter_last_hours(features, hours, ref_time):
 def main():
     capture_time = now_utc()
 
-    kml_content = descargar_kml()
+    kml_content = descargar_kmz_o_kml()
     new_features = parse_kml_to_features(kml_content, capture_time)
 
     old_data = read_geojson(HISTORICO)
@@ -476,14 +639,14 @@ def main():
     features_48h = filter_last_hours(all_features, 48, capture_time)
     features_24h = filter_last_hours(all_features, 24, capture_time)
 
-    # El histórico se queda solo con 72h
+    # El histórico se mantiene solo a 72 h
     write_geojson(HISTORICO, features_72h)
     write_geojson(FILE_24H, features_24h)
     write_geojson(FILE_48H, features_48h)
     write_geojson(FILE_72H, features_72h)
 
     manifest = {
-        "producto": "Rayos SIGIF/GVA KML 24h convertido a GeoJSON",
+        "producto": "Rayos SIGIF/GVA KMZ 24h convertido a GeoJSON",
         "fuente": SIGIF_KML_URL,
         "actualizado_utc": iso_utc(capture_time),
         "bbox_valencia": {
@@ -504,7 +667,11 @@ def main():
             "rayos_72h.geojson",
             "rayos_historico.geojson"
         ],
-        "nota": "Si el KML no trae hora individual de cada rayo, se usa la primera hora de captura en GitHub Actions."
+        "nota": (
+            "SIGIF/GVA proporciona un KMZ con rayos de las últimas 24 h. "
+            "Este script acumula histórico propio hasta 72 h. "
+            "Si el KML no trae hora individual de cada rayo, se usa la primera hora de captura."
+        )
     }
 
     write_json(MANIFEST, manifest)
