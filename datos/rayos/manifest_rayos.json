@@ -1,46 +1,24 @@
 {
-  "producto": "Rayos AEMET raster GeoTIFF",
-  "fuente": "https://www.aemet.es/es/geojson/download/rayos/descargar_rayos_1782727266.tar.gz",
-  "region_token": "PB_LOCL",
-  "actualizado_utc": "2026-06-29T11:04:15+00:00",
+  "producto": "Rayos SIGIF/GVA KMZ 24h convertido a GeoJSON",
+  "fuente": "https://prevencionincendiosgva.es/Meteorologia/GetRayos24hKML",
+  "actualizado_utc": "2026-06-29T11:34:27+00:00",
   "bbox_valencia": {
     "lon_min": -1.7,
     "lat_min": 38.6,
     "lon_max": 0.05,
     "lat_max": 40.25
   },
-  "geotiff_procesados_en_esta_ejecucion": 25,
-  "geotiff_con_pixeles_visibles_valencia": 11,
-  "historico_horas_guardadas": 38,
-  "image_size": {
-    "width": 992,
-    "height": 936
-  },
-  "salidas": {
-    "24h": {
-      "horas": 24,
-      "archivo": "rayos_24h.png",
-      "imagenes_usadas": 22,
-      "pixeles_visibles_acumulados": 228922
-    },
-    "48h": {
-      "horas": 48,
-      "archivo": "rayos_48h.png",
-      "imagenes_usadas": 38,
-      "pixeles_visibles_acumulados": 235627
-    },
-    "72h": {
-      "horas": 72,
-      "archivo": "rayos_72h.png",
-      "imagenes_usadas": 38,
-      "pixeles_visibles_acumulados": 235627
-    }
-  },
-  "archivos_para_leaflet": [
-    "rayos_24h.png",
-    "rayos_48h.png",
-    "rayos_72h.png",
-    "rayos_bounds.json"
+  "rayos_descargados_en_bbox": 405,
+  "rayos_nuevos": 404,
+  "rayos_repetidos": 1,
+  "rayos_24h": 401,
+  "rayos_48h": 404,
+  "rayos_72h": 404,
+  "archivos": [
+    "rayos_24h.geojson",
+    "rayos_48h.geojson",
+    "rayos_72h.geojson",
+    "rayos_historico.geojson"
   ],
-  "nota": "AEMET proporciona los rayos como GeoTIFF raster. No hay puntos GeoJSON individuales."
+  "nota": "SIGIF/GVA proporciona un KMZ con rayos de las últimas 24 h. Este script acumula histórico propio hasta 72 h. Si el KML no trae hora individual de cada rayo, se usa la primera hora de captura."
 }
