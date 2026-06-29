@@ -1,509 +1,419 @@
 {
+  "tipo": "leyenda_modelo_combustible_agrupada",
+  "campo_base": "MODELO_COM",
+  "fuentes_usadas": [
+    "MC_CV_ras.tif.vat.dbf",
+    "Códigos Modelos Combustible.txt"
+  ],
   "valores": [
     {
-      "valor": 1,
+      "valor": "GR2",
+      "nombre": "GR2 · Pasto bajo/moderado",
+      "modelo": "GR2",
       "color_rgba": [
-        218,
-        46,
-        46,
+        230,
+        245,
+        152,
         170
-      ]
-    },
-    {
-      "valor": 2,
-      "color_rgba": [
-        46,
-        96,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 3,
-      "color_rgba": [
-        146,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 4,
-      "color_rgba": [
-        218,
-        46,
-        196,
-        170
-      ]
-    },
-    {
-      "valor": 5,
-      "color_rgba": [
-        46,
-        218,
-        189,
-        170
-      ]
-    },
-    {
-      "valor": 6,
-      "color_rgba": [
-        218,
-        139,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 7,
-      "color_rgba": [
-        89,
-        46,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 8,
-      "color_rgba": [
-        54,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 9,
-      "color_rgba": [
-        218,
-        46,
-        104,
-        170
-      ]
-    },
-    {
-      "valor": 10,
-      "color_rgba": [
-        46,
-        154,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 11,
-      "color_rgba": [
+      ],
+      "codigos_raster_presentes": [
+        1,
+        201,
+        202,
+        203,
         204,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 12,
-      "color_rgba": [
-        182,
-        46,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 13,
-      "color_rgba": [
-        46,
-        218,
-        132,
-        170
-      ]
-    },
-    {
-      "valor": 14,
-      "color_rgba": [
-        218,
-        82,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 15,
-      "color_rgba": [
-        46,
-        61,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 16,
-      "color_rgba": [
-        111,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 17,
-      "color_rgba": [
-        218,
-        46,
-        161,
-        170
-      ]
-    },
-    {
-      "valor": 18,
-      "color_rgba": [
-        46,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
         211,
-        218,
-        170
-      ]
+        212,
+        213,
+        214,
+        215,
+        217,
+        218
+      ],
+      "codigo_sb": 102,
+      "tipo": "Dinámico"
     },
     {
-      "valor": 19,
+      "valor": "GR4",
+      "nombre": "GR4 · Pasto alto/carga moderada",
+      "modelo": "GR4",
       "color_rgba": [
-        218,
-        175,
-        46,
+        254,
+        224,
+        139,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        2
+      ],
+      "codigo_sb": 104,
+      "tipo": "Dinámico"
     },
     {
-      "valor": 20,
+      "valor": "GR7",
+      "nombre": "GR7 · Pasto muy cargado",
+      "modelo": "GR7",
       "color_rgba": [
-        125,
-        46,
-        218,
+        253,
+        174,
+        97,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        3
+      ],
+      "codigo_sb": 107,
+      "tipo": "Dinámico"
     },
     {
-      "valor": 21,
+      "valor": "GR8",
+      "nombre": "GR8 · Pasto muy alto/carga alta",
+      "modelo": "GR8",
       "color_rgba": [
-        46,
-        218,
-        75,
+        244,
+        109,
+        67,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        4
+      ],
+      "codigo_sb": 108,
+      "tipo": "Dinámico"
     },
     {
-      "valor": 101,
+      "valor": "SB3",
+      "nombre": "SB3 · Restos de corta / carga elevada",
+      "modelo": "SB3",
       "color_rgba": [
-        218,
-        46,
-        68,
-        170
-      ]
+        140,
+        81,
+        10,
+        175
+      ],
+      "codigos_raster_presentes": [
+        5
+      ],
+      "codigo_sb": 203,
+      "tipo": "N/A"
     },
     {
-      "valor": 102,
-      "color_rgba": [
-        46,
-        118,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 103,
-      "color_rgba": [
-        168,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 104,
+      "valor": "SH1",
+      "nombre": "SH1 · Matorral bajo",
+      "modelo": "SH1",
       "color_rgba": [
         217,
-        46,
-        218,
+        240,
+        163,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        6
+      ],
+      "codigo_sb": 141,
+      "tipo": "Dinámico"
     },
     {
-      "valor": 105,
+      "valor": "SH3",
+      "nombre": "SH3 · Matorral moderado",
+      "modelo": "SH3",
       "color_rgba": [
-        46,
-        218,
-        167,
+        173,
+        221,
+        142,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        7
+      ],
+      "codigo_sb": 143,
+      "tipo": "N/A"
     },
     {
-      "valor": 106,
+      "valor": "SH4",
+      "nombre": "SH4 · Matorral denso",
+      "modelo": "SH4",
       "color_rgba": [
-        218,
-        117,
-        46,
+        120,
+        198,
+        121,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        8
+      ],
+      "codigo_sb": 144,
+      "tipo": "N/A"
     },
     {
-      "valor": 107,
+      "valor": "SH5",
+      "nombre": "SH5 · Matorral con carga alta",
+      "modelo": "SH5",
       "color_rgba": [
-        67,
-        46,
-        218,
+        49,
+        163,
+        84,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        9
+      ],
+      "codigo_sb": 145,
+      "tipo": "N/A"
     },
     {
-      "valor": 108,
+      "valor": "SH9",
+      "nombre": "SH9 · Matorral muy cargado",
+      "modelo": "SH9",
       "color_rgba": [
-        76,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 109,
-      "color_rgba": [
-        218,
-        46,
-        126,
-        170
-      ]
-    },
-    {
-      "valor": 110,
-      "color_rgba": [
-        46,
-        176,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 111,
-      "color_rgba": [
-        218,
-        210,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 112,
-      "color_rgba": [
-        160,
-        46,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 113,
-      "color_rgba": [
-        46,
-        218,
-        110,
-        170
-      ]
-    },
-    {
-      "valor": 114,
-      "color_rgba": [
-        218,
-        60,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 115,
-      "color_rgba": [
-        46,
-        83,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 116,
-      "color_rgba": [
-        133,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 117,
-      "color_rgba": [
-        218,
-        46,
-        183,
-        170
-      ]
-    },
-    {
-      "valor": 118,
-      "color_rgba": [
-        46,
-        218,
-        203,
-        170
-      ]
-    },
-    {
-      "valor": 201,
-      "color_rgba": [
-        218,
-        153,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 202,
-      "color_rgba": [
-        103,
-        46,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 203,
-      "color_rgba": [
-        46,
-        218,
-        53,
-        170
-      ]
-    },
-    {
-      "valor": 204,
-      "color_rgba": [
-        218,
-        46,
-        90,
-        170
-      ]
-    },
-    {
-      "valor": 205,
-      "color_rgba": [
-        46,
-        140,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 206,
-      "color_rgba": [
-        190,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 207,
-      "color_rgba": [
-        195,
-        46,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 208,
-      "color_rgba": [
-        46,
-        218,
-        145,
-        170
-      ]
-    },
-    {
-      "valor": 209,
-      "color_rgba": [
-        218,
-        95,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 210,
-      "color_rgba": [
-        46,
-        47,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 211,
-      "color_rgba": [
-        97,
-        218,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 212,
-      "color_rgba": [
-        218,
-        46,
-        147,
-        170
-      ]
-    },
-    {
-      "valor": 213,
-      "color_rgba": [
-        46,
-        197,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 214,
-      "color_rgba": [
-        218,
-        188,
-        46,
-        170
-      ]
-    },
-    {
-      "valor": 215,
-      "color_rgba": [
-        138,
-        46,
-        218,
-        170
-      ]
-    },
-    {
-      "valor": 217,
-      "color_rgba": [
-        46,
-        218,
-        88,
-        170
-      ]
-    },
-    {
-      "valor": 218,
-      "color_rgba": [
-        218,
-        46,
+        0,
+        104,
         55,
+        180
+      ],
+      "codigos_raster_presentes": [
+        10
+      ],
+      "codigo_sb": 149,
+      "tipo": "Dinámico"
+    },
+    {
+      "valor": "TU1",
+      "nombre": "TU1 · Arbolado con sotobosque ligero",
+      "modelo": "TU1",
+      "color_rgba": [
+        199,
+        233,
+        192,
         170
-      ]
+      ],
+      "codigos_raster_presentes": [
+        11
+      ],
+      "codigo_sb": 161,
+      "tipo": "Dinámico"
+    },
+    {
+      "valor": "TU2",
+      "nombre": "TU2 · Arbolado con sotobosque moderado",
+      "modelo": "TU2",
+      "color_rgba": [
+        116,
+        196,
+        118,
+        170
+      ],
+      "codigos_raster_presentes": [
+        12
+      ],
+      "codigo_sb": 162,
+      "tipo": "N/A"
+    },
+    {
+      "valor": "TU3",
+      "nombre": "TU3 · Arbolado con sotobosque herbáceo/matorral",
+      "modelo": "TU3",
+      "color_rgba": [
+        35,
+        139,
+        69,
+        175
+      ],
+      "codigos_raster_presentes": [
+        13
+      ],
+      "codigo_sb": 163,
+      "tipo": "Dinámico"
+    },
+    {
+      "valor": "TU5",
+      "nombre": "TU5 · Arbolado con sotobosque denso",
+      "modelo": "TU5",
+      "color_rgba": [
+        0,
+        68,
+        27,
+        185
+      ],
+      "codigos_raster_presentes": [
+        14
+      ],
+      "codigo_sb": 165,
+      "tipo": "N/A"
+    },
+    {
+      "valor": "NB1",
+      "nombre": "NB1 · No combustible",
+      "modelo": "NB1",
+      "color_rgba": [
+        189,
+        189,
+        189,
+        95
+      ],
+      "codigos_raster_presentes": [
+        18,
+        20,
+        21
+      ],
+      "codigo_sb": 91,
+      "tipo": ""
+    },
+    {
+      "valor": "NB3",
+      "nombre": "NB3 · No combustible / agrícola",
+      "modelo": "NB3",
+      "color_rgba": [
+        238,
+        238,
+        238,
+        70
+      ],
+      "codigos_raster_presentes": [
+        15,
+        19,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "codigo_sb": 93,
+      "tipo": ""
+    },
+    {
+      "valor": "NB8",
+      "nombre": "NB8 · Agua",
+      "modelo": "NB8",
+      "color_rgba": [
+        127,
+        127,
+        127,
+        95
+      ],
+      "codigos_raster_presentes": [
+        16
+      ],
+      "codigo_sb": 98,
+      "tipo": ""
+    },
+    {
+      "valor": "NB9",
+      "nombre": "NB9 · Urbano / infraestructuras",
+      "modelo": "NB9",
+      "color_rgba": [
+        37,
+        37,
+        37,
+        95
+      ],
+      "codigos_raster_presentes": [
+        17
+      ],
+      "codigo_sb": 99,
+      "tipo": ""
     }
   ],
-  "nota": "Colores categóricos temporales. Se pueden sustituir por la paleta oficial si aportas la leyenda."
+  "resumen": {
+    "num_codigos_raster_presentes": 56,
+    "num_modelos_combustible_presentes": 18,
+    "codigos_raster_presentes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      217,
+      218
+    ],
+    "modelos_presentes": [
+      "GR2",
+      "GR4",
+      "GR7",
+      "GR8",
+      "SB3",
+      "SH1",
+      "SH3",
+      "SH4",
+      "SH5",
+      "SH9",
+      "TU1",
+      "TU2",
+      "TU3",
+      "TU5",
+      "NB1",
+      "NB3",
+      "NB8",
+      "NB9"
+    ]
+  },
+  "nota": "La imagen usa colores por modelo de combustible base, no por cada código raster. Los códigos 100/101-118 se agrupan como NB3 y los 201-219 como GR2 según la tabla VAT/DBF y el archivo de códigos."
 }
