@@ -1,6 +1,6 @@
 // ===============================
 // METVLC · VISOR RAYOS INCENDIOS
-// Rayos SIGIF/GVA como puntos GeoJSON
+// Rayos SIGIF/GVA + combustible + pendiente + NDMI
 // ===============================
 
 console.log("visor.js cargado correctamente");
@@ -15,6 +15,22 @@ const map = L.map("map", {
   minZoom: 7,
   maxZoom: 16
 });
+
+// ===============================
+// ORDEN DE CAPAS
+// ===============================
+
+map.createPane("pendientePane");
+map.getPane("pendientePane").style.zIndex = 330;
+
+map.createPane("ndmiPane");
+map.getPane("ndmiPane").style.zIndex = 340;
+
+map.createPane("combustiblePane");
+map.getPane("combustiblePane").style.zIndex = 350;
+
+map.createPane("rayosPane");
+map.getPane("rayosPane").style.zIndex = 650;
 
 // ===============================
 // CAPAS BASE
@@ -42,7 +58,7 @@ const baseLayers = {
 };
 
 // ===============================
-// CAPAS OPERATIVAS
+// GRUPOS DE CAPAS
 // ===============================
 
 const rayosLayer = L.layerGroup().addTo(map);
@@ -73,20 +89,28 @@ const RAYOS_FILES = {
 
 const RAYOS_MANIFEST = "datos/rayos/manifest_rayos.json";
 
-const COMBUSTIBLE_GEOJSON = "datos/combustible/modelo_combustible.geojson";
-const PENDIENTE_GEOJSON = "datos/pendiente/pendiente.geojson";
-const NDMI_IMAGE = "datos/ndmi/ultimo_ndmi.png";
+const COMBUSTIBLE_IMAGE = "datos/combustible/modelo_combustible.png";
+const COMBUSTIBLE_BOUNDS = "datos/combustible/modelo_combustible_bounds.json";
 
-const NDMI_BOUNDS = [
-  [38.60, -1.70],
-  [40.25, 0.05]
-];
+const PENDIENTE_IMAGE = "datos/pendiente/pendiente.png";
+const PENDIENTE_BOUNDS = "datos/pendiente/pendiente_bounds.json";
+
+const NDMI_IMAGE = "datos/ndmi/ultimo_ndmi.png";
+const NDMI_BOUNDS = "datos/ndmi/ndmi_bounds.json";
 
 // ===============================
 // VARIABLES
 // ===============================
 
 let primeraCargaRayos = true;
+
+let combustibleOverlay = null;
+let pendienteOverlay = null;
+let ndmiOverlay = null;
+
+let combustibleOpacity = 0.55;
+let pendienteOpacity = 0.45;
+let ndmiOpacity = 0.65;
 
 // ===============================
 // UTILIDADES
@@ -117,6 +141,40 @@ async function cargarJSON(url) {
 
   return await response.json();
 }
+
+function convertirBounds(data) {
+  // Formato preferido:
+  // { "bounds": [[lat_min, lon_min], [lat_max, lon_max]] }
+  if (data.bounds && Array.isArray(data.bounds)) {
+    return L.latLngBounds(data.bounds);
+  }
+
+  // Formato alternativo:
+  // { "bbox": { "lon_min": ..., "lat_min": ..., "lon_max": ..., "lat_max": ... } }
+  if (data.bbox) {
+    return L.latLngBounds(
+      [data.bbox.lat_min, data.bbox.lon_min],
+      [data.bbox.lat_max, data.bbox.lon_max]
+    );
+  }
+
+  throw new Error("Archivo bounds sin formato válido");
+}
+
+async function cargarBounds(url) {
+  const data = await cargarJSON(url);
+  const bounds = convertirBounds(data);
+
+  if (!bounds.isValid()) {
+    throw new Error(`Bounds no válidos en ${url}`);
+  }
+
+  return bounds;
+}
+
+// ===============================
+// FECHAS RAYOS
+// ===============================
 
 function parseFechaUTC(value) {
   if (!value) return null;
@@ -217,11 +275,12 @@ async function cargarRayos(horas = 24) {
         const h = edadHoras(feature);
 
         return L.circleMarker(latlng, {
+          pane: "rayosPane",
           radius: radioPorEdad(h),
           color: "#111111",
-          weight: 1.6,
+          weight: 1.8,
           fillColor: colorPorEdad(h),
-          fillOpacity: 0.90,
+          fillOpacity: 0.95,
           opacity: 1
         });
       },
@@ -298,112 +357,160 @@ document.querySelectorAll(".time-btn").forEach(btn => {
 });
 
 // ===============================
-// MODELO DE COMBUSTIBLE
+// CAPAS RASTER
 // ===============================
 
-async function cargarCombustible() {
+async function cargarCapaRaster(nombre, imageUrl, boundsUrl, layerGroup, pane, opacity) {
   try {
-    const response = await fetch(urlNoCache(COMBUSTIBLE_GEOJSON), {
-      cache: "no-store"
-    });
+    const bounds = await cargarBounds(boundsUrl);
 
-    if (!response.ok) {
-      console.warn("Modelo de combustible no disponible todavía.");
-      return;
-    }
-
-    const data = await response.json();
-
-    L.geoJSON(data, {
-      style: function () {
-        return {
-          color: "#654321",
-          weight: 0.8,
-          fillColor: "#c17f35",
-          fillOpacity: 0.35
-        };
-      },
-
-      onEachFeature: function (feature, layer) {
-        const props = feature.properties || {};
-
-        layer.bindPopup(`
-          <strong>Modelo de combustible</strong><br>
-          <hr style="margin:6px 0">
-          ${Object.entries(props)
-            .map(([k, v]) => `<strong>${k}:</strong> ${v}`)
-            .join("<br>")}
-        `);
-      }
-    }).addTo(combustibleLayer);
-
-  } catch (error) {
-    console.warn("No se pudo cargar modelo de combustible.", error);
-  }
-}
-
-// ===============================
-// PENDIENTE
-// ===============================
-
-async function cargarPendiente() {
-  try {
-    const response = await fetch(urlNoCache(PENDIENTE_GEOJSON), {
-      cache: "no-store"
-    });
-
-    if (!response.ok) {
-      console.warn("Pendiente no disponible todavía.");
-      return;
-    }
-
-    const data = await response.json();
-
-    L.geoJSON(data, {
-      style: function () {
-        return {
-          color: "#5a5a5a",
-          weight: 0.8,
-          fillColor: "#8d8d8d",
-          fillOpacity: 0.30
-        };
-      },
-
-      onEachFeature: function (feature, layer) {
-        const props = feature.properties || {};
-
-        layer.bindPopup(`
-          <strong>Pendiente</strong><br>
-          <hr style="margin:6px 0">
-          ${Object.entries(props)
-            .map(([k, v]) => `<strong>${k}:</strong> ${v}`)
-            .join("<br>")}
-        `);
-      }
-    }).addTo(pendienteLayer);
-
-  } catch (error) {
-    console.warn("No se pudo cargar pendiente.", error);
-  }
-}
-
-// ===============================
-// NDMI
-// ===============================
-
-function cargarNDMI() {
-  try {
-    const ndmi = L.imageOverlay(urlNoCache(NDMI_IMAGE), NDMI_BOUNDS, {
-      opacity: 0.65,
+    const overlay = L.imageOverlay(urlNoCache(imageUrl), bounds, {
+      pane: pane,
+      opacity: opacity,
       interactive: false
     });
 
-    ndmi.addTo(ndmiLayer);
+    overlay.addTo(layerGroup);
+
+    console.log(`${nombre} cargado correctamente`);
+
+    return overlay;
 
   } catch (error) {
-    console.warn("NDMI no cargado todavía.", error);
+    console.warn(`No se pudo cargar ${nombre}:`, error);
+    return null;
   }
 }
+
+async function cargarCombustible() {
+  combustibleOverlay = await cargarCapaRaster(
+    "modelo de combustible",
+    COMBUSTIBLE_IMAGE,
+    COMBUSTIBLE_BOUNDS,
+    combustibleLayer,
+    "combustiblePane",
+    combustibleOpacity
+  );
+}
+
+async function cargarPendiente() {
+  pendienteOverlay = await cargarCapaRaster(
+    "pendiente",
+    PENDIENTE_IMAGE,
+    PENDIENTE_BOUNDS,
+    pendienteLayer,
+    "pendientePane",
+    pendienteOpacity
+  );
+}
+
+async function cargarNDMI() {
+  ndmiOverlay = await cargarCapaRaster(
+    "NDMI",
+    NDMI_IMAGE,
+    NDMI_BOUNDS,
+    ndmiLayer,
+    "ndmiPane",
+    ndmiOpacity
+  );
+}
+
+// ===============================
+// CONTROL DE OPACIDADES
+// ===============================
+
+const opacityControl = L.control({
+  position: "topright"
+});
+
+opacityControl.onAdd = function () {
+  const div = L.DomUtil.create("div", "legend");
+
+  div.innerHTML = `
+    <div class="legend-title">Opacidad capas</div>
+
+    <label style="display:block;margin-top:6px;">
+      Combustible
+      <input 
+        id="combustibleOpacity" 
+        type="range" 
+        min="0" 
+        max="1" 
+        step="0.05" 
+        value="${combustibleOpacity}"
+        style="width:130px;"
+      >
+    </label>
+
+    <label style="display:block;margin-top:6px;">
+      Pendiente
+      <input 
+        id="pendienteOpacity" 
+        type="range" 
+        min="0" 
+        max="1" 
+        step="0.05" 
+        value="${pendienteOpacity}"
+        style="width:130px;"
+      >
+    </label>
+
+    <label style="display:block;margin-top:6px;">
+      NDMI
+      <input 
+        id="ndmiOpacity" 
+        type="range" 
+        min="0" 
+        max="1" 
+        step="0.05" 
+        value="${ndmiOpacity}"
+        style="width:130px;"
+      >
+    </label>
+  `;
+
+  L.DomEvent.disableClickPropagation(div);
+
+  setTimeout(() => {
+    const combustibleInput = document.getElementById("combustibleOpacity");
+    const pendienteInput = document.getElementById("pendienteOpacity");
+    const ndmiInput = document.getElementById("ndmiOpacity");
+
+    if (combustibleInput) {
+      combustibleInput.addEventListener("input", e => {
+        combustibleOpacity = Number(e.target.value);
+
+        if (combustibleOverlay) {
+          combustibleOverlay.setOpacity(combustibleOpacity);
+        }
+      });
+    }
+
+    if (pendienteInput) {
+      pendienteInput.addEventListener("input", e => {
+        pendienteOpacity = Number(e.target.value);
+
+        if (pendienteOverlay) {
+          pendienteOverlay.setOpacity(pendienteOpacity);
+        }
+      });
+    }
+
+    if (ndmiInput) {
+      ndmiInput.addEventListener("input", e => {
+        ndmiOpacity = Number(e.target.value);
+
+        if (ndmiOverlay) {
+          ndmiOverlay.setOpacity(ndmiOpacity);
+        }
+      });
+    }
+  }, 300);
+
+  return div;
+};
+
+opacityControl.addTo(map);
 
 // ===============================
 // LEYENDA
@@ -441,14 +548,21 @@ legend.onAdd = function () {
 
     <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
 
+    <div class="legend-title">Capas territoriales</div>
+
     <div class="legend-item">
       <span class="legend-dot" style="background:#c17f35"></span>
-      Combustible
+      Modelo combustible
     </div>
 
     <div class="legend-item">
       <span class="legend-dot" style="background:#8d8d8d"></span>
       Pendiente
+    </div>
+
+    <div class="legend-item">
+      <span class="legend-dot" style="background:#4f8f4f"></span>
+      NDMI
     </div>
   `;
 
@@ -464,4 +578,4 @@ legend.addTo(map);
 cargarRayos(24);
 cargarCombustible();
 cargarPendiente();
-// cargarNDMI(); // Lo activaremos cuando subas la imagen NDMI real
+cargarNDMI();
