@@ -516,6 +516,63 @@ opacityControl.addTo(map);
 // LEYENDA
 // ===============================
 
+// ===============================
+// LEYENDA
+// ===============================
+
+const COMBUSTIBLE_LEYENDA = "datos/combustible/modelo_combustible_leyenda.json";
+
+function rgbaToCss(rgba) {
+  if (!rgba || rgba.length < 3) {
+    return "rgba(180,180,180,0.85)";
+  }
+
+  const r = rgba[0];
+  const g = rgba[1];
+  const b = rgba[2];
+  const a = rgba.length >= 4 ? (rgba[3] / 255) : 1;
+
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+
+async function cargarLeyendaCombustible() {
+  try {
+    const data = await cargarJSON(COMBUSTIBLE_LEYENDA);
+    const valores = data.valores || [];
+
+    if (!valores.length) {
+      return `
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#c17f35"></span>
+          Modelo de combustible
+        </div>
+      `;
+    }
+
+    return valores.map(item => {
+      const color = rgbaToCss(item.color_rgba);
+      const valor = item.valor;
+
+      return `
+        <div class="legend-item">
+          <span class="legend-dot" style="background:${color}"></span>
+          Modelo ${valor}
+        </div>
+      `;
+    }).join("");
+
+  } catch (error) {
+    console.warn("No se pudo cargar la leyenda de combustible:", error);
+
+    return `
+      <div class="legend-item">
+        <span class="legend-dot" style="background:#c17f35"></span>
+        Modelo de combustible
+      </div>
+    `;
+  }
+}
+
 const legend = L.control({
   position: "bottomright"
 });
@@ -523,48 +580,116 @@ const legend = L.control({
 legend.onAdd = function () {
   const div = L.DomUtil.create("div", "legend");
 
+  div.style.maxWidth = "260px";
+  div.style.maxHeight = "420px";
+  div.style.overflowY = "auto";
+
   div.innerHTML = `
-    <div class="legend-title">Antigüedad rayos</div>
+    <div class="legend-title">Leyenda del visor</div>
 
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#ff0000"></span>
-      0 - 6 h
-    </div>
+    <details open style="margin-top:6px;">
+      <summary style="font-weight:700; cursor:pointer;">Rayos SIGIF/GVA</summary>
+      <div style="margin-top:6px;">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#ff0000"></span>
+          0 - 6 h
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#ff8c00"></span>
-      6 - 24 h
-    </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#ff8c00"></span>
+          6 - 24 h
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#ffd400"></span>
-      24 - 48 h
-    </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#ffd400"></span>
+          24 - 48 h
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#7a7a7a"></span>
-      48 - 72 h
-    </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#7a7a7a"></span>
+          48 - 72 h
+        </div>
+      </div>
+    </details>
 
     <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
 
-    <div class="legend-title">Capas territoriales</div>
+    <details open>
+      <summary style="font-weight:700; cursor:pointer;">Pendiente</summary>
+      <div style="margin-top:6px;">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#fff7bc"></span>
+          Pendiente baja
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#c17f35"></span>
-      Modelo combustible
-    </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#fec44f"></span>
+          Pendiente media
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#8d8d8d"></span>
-      Pendiente
-    </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#fe9929"></span>
+          Pendiente alta
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-dot" style="background:#4f8f4f"></span>
-      NDMI
-    </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#d95f0e"></span>
+          Pendiente muy alta
+        </div>
+      </div>
+    </details>
+
+    <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
+
+    <details open>
+      <summary style="font-weight:700; cursor:pointer;">NDMI</summary>
+      <div style="margin-top:6px;">
+        <div style="
+          width:170px;
+          height:12px;
+          border-radius:6px;
+          border:1px solid #999;
+          background:linear-gradient(to right, #8c510a, #dfc27d, #c7eae5, #01665e);
+          margin:4px 0 6px 0;
+        "></div>
+
+        <div style="
+          display:flex;
+          justify-content:space-between;
+          font-size:11px;
+          gap:8px;
+        ">
+          <span>Más seco</span>
+          <span>Más húmedo</span>
+        </div>
+      </div>
+    </details>
+
+    <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
+
+    <details open>
+      <summary style="font-weight:700; cursor:pointer;">Modelo de combustible</summary>
+      <div id="leyendaCombustible" style="
+        margin-top:6px;
+        max-height:170px;
+        overflow-y:auto;
+        padding-right:4px;
+      ">
+        Cargando leyenda...
+      </div>
+    </details>
   `;
+
+  L.DomEvent.disableClickPropagation(div);
+  L.DomEvent.disableScrollPropagation(div);
+
+  setTimeout(async () => {
+    const contenedor = document.getElementById("leyendaCombustible");
+
+    if (contenedor) {
+      contenedor.innerHTML = await cargarLeyendaCombustible();
+    }
+  }, 250);
 
   return div;
 };
