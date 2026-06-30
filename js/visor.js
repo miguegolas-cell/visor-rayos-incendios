@@ -654,33 +654,30 @@ legend.onAdd = function () {
     <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
 
     <details open>
-      <summary style="font-weight:700; cursor:pointer;">Pendiente</summary>
+  <summary style="font-weight:700; cursor:pointer;">Pendiente media del terreno</summary>
 
-      <div style="margin-top:6px;">
-        <div class="legend-item">
-          <span class="legend-square" style="background:#fff7bc"></span>
-          Pendiente baja
-        </div>
+  <div style="margin-top:6px;">
+    <div class="legend-item">
+      <span class="legend-square" style="background:transparent; border:1px dashed #777;"></span>
+      ≤ 25 % · transparente
+    </div>
 
-        <div class="legend-item">
-          <span class="legend-square" style="background:#fec44f"></span>
-          Pendiente media
-        </div>
+    <div class="legend-item">
+      <span class="legend-square" style="background:#ffff00"></span>
+      &gt; 25 % y ≤ 30 %
+    </div>
 
-        <div class="legend-item">
-          <span class="legend-square" style="background:#fe9929"></span>
-          Pendiente alta
-        </div>
+    <div class="legend-item">
+      <span class="legend-square" style="background:#ff8500"></span>
+      &gt; 30 % y ≤ 50 %
+    </div>
 
-        <div class="legend-item">
-          <span class="legend-square" style="background:#d95f0e"></span>
-          Pendiente muy alta
-        </div>
-      </div>
-    </details>
-
-    <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
-
+    <div class="legend-item">
+      <span class="legend-square" style="background:#910000"></span>
+      &gt; 50 %
+    </div>
+  </div>
+</details>
     <details open>
       <summary style="font-weight:700; cursor:pointer;">NDMI suelo forestal</summary>
 
