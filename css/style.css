@@ -1,25 +1,36 @@
 html,
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
-  background: #eef4f8;
+  background: #f6f9fc;
   font-family: Arial, Helvetica, sans-serif;
   color: #263238;
 }
 
+/* ===============================
+   CONTENEDOR GENERAL
+   =============================== */
+
 .page {
-  max-width: 1250px;
-  margin: 18px auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+  box-shadow: none;
 }
 
+/* ===============================
+   CABECERA
+   =============================== */
+
 .header {
-  padding: 22px 26px;
+  padding: 18px 26px;
   color: white;
   background: linear-gradient(135deg, #0b2f4f, #174d6d);
+  border-radius: 0;
 }
 
 .title {
@@ -34,14 +45,19 @@ body {
   opacity: 0.92;
 }
 
+/* ===============================
+   BARRA SUPERIOR
+   =============================== */
+
 .toolbar {
   display: flex;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  padding: 14px 18px;
+  padding: 12px 18px;
   background: #f4f8fb;
   border-bottom: 1px solid #d9e4ec;
+  max-width: none;
 }
 
 .toolbar-title {
@@ -81,10 +97,20 @@ body {
   color: #425867;
 }
 
+/* ===============================
+   MAPA
+   =============================== */
+
 #map {
   width: 100%;
-  height: 740px;
+  height: calc(100vh - 215px);
+  min-height: 650px;
+  border-radius: 0;
 }
+
+/* ===============================
+   PIE
+   =============================== */
 
 .footer {
   padding: 12px 18px;
@@ -92,15 +118,32 @@ body {
   border-top: 1px solid #d9e4ec;
   font-size: 13px;
   color: #415767;
+  border-radius: 0;
 }
 
+/* ===============================
+   LEYENDAS Y CONTROLES LEAFLET
+   =============================== */
+
 .legend {
-  background: white;
+  background: rgba(255, 255, 255, 0.96);
   padding: 10px 12px;
   border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.22);
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.4;
+  color: #222;
+  z-index: 1000;
+}
+
+.main-legend {
+  max-width: 300px;
+  max-height: 430px;
+  overflow-y: auto;
+}
+
+.opacity-box {
+  max-width: 190px;
 }
 
 .legend-title {
@@ -113,62 +156,88 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
+  margin: 3px 0;
 }
 
 .legend-dot {
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   display: inline-block;
-  border: 1px solid rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.45);
+  flex-shrink: 0;
 }
+
+.legend-square {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.45);
+  flex-shrink: 0;
+}
+
+.legend details {
+  margin-top: 4px;
+}
+
+.legend details summary {
+  list-style-position: outside;
+  cursor: pointer;
+}
+
+.legend hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 8px 0;
+}
+
+/* Evita que los controles de Leaflet queden demasiado pegados */
+.leaflet-top.leaflet-right {
+  margin-top: 8px;
+}
+
+.leaflet-bottom.leaflet-left {
+  margin-bottom: 8px;
+}
+
+.leaflet-control-layers {
+  border-radius: 10px;
+}
+
 /* ===============================
-   VISOR A ANCHO COMPLETO
+   RESPONSIVE
    =============================== */
 
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #f6f9fc;
-}
-
-.page {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.header {
-  border-radius: 0;
-}
-
-.toolbar {
-  max-width: none;
-}
-
-#map {
-  width: 100%;
-  height: calc(100vh - 230px);
-  min-height: 650px;
-  border-radius: 0;
-}
-
-.footer {
-  border-radius: 0;
-}
-
-/* En pantallas pequeñas */
 @media (max-width: 768px) {
+  .header {
+    padding: 16px 18px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .toolbar {
+    align-items: flex-start;
+  }
+
+  .info-rayos {
+    margin-left: 0;
+    width: 100%;
+  }
+
   #map {
     height: calc(100vh - 260px);
     min-height: 520px;
   }
 
-  .page {
-    margin: 0;
+  .main-legend {
+    max-width: 250px;
+    max-height: 340px;
+  }
+
+  .legend {
+    font-size: 12px;
   }
 }
