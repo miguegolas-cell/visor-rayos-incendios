@@ -60,7 +60,8 @@ const baseLayers = {
 // ===============================
 // GRUPOS DE CAPAS
 // ===============================
-// Las añadimos al mapa por defecto para que se vean al abrir el visor.
+// Por defecto solo se activa rayos.
+// Las demás capas se pueden activar desde el selector.
 
 const pendienteLayer = L.layerGroup();
 const ndmiLayer = L.layerGroup();
@@ -111,7 +112,7 @@ let pendienteOverlay = null;
 let ndmiOverlay = null;
 
 let combustibleOpacity = 0.55;
-let pendienteOpacity = 0.45;
+let pendienteOpacity = 0.65;
 let ndmiOpacity = 0.65;
 
 // ===============================
@@ -145,15 +146,9 @@ async function cargarJSON(url) {
 }
 
 function convertirBounds(data) {
-  // Formato preferido:
-  // { "bounds": [[lat_min, lon_min], [lat_max, lon_max]] }
-
   if (data.bounds && Array.isArray(data.bounds)) {
     return L.latLngBounds(data.bounds);
   }
-
-  // Formato alternativo:
-  // { "bbox": { "lon_min": ..., "lat_min": ..., "lon_max": ..., "lat_max": ... } }
 
   if (data.bbox) {
     return L.latLngBounds(
@@ -534,20 +529,7 @@ function rgbaToCss(rgba) {
   return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
 
-function normalizarItemsLeyendaCombustible(data) {
-  if (!data) return [];
-
-  if (Array.isArray(data)) return data;
-
-  if (Array.isArray(data.valores)) return data.valores;
-  if (Array.isArray(data.items)) return data.items;
-  if (Array.isArray(data.clases)) return data.clases;
-  if (Array.isArray(data.leyenda)) return data.leyenda;
-
-  return [];
-}
-
-function colorItemCombustible(item) {
+function colorCombustible(item) {
   if (item.color_rgba) return rgbaToCss(item.color_rgba);
   if (item.rgba) return rgbaToCss(item.rgba);
   if (item.color) return item.color;
@@ -556,51 +538,113 @@ function colorItemCombustible(item) {
   return "#c17f35";
 }
 
-function valorItemCombustible(item) {
-  return (
-    item.valor ??
-    item.value ??
-    item.codigo ??
-    item.code ??
-    item.id ??
-    "sin dato"
-  );
-}
-
-function nombreItemCombustible(item) {
+function nombreCombustible(item) {
   return (
     item.nombre ??
     item.name ??
     item.descripcion ??
     item.description ??
-    `Modelo ${valorItemCombustible(item)}`
+    item.modelo ??
+    item.codigo ??
+    item.valor ??
+    "Modelo combustible"
   );
+}
+
+function extraerGruposCombustible(data) {
+  if (!data) return [];
+
+  if (Array.isArray(data.grupos)) return data.grupos;
+  if (Array.isArray(data.familias)) return data.familias;
+  if (Array.isArray(data.categorias)) return data.categorias;
+
+  if (Array.isArray(data.valores)) {
+    return [
+      {
+        nombre: "Modelos de combustible",
+        items: data.valores
+      }
+    ];
+  }
+
+  if (Array.isArray(data.items)) {
+    return [
+      {
+        nombre: "Modelos de combustible",
+        items: data.items
+      }
+    ];
+  }
+
+  if (Array.isArray(data.leyenda)) {
+    return [
+      {
+        nombre: "Modelos de combustible",
+        items: data.leyenda
+      }
+    ];
+  }
+
+  return [];
+}
+
+function renderGrupoCombustible(grupo, abierto = false) {
+  const nombreGrupo =
+    grupo.nombre ??
+    grupo.name ??
+    grupo.familia ??
+    grupo.categoria ??
+    "Grupo";
+
+  const items =
+    grupo.items ??
+    grupo.valores ??
+    grupo.modelos ??
+    grupo.clases ??
+    [];
+
+  if (!items.length) return "";
+
+  const openAttr = abierto ? "open" : "";
+
+  const htmlItems = items.map(item => {
+    const color = colorCombustible(item);
+    const nombre = nombreCombustible(item);
+
+    return `
+      <div class="legend-item">
+        <span class="legend-square" style="background:${color}"></span>
+        ${nombre}
+      </div>
+    `;
+  }).join("");
+
+  return `
+    <details ${openAttr} style="margin-top:5px;">
+      <summary style="font-weight:600; cursor:pointer;">${nombreGrupo}</summary>
+      <div style="margin-top:5px;">
+        ${htmlItems}
+      </div>
+    </details>
+  `;
 }
 
 async function cargarLeyendaCombustible() {
   try {
     const data = await cargarJSON(COMBUSTIBLE_LEYENDA);
-    const items = normalizarItemsLeyendaCombustible(data);
+    const grupos = extraerGruposCombustible(data);
 
-    if (!items.length) {
+    if (!grupos.length) {
       return `
         <div class="legend-item">
-          <span class="legend-dot" style="background:#c17f35"></span>
+          <span class="legend-square" style="background:#c17f35"></span>
           Modelo de combustible
         </div>
       `;
     }
 
-    return items.map(item => {
-      const color = colorItemCombustible(item);
-      const nombre = nombreItemCombustible(item);
-
-      return `
-        <div class="legend-item">
-          <span class="legend-dot" style="background:${color}"></span>
-          ${nombre}
-        </div>
-      `;
+    return grupos.map((grupo, i) => {
+      return renderGrupoCombustible(grupo, i === 0);
     }).join("");
 
   } catch (error) {
@@ -608,7 +652,7 @@ async function cargarLeyendaCombustible() {
 
     return `
       <div class="legend-item">
-        <span class="legend-dot" style="background:#c17f35"></span>
+        <span class="legend-square" style="background:#c17f35"></span>
         Modelo de combustible
       </div>
     `;
@@ -651,33 +695,36 @@ legend.onAdd = function () {
       </div>
     </details>
 
-    <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
+    <hr>
 
     <details open>
-  <summary style="font-weight:700; cursor:pointer;">Pendiente media del terreno</summary>
+      <summary style="font-weight:700; cursor:pointer;">Pendiente media del terreno</summary>
 
-  <div style="margin-top:6px;">
-    <div class="legend-item">
-      <span class="legend-square" style="background:transparent; border:1px dashed #777;"></span>
-      ≤ 25 % · transparente
-    </div>
+      <div style="margin-top:6px;">
+        <div class="legend-item">
+          <span class="legend-square" style="background:transparent; border:1px dashed #777;"></span>
+          ≤ 25 % · transparente
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-square" style="background:#ffff00"></span>
-      &gt; 25 % y ≤ 30 %
-    </div>
+        <div class="legend-item">
+          <span class="legend-square" style="background:#ffff00"></span>
+          &gt; 25 % y ≤ 30 %
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-square" style="background:#ff8500"></span>
-      &gt; 30 % y ≤ 50 %
-    </div>
+        <div class="legend-item">
+          <span class="legend-square" style="background:#ff8500"></span>
+          &gt; 30 % y ≤ 50 %
+        </div>
 
-    <div class="legend-item">
-      <span class="legend-square" style="background:#910000"></span>
-      &gt; 50 %
-    </div>
-  </div>
-</details>
+        <div class="legend-item">
+          <span class="legend-square" style="background:#910000"></span>
+          &gt; 50 %
+        </div>
+      </div>
+    </details>
+
+    <hr>
+
     <details open>
       <summary style="font-weight:700; cursor:pointer;">NDMI suelo forestal</summary>
 
@@ -703,14 +750,14 @@ legend.onAdd = function () {
       </div>
     </details>
 
-    <hr style="border:none;border-top:1px solid #ddd;margin:8px 0">
+    <hr>
 
     <details>
       <summary style="font-weight:700; cursor:pointer;">Modelo de combustible</summary>
 
       <div id="leyendaCombustible" style="
         margin-top:6px;
-        max-height:170px;
+        max-height:210px;
         overflow-y:auto;
         padding-right:4px;
       ">
