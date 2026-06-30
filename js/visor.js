@@ -62,9 +62,9 @@ const baseLayers = {
 // ===============================
 // Las añadimos al mapa por defecto para que se vean al abrir el visor.
 
-const pendienteLayer = L.layerGroup().addTo();
-const ndmiLayer = L.layerGroup().addTo();
-const combustibleLayer = L.layerGroup().addTo();
+const pendienteLayer = L.layerGroup();
+const ndmiLayer = L.layerGroup();
+const combustibleLayer = L.layerGroup();
 const rayosLayer = L.layerGroup().addTo(map);
 
 const overlayLayers = {
