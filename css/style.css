@@ -122,3 +122,53 @@ body {
   display: inline-block;
   border: 1px solid rgba(0,0,0,0.25);
 }
+/* ===============================
+   VISOR A ANCHO COMPLETO
+   =============================== */
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f6f9fc;
+}
+
+.page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.header {
+  border-radius: 0;
+}
+
+.toolbar {
+  max-width: none;
+}
+
+#map {
+  width: 100%;
+  height: calc(100vh - 230px);
+  min-height: 650px;
+  border-radius: 0;
+}
+
+.footer {
+  border-radius: 0;
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 768px) {
+  #map {
+    height: calc(100vh - 260px);
+    min-height: 520px;
+  }
+
+  .page {
+    margin: 0;
+  }
+}
