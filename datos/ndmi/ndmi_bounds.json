@@ -1,26 +1,21 @@
 {
   "bounds": [
     [
-      38.68655366688531,
+      38.686184269769115,
       -1.52891558510685
     ],
     [
-      40.21168266876426,
-      -0.02479523737455949
+      40.211682668764254,
+      -0.024702923896453576
     ]
   ],
-  "leaflet": "L.imageOverlay(url, bounds)",
-  "bbox": {
-    "lon_min": -1.52891558510685,
-    "lat_min": 38.68655366688531,
-    "lon_max": -0.02479523737455949,
-    "lat_max": 40.21168266876426
+  "origen": "NDMI provincia de Valencia corregido para Leaflet a partir del PNG ya usado en el visor de rayos",
+  "imagen_proyectada_en": "EPSG:3857",
+  "bounds_en": "EPSG:4326",
+  "provincia": "Valencia",
+  "png_generado": {
+    "width": 871,
+    "height": 1144
   },
-  "crs": "EPSG:4326",
-  "image_size": {
-    "width": 1009,
-    "height": 1024
-  },
-  "nota": "NDMI aportado por el usuario. Se le asignan los límites del SHP de provincia de Valencia.",
-  "tipo": "ndmi_png_aportado"
+  "nota": "Sustituir los archivos de datos/ndmi en el visor de rayos."
 }

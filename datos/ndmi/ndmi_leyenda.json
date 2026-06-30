@@ -1,0 +1,14 @@
+{
+  "titulo": "NDMI provincia de Valencia",
+  "tratamiento": "PNG reproyectado a EPSG:3857 para mejor ajuste en Leaflet",
+  "interpretacion": [
+    {
+      "texto": "Tonos cálidos",
+      "significado": "menor humedad / más seco"
+    },
+    {
+      "texto": "Tonos fríos o azulados",
+      "significado": "mayor humedad / más húmedo"
+    }
+  ]
+}
