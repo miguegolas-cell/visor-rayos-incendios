@@ -1,21 +1,29 @@
 {
   "bounds": [
     [
-      38.686184269769115,
-      -1.52891558510685
+      38.68709222314668,
+      -1.5298681640625
     ],
     [
-      40.211682668764254,
-      -0.024702923896453576
+      40.213234261908966,
+      -0.02407815246589187
     ]
   ],
-  "origen": "NDMI provincia de Valencia corregido para Leaflet a partir del PNG ya usado en el visor de rayos",
+  "origen": "NDMI provincia de Valencia generado desde TIFF original",
   "imagen_proyectada_en": "EPSG:3857",
   "bounds_en": "EPSG:4326",
   "provincia": "Valencia",
+  "limite_usado": "VALENCIA.shp",
+  "raster_original": "2026-06-23-00_00_2026-06-23-23_59_Sentinel-2_L2A_Moisture_index.tiff",
   "png_generado": {
-    "width": 871,
-    "height": 1144
+    "width": 467,
+    "height": 613
   },
-  "nota": "Sustituir los archivos de datos/ndmi en el visor de rayos."
+  "bbox_limite_valencia": {
+    "lon_min": -1.52891558510685,
+    "lat_min": 38.68655366688531,
+    "lon_max": -0.02479523737455949,
+    "lat_max": 40.21168266876426
+  },
+  "nota": "Generado desde el TIFF original y reproyectado a Web Mercator para ajuste correcto en Leaflet."
 }
