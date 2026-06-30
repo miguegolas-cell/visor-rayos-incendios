@@ -1,0 +1,58 @@
+{
+  "titulo": "Pendiente media del terreno (%)",
+  "descripcion": "Visualización gráfica de los pendientes del terreno en el territorio valenciano según rangos de normativa sobre ordenación territorial e infraestructura verde.",
+  "clases": [
+    {
+      "valor": 1,
+      "rango": "<= 25 %",
+      "nombre": "Pendiente <= 25 %",
+      "color": "transparent",
+      "color_rgba": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible": false
+    },
+    {
+      "valor": 2,
+      "rango": "> 25 % y <= 30 %",
+      "nombre": "Pendiente >25-30 %",
+      "color": "#ffff00",
+      "color_rgba": [
+        255,
+        255,
+        0,
+        210
+      ],
+      "visible": true
+    },
+    {
+      "valor": 3,
+      "rango": "> 30 % y <= 50 %",
+      "nombre": "Pendiente >30-50 %",
+      "color": "#ff8500",
+      "color_rgba": [
+        255,
+        133,
+        0,
+        215
+      ],
+      "visible": true
+    },
+    {
+      "valor": 4,
+      "rango": "> 50 %",
+      "nombre": "Pendiente >50 %",
+      "color": "#910000",
+      "color_rgba": [
+        145,
+        0,
+        0,
+        225
+      ],
+      "visible": true
+    }
+  ]
+}

@@ -9,24 +9,17 @@
       -0.02479523737455949
     ]
   ],
-  "leaflet": "L.imageOverlay(url, bounds)",
   "bbox": {
     "lon_min": -1.52891558510685,
     "lat_min": 38.68655366688531,
     "lon_max": -0.02479523737455949,
     "lat_max": 40.21168266876426
   },
-  "crs": "EPSG:4326",
   "image_size": {
-    "width": 1500,
-    "height": 1521
+    "width": 1600,
+    "height": 1622
   },
-  "nota": "Imagen recortada a la provincia de Valencia a partir del SHP aportado.",
-  "tipo": "pendiente_raster_coloreado",
-  "valores_detectados": [
-    2,
-    3,
-    4
-  ],
-  "transparencia": "Fuera de la provincia y nodata quedan transparentes."
+  "crs_leaflet": "EPSG:4326",
+  "fuente_original": "0701_2018_CVAL0500_slope_colour.tif",
+  "nota": "Raster de pendiente reproyectado a EPSG:4326 y recortado al límite de la provincia de Valencia."
 }
