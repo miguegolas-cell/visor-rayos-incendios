@@ -1,243 +1,225 @@
 html,
 body {
-  width: 100%;
   margin: 0;
   padding: 0;
-  background: #f6f9fc;
+  width: 100%;
+  min-height: 100%;
+  background: #f3f6fa;
   font-family: Arial, Helvetica, sans-serif;
-  color: #263238;
+  color: #24313d;
 }
 
-/* ===============================
-   CONTENEDOR GENERAL
-   =============================== */
+* {
+  box-sizing: border-box;
+}
 
 .page {
   width: 100%;
-  max-width: none;
-  margin: 0;
+  min-height: 100vh;
   background: #ffffff;
-  border-radius: 0;
-  overflow: hidden;
-  box-shadow: none;
 }
-
-/* ===============================
-   CABECERA
-   =============================== */
 
 .header {
   padding: 18px 26px;
-  color: white;
-  background: linear-gradient(135deg, #0b2f4f, #174d6d);
-  border-radius: 0;
+  color: #ffffff;
+  background: linear-gradient(135deg, #092f4f 0%, #0b5f83 60%, #0d7d8d 100%);
+  border-bottom: 4px solid #f2b705;
 }
 
-.title {
-  font-size: 26px;
+.header h1 {
+  margin: 0 0 6px 0;
+  font-size: 28px;
+  line-height: 1.15;
   font-weight: 800;
-  letter-spacing: 0.3px;
 }
 
-.subtitle {
-  margin-top: 6px;
+.header p {
+  margin: 0;
   font-size: 15px;
-  opacity: 0.92;
+  opacity: 0.95;
 }
-
-/* ===============================
-   BARRA SUPERIOR
-   =============================== */
 
 .toolbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
-  flex-wrap: wrap;
-  padding: 12px 18px;
-  background: #f4f8fb;
-  border-bottom: 1px solid #d9e4ec;
-  max-width: none;
+  padding: 10px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #d8e1ea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  z-index: 20;
+  position: relative;
 }
 
-.toolbar-title {
-  font-weight: 700;
-  color: #17384d;
-}
-
-.buttons {
+.toolbar-left,
+.toolbar-right {
   display: flex;
+  align-items: center;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.time-btn {
-  border: 1px solid #b5c7d5;
-  background: white;
-  color: #17384d;
-  border-radius: 999px;
-  padding: 8px 14px;
+.toolbar-title {
   font-weight: 700;
-  cursor: pointer;
+  color: #203040;
 }
 
-.time-btn:hover {
-  background: #e7f1f8;
+#estadoDatos {
+  font-size: 13px;
+  color: #526170;
 }
 
-.time-btn.active {
-  background: #0b4f75;
-  color: white;
-  border-color: #0b4f75;
+.map-wrap {
+  width: 100%;
+  height: calc(100vh - 165px);
+  min-height: 540px;
 }
-
-.info-rayos {
-  margin-left: auto;
-  font-size: 14px;
-  color: #425867;
-}
-
-/* ===============================
-   MAPA
-   =============================== */
 
 #map {
   width: 100%;
-  height: calc(100vh - 215px);
-  min-height: 650px;
-  border-radius: 0;
+  height: 100%;
 }
-
-/* ===============================
-   PIE
-   =============================== */
 
 .footer {
-  padding: 12px 18px;
-  background: #f4f8fb;
-  border-top: 1px solid #d9e4ec;
-  font-size: 13px;
-  color: #415767;
-  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 16px;
+  font-size: 12px;
+  color: #435160;
+  background: #ffffff;
+  border-top: 1px solid #d8e1ea;
 }
 
-/* ===============================
-   LEYENDAS Y CONTROLES LEAFLET
-   =============================== */
+.leaflet-control-layers {
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18) !important;
+}
+
+.leaflet-popup-content {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.popup-title {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #102a3a;
+}
+
+.popup-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.popup-table td {
+  padding: 2px 4px;
+  vertical-align: top;
+}
+
+.popup-table td:first-child {
+  font-weight: 700;
+  color: #334;
+  white-space: nowrap;
+}
 
 .legend {
   background: rgba(255, 255, 255, 0.96);
   padding: 10px 12px;
-  border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.22);
-  font-size: 13px;
-  line-height: 1.4;
-  color: #222;
-  z-index: 1000;
-}
-
-.main-legend {
-  max-width: 300px;
-  max-height: 430px;
-  overflow-y: auto;
-}
-
-.opacity-box {
-  max-width: 190px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+  font-size: 12px;
+  color: #1f2d3a;
+  max-width: 310px;
 }
 
 .legend-title {
   font-weight: 800;
-  margin-bottom: 6px;
-  color: #17384d;
+  margin-bottom: 7px;
+  font-size: 13px;
+  color: #102a3a;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
   gap: 7px;
-  margin: 3px 0;
+  margin: 4px 0;
 }
 
-.legend-dot {
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  display: inline-block;
-  border: 1px solid rgba(0,0,0,0.45);
-  flex-shrink: 0;
-}
-
-.legend-square {
-  width: 14px;
-  height: 14px;
+.legend-color {
+  width: 16px;
+  height: 12px;
   border-radius: 3px;
-  display: inline-block;
-  border: 1px solid rgba(0,0,0,0.45);
-  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  flex: 0 0 auto;
 }
 
-.legend details {
-  margin-top: 4px;
+.opacity-control {
+  background: rgba(255, 255, 255, 0.96);
+  padding: 10px 12px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+  font-size: 12px;
+  min-width: 220px;
 }
 
-.legend details summary {
-  list-style-position: outside;
-  cursor: pointer;
+.opacity-control label {
+  display: block;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #102a3a;
 }
 
-.legend hr {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 8px 0;
+.opacity-row {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
 }
 
-/* Evita que los controles de Leaflet queden demasiado pegados */
-.leaflet-top.leaflet-right {
-  margin-top: 8px;
+.opacity-row span {
+  font-size: 12px;
+  color: #2f3f4e;
 }
 
-.leaflet-bottom.leaflet-left {
-  margin-bottom: 8px;
+.opacity-row input[type="range"] {
+  width: 100%;
 }
 
-.leaflet-control-layers {
-  border-radius: 10px;
-}
-
-/* ===============================
-   RESPONSIVE
-   =============================== */
-
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .header {
-    padding: 16px 18px;
+    padding: 14px 16px;
   }
 
-  .title {
-    font-size: 22px;
+  .header h1 {
+    font-size: 21px;
+  }
+
+  .header p {
+    font-size: 13px;
   }
 
   .toolbar {
     align-items: flex-start;
+    flex-direction: column;
   }
 
-  .info-rayos {
-    margin-left: 0;
-    width: 100%;
+  .map-wrap {
+    height: calc(100vh - 215px);
+    min-height: 480px;
   }
 
-  #map {
-    height: calc(100vh - 260px);
-    min-height: 520px;
+  .footer {
+    flex-direction: column;
   }
 
-  .main-legend {
-    max-width: 250px;
-    max-height: 340px;
-  }
-
-  .legend {
-    font-size: 12px;
+  .legend,
+  .opacity-control {
+    max-width: 240px;
   }
 }
