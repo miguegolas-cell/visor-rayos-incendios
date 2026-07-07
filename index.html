@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MetVlc · Rayos e incendios</title>
+  <title>MetVlc · Últimos rayos</title>
 
-  <!-- Leaflet CSS -->
+  <!-- Leaflet -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -14,50 +14,55 @@
   />
 
   <!-- Estilos propios -->
-  <link rel="stylesheet" href="css/style.css?v=20260701-1" />
+  <link rel="stylesheet" href="css/style.css?v=20260707-1" />
 </head>
 
 <body>
   <div class="page">
 
     <header class="header">
-      <div class="title">MetVlc · Visor de rayos e incendios</div>
-      <div class="subtitle">
-        Rayos SIGIF/GVA · Modelo de combustible · Pendiente · NDMI
+      <div class="header-text">
+        <h1>MetVlc · Visor de últimos rayos</h1>
+        <p>
+          Rayos registrados · Comunitat Valenciana · Combustible · Pendiente · NDMI · Satélite y relieve Esri
+        </p>
       </div>
     </header>
 
     <section class="toolbar">
-      <div class="toolbar-title">Periodo de rayos</div>
-
-      <div class="buttons">
-        <button class="time-btn active" data-hours="24">Últimas 24 h</button>
-        <button class="time-btn" data-hours="48">Últimas 48 h</button>
-        <button class="time-btn" data-hours="72">Últimas 72 h</button>
+      <div class="toolbar-left">
+        <span class="toolbar-title">Capas operativas:</span>
+        <span>Rayos · Combustible · Pendiente · NDMI</span>
       </div>
 
-      <div id="infoRayos" class="info-rayos">
-        Cargando rayos...
+      <div class="toolbar-right">
+        <span id="estadoDatos">Inicializando visor...</span>
       </div>
     </section>
 
-    <div id="map"></div>
+    <main class="map-wrap">
+      <div id="map"></div>
+    </main>
 
-    <section class="footer">
-      <strong>Fuente rayos:</strong> SIGIF/GVA ·
-      <strong>Visualización:</strong> MetVlc ·
-      Datos orientativos para seguimiento meteorológico, rayos latentes y análisis territorial.
-    </section>
+    <footer class="footer">
+      <div>
+        <strong>Ámbito:</strong> Comunitat Valenciana ·
+        <strong>Visor:</strong> MetVlc
+      </div>
+      <div>
+        Los rayos se muestran como información operativa orientativa. Comprueba siempre la fuente oficial.
+      </div>
+    </footer>
 
   </div>
 
-  <!-- Leaflet JS -->
+  <!-- Leaflet -->
   <script
     src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     crossorigin="">
   </script>
 
-  <!-- Visor propio -->
-  <script src="js/visor.js?v=20260701-1"></script>
+  <!-- Script propio -->
+  <script src="js/visor.js?v=20260707-1"></script>
 </body>
 </html>
