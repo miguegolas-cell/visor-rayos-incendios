@@ -11,14 +11,16 @@
 // ===============================
 
 // Rayos.
-// El script intenta cargar por orden estas rutas para ser compatible
-// con diferentes nombres de archivo usados en el visor.
+// El script Python genera estos archivos:
+// datos/rayos/rayos_24h.geojson
+// datos/rayos/rayos_48h.geojson
+// datos/rayos/rayos_72h.geojson
+// datos/rayos/rayos_historico.geojson
 const RAYOS_CANDIDATOS = [
-  "datos/rayos/rayos.geojson",
-  "datos/rayos/ultimos_rayos.geojson",
-  "datos/rayos/rayos_ultimos.geojson",
-  "datos/rayos/rayos_sigif.geojson",
-  "datos/rayos/ultimos_rayos.json"
+  "datos/rayos/rayos_24h.geojson",
+  "datos/rayos/rayos_48h.geojson",
+  "datos/rayos/rayos_72h.geojson",
+  "datos/rayos/rayos_historico.geojson"
 ];
 
 const LIMITE_CV = "datos/limites/comunitat_valenciana.geojson";
@@ -164,6 +166,8 @@ let combustibleLayer = null;
 let pendienteLayer = null;
 let ndmiLayer = null;
 
+let rayosOverlayRegistrado = false;
+
 
 // ===============================
 // UTILIDADES
@@ -176,7 +180,9 @@ function urlNoCache(url) {
 
 function setEstado(texto) {
   const el = document.getElementById("estadoDatos");
-  if (el) el.textContent = texto;
+  if (el) {
+    el.textContent = texto;
+  }
 }
 
 async function fetchJson(url) {
@@ -219,11 +225,15 @@ function getProp(props, keys, fallback = "") {
 }
 
 function normalizarFecha(valor) {
-  if (!valor) return null;
+  if (!valor) {
+    return null;
+  }
 
   const d = new Date(valor);
 
-  if (Number.isNaN(d.getTime())) return null;
+  if (Number.isNaN(d.getTime())) {
+    return null;
+  }
 
   return d;
 }
@@ -231,7 +241,9 @@ function normalizarFecha(valor) {
 function formatoFecha(valor) {
   const fecha = normalizarFecha(valor);
 
-  if (!fecha) return "Sin fecha";
+  if (!fecha) {
+    return "Sin fecha";
+  }
 
   return fecha.toLocaleString("es-ES", {
     timeZone: "Europe/Madrid",
@@ -243,20 +255,29 @@ function formatoFecha(valor) {
   });
 }
 
-function colorRayoPorAntiguedad(props) {
-  const fecha = getProp(props, [
+function obtenerFechaRayo(props) {
+  return getProp(props, [
+    "metvlc_time_utc",
     "fecha",
     "datetime",
     "time",
     "timestamp",
     "fecha_hora",
+    "fechahora",
+    "date",
+    "hora",
     "FECHA",
     "HORA"
   ], null);
+}
 
+function colorRayoPorAntiguedad(props) {
+  const fecha = obtenerFechaRayo(props);
   const d = normalizarFecha(fecha);
 
-  if (!d) return "#7b2cbf";
+  if (!d) {
+    return "#7b2cbf";
+  }
 
   const horas = (Date.now() - d.getTime()) / 3600000;
 
@@ -272,15 +293,7 @@ function colorRayoPorAntiguedad(props) {
 function popupRayo(feature) {
   const p = feature.properties || {};
 
-  const fecha = getProp(p, [
-    "fecha",
-    "datetime",
-    "time",
-    "timestamp",
-    "fecha_hora",
-    "FECHA",
-    "HORA"
-  ], "—");
+  const fecha = obtenerFechaRayo(p);
 
   const intensidad = getProp(p, [
     "intensidad",
@@ -298,21 +311,43 @@ function popupRayo(feature) {
   ], "—");
 
   const fuente = getProp(p, [
+    "metvlc_fuente",
     "fuente",
     "source",
     "origen",
     "ORIGEN"
   ], "—");
 
-  return `
+  const timeSource = getProp(p, [
+    "metvlc_time_source"
+  ], "");
+
+  const captura = getProp(p, [
+    "metvlc_captura_utc"
+  ], "");
+
+  let html = `
     <div class="popup-title">Rayo detectado</div>
     <table class="popup-table">
       <tr><td>Fecha</td><td>${formatoFecha(fecha)}</td></tr>
       <tr><td>Intensidad</td><td>${intensidad}</td></tr>
       <tr><td>Polaridad</td><td>${polaridad}</td></tr>
       <tr><td>Fuente</td><td>${fuente}</td></tr>
+  `;
+
+  if (timeSource) {
+    html += `<tr><td>Origen hora</td><td>${timeSource}</td></tr>`;
+  }
+
+  if (captura) {
+    html += `<tr><td>Captura</td><td>${formatoFecha(captura)}</td></tr>`;
+  }
+
+  html += `
     </table>
   `;
+
+  return html;
 }
 
 
@@ -354,9 +389,28 @@ async function cargarRayos() {
     layer.addTo(rayosLayer);
 
     const total = geojson.features ? geojson.features.length : 0;
-    setEstado(`${total} rayos cargados`);
 
-    layerControl.addOverlay(rayosLayer, "Últimos rayos");
+    let periodo = "rayos";
+    if (result.url.includes("24h")) periodo = "rayos 24 h";
+    if (result.url.includes("48h")) periodo = "rayos 48 h";
+    if (result.url.includes("72h")) periodo = "rayos 72 h";
+
+    setEstado(`${total} ${periodo} cargados`);
+
+    if (!rayosOverlayRegistrado) {
+      layerControl.addOverlay(rayosLayer, "Últimos rayos");
+      rayosOverlayRegistrado = true;
+    }
+
+    try {
+      const bounds = layer.getBounds();
+
+      if (bounds.isValid()) {
+        map.fitBounds(bounds.pad(0.10));
+      }
+    } catch (e) {
+      console.warn("No se pudo ajustar el mapa a los rayos", e);
+    }
 
   } catch (error) {
     console.error(error);
@@ -550,19 +604,25 @@ function activarControlesOpacidad() {
 
   if (opPendiente) {
     opPendiente.addEventListener("input", e => {
-      if (pendienteLayer) pendienteLayer.setOpacity(Number(e.target.value));
+      if (pendienteLayer) {
+        pendienteLayer.setOpacity(Number(e.target.value));
+      }
     });
   }
 
   if (opNdmi) {
     opNdmi.addEventListener("input", e => {
-      if (ndmiLayer) ndmiLayer.setOpacity(Number(e.target.value));
+      if (ndmiLayer) {
+        ndmiLayer.setOpacity(Number(e.target.value));
+      }
     });
   }
 
   if (opCombustible) {
     opCombustible.addEventListener("input", e => {
-      if (combustibleLayer) combustibleLayer.setOpacity(Number(e.target.value));
+      if (combustibleLayer) {
+        combustibleLayer.setOpacity(Number(e.target.value));
+      }
     });
   }
 }
