@@ -4,789 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "16/07/2026 18:31:05",
-        "COORD": "-1,1147,38,7822",
-        "DATE": "2026-07-16",
-        "TIME": "18:31",
-        "MXI": "-7,84 kA.",
-        "STR": "0",
-        "SMA": "0,232 Km.",
-        "SMI": "0,16699994 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T16:31:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-16T17:11:54+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1147,
-          38.7822
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:22:44",
-        "COORD": "-0,8428,39,2269",
-        "DATE": "2026-07-16",
-        "TIME": "19:22",
-        "MXI": "-6,47 kA.",
-        "STR": "0",
-        "SMA": "0,701 Km.",
-        "SMI": "0,24799998 Km.",
-        "CHI": "0,1",
-        "metvlc_time_utc": "2026-07-16T17:22:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8428,
-          39.2269
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:29:56",
-        "COORD": "-1,0887,38,7538",
-        "DATE": "2026-07-16",
-        "TIME": "19:29",
-        "MXI": "-13,04 kA.",
-        "STR": "0",
-        "SMA": "0,183 Km.",
-        "SMI": "0,12299999 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T17:29:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.0887,
-          38.7538
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:31:18",
-        "COORD": "-0,7932,39,2322",
-        "DATE": "2026-07-16",
-        "TIME": "19:31",
-        "MXI": "-11,68 kA.",
-        "STR": "0",
-        "SMA": "0,189 Km.",
-        "SMI": "0,12100004 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T17:31:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7932,
-          39.2322
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:31:19",
-        "COORD": "-0,7937,39,2322",
-        "DATE": "2026-07-16",
-        "TIME": "19:31",
-        "MXI": "-8,05 kA.",
-        "STR": "0",
-        "SMA": "0,287 Km.",
-        "SMI": "0,18700004 Km.",
-        "CHI": "0,6",
-        "metvlc_time_utc": "2026-07-16T17:31:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7937,
-          39.2322
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:31:19",
-        "COORD": "-0,7929,39,232",
-        "DATE": "2026-07-16",
-        "TIME": "19:31",
-        "MXI": "-20,99 kA.",
-        "STR": "0",
-        "SMA": "0,171 Km.",
-        "SMI": "0,125 Km.",
-        "CHI": "0,6",
-        "metvlc_time_utc": "2026-07-16T17:31:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7929,
-          39.232
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:31:19",
-        "COORD": "-0,793,39,2321",
-        "DATE": "2026-07-16",
-        "TIME": "19:31",
-        "MXI": "-7,04 kA.",
-        "STR": "0",
-        "SMA": "0,234 Km.",
-        "SMI": "0,17699999 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T17:31:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.793,
-          39.2321
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:31:19",
-        "COORD": "-0,7929,39,2325",
-        "DATE": "2026-07-16",
-        "TIME": "19:31",
-        "MXI": "-9,18 kA.",
-        "STR": "0",
-        "SMA": "0,352 Km.",
-        "SMI": "0,17399995 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T17:31:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7929,
-          39.2325
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:32:51",
-        "COORD": "-0,7383,39,2882",
-        "DATE": "2026-07-16",
-        "TIME": "19:32",
-        "MXI": "-8,89 kA.",
-        "STR": "0",
-        "SMA": "0,191 Km.",
-        "SMI": "0,13699996 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T17:32:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7383,
-          39.2882
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:33:49",
-        "COORD": "-0,7659,39,2496",
-        "DATE": "2026-07-16",
-        "TIME": "19:33",
-        "MXI": "-5,91 kA.",
-        "STR": "0",
-        "SMA": "0,856 Km.",
-        "SMI": "0,23200001 Km.",
-        "CHI": "0,5",
-        "metvlc_time_utc": "2026-07-16T17:33:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7659,
-          39.2496
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:33:49",
-        "COORD": "-0,7688,39,2427",
-        "DATE": "2026-07-16",
-        "TIME": "19:33",
-        "MXI": "-12,12 kA.",
-        "STR": "0",
-        "SMA": "0,182 Km.",
-        "SMI": "0,12600005 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T17:33:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7688,
-          39.2427
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:33:49",
-        "COORD": "-0,7813,39,2522",
-        "DATE": "2026-07-16",
-        "TIME": "19:33",
-        "MXI": "-25,89 kA.",
-        "STR": "0",
-        "SMA": "0,17 Km.",
-        "SMI": "0,12399998 Km.",
-        "CHI": "1",
-        "metvlc_time_utc": "2026-07-16T17:33:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7813,
-          39.2522
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:33:49",
-        "COORD": "-0,7814,39,2519",
-        "DATE": "2026-07-16",
-        "TIME": "19:33",
-        "MXI": "-13,42 kA.",
-        "STR": "0",
-        "SMA": "0,173 Km.",
-        "SMI": "0,13000003 Km.",
-        "CHI": "0,3",
-        "metvlc_time_utc": "2026-07-16T17:33:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7814,
-          39.2519
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:33:49",
-        "COORD": "-0,7818,39,2525",
-        "DATE": "2026-07-16",
-        "TIME": "19:33",
-        "MXI": "-14,46 kA.",
-        "STR": "0",
-        "SMA": "0,173 Km.",
-        "SMI": "0,13000003 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T17:33:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7818,
-          39.2525
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:33:49",
-        "COORD": "-0,781,39,2522",
-        "DATE": "2026-07-16",
-        "TIME": "19:33",
-        "MXI": "-11,06 kA.",
-        "STR": "0",
-        "SMA": "0,23 Km.",
-        "SMI": "0,13300003 Km.",
-        "CHI": "0,1",
-        "metvlc_time_utc": "2026-07-16T17:33:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.781,
-          39.2522
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:33:49",
-        "COORD": "-0,7815,39,2522",
-        "DATE": "2026-07-16",
-        "TIME": "19:33",
-        "MXI": "-8,89 kA.",
-        "STR": "0",
-        "SMA": "0,238 Km.",
-        "SMI": "0,155 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T17:33:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7815,
-          39.2522
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:34:52",
-        "COORD": "-0,7497,39,2619",
-        "DATE": "2026-07-16",
-        "TIME": "19:34",
-        "MXI": "-10,63 kA.",
-        "STR": "0",
-        "SMA": "0,178 Km.",
-        "SMI": "0,128 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T17:34:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7497,
-          39.2619
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:34:57",
-        "COORD": "-0,7385,39,2362",
-        "DATE": "2026-07-16",
-        "TIME": "19:34",
-        "MXI": "-11,02 kA.",
-        "STR": "0",
-        "SMA": "0,208 Km.",
-        "SMI": "0,12599997 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T17:34:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7385,
-          39.2362
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:35:06",
-        "COORD": "-0,7584,39,2556",
-        "DATE": "2026-07-16",
-        "TIME": "19:35",
-        "MXI": "-15,32 kA.",
-        "STR": "0",
-        "SMA": "0,175 Km.",
-        "SMI": "0,125 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T17:35:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7584,
-          39.2556
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:39:41",
-        "COORD": "-0,6752,39,3258",
-        "DATE": "2026-07-16",
-        "TIME": "19:39",
-        "MXI": "-11,84 kA.",
-        "STR": "0",
-        "SMA": "0,189 Km.",
-        "SMI": "0,126 Km.",
-        "CHI": "0,3",
-        "metvlc_time_utc": "2026-07-16T17:39:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.6752,
-          39.3258
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:39:41",
-        "COORD": "-0,6828,39,3288",
-        "DATE": "2026-07-16",
-        "TIME": "19:39",
-        "MXI": "-11,42 kA.",
-        "STR": "0",
-        "SMA": "0,188 Km.",
-        "SMI": "0,13099995 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T17:39:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.6828,
-          39.3288
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:40:00",
-        "COORD": "-0,6919,39,3366",
-        "DATE": "2026-07-16",
-        "TIME": "19:40",
-        "MXI": "-22,16 kA.",
-        "STR": "0",
-        "SMA": "0,195 Km.",
-        "SMI": "0,14300004 Km.",
-        "CHI": "0,9",
-        "metvlc_time_utc": "2026-07-16T17:40:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.6919,
-          39.3366
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:47:11",
-        "COORD": "-0,7092,39,1624",
-        "DATE": "2026-07-16",
-        "TIME": "19:47",
-        "MXI": "-14,59 kA.",
-        "STR": "0",
-        "SMA": "0,199 Km.",
-        "SMI": "0,12700002 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T17:47:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7092,
-          39.1624
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 19:47:11",
-        "COORD": "-0,709,39,162",
-        "DATE": "2026-07-16",
-        "TIME": "19:47",
-        "MXI": "-10,84 kA.",
-        "STR": "0",
-        "SMA": "0,238 Km.",
-        "SMI": "0,14699997 Km.",
-        "CHI": "0,5",
-        "metvlc_time_utc": "2026-07-16T17:47:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.709,
-          39.162
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 20:12:06",
-        "COORD": "-0,9272,38,8914",
-        "DATE": "2026-07-16",
-        "TIME": "20:12",
-        "MXI": "-4,95 kA.",
-        "STR": "0",
-        "SMA": "0,267 Km.",
-        "SMI": "0,17700006 Km.",
-        "CHI": "0,5",
-        "metvlc_time_utc": "2026-07-16T18:12:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9272,
-          38.8914
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 20:27:56",
-        "COORD": "-1,1452,39,5946",
-        "DATE": "2026-07-16",
-        "TIME": "20:27",
-        "MXI": "-6,21 kA.",
-        "STR": "0",
-        "SMA": "1,028 Km.",
-        "SMI": "0,30100003 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T18:27:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1452,
-          39.5946
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 20:29:36",
-        "COORD": "-1,1541,39,3924",
-        "DATE": "2026-07-16",
-        "TIME": "20:29",
-        "MXI": "-5,53 kA.",
-        "STR": "0",
-        "SMA": "0,391 Km.",
-        "SMI": "0,21600004 Km.",
-        "CHI": "0,2",
-        "metvlc_time_utc": "2026-07-16T18:29:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1541,
-          39.3924
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 20:32:58",
-        "COORD": "-1,1871,39,5353",
-        "DATE": "2026-07-16",
-        "TIME": "20:32",
-        "MXI": "-6,73 kA.",
-        "STR": "0",
-        "SMA": "0,472 Km.",
-        "SMI": "0,21799996 Km.",
-        "CHI": "0,4",
-        "metvlc_time_utc": "2026-07-16T18:32:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1871,
-          39.5353
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "16/07/2026 21:15:30",
-        "COORD": "-0,9577,39,4157",
-        "DATE": "2026-07-16",
-        "TIME": "21:15",
-        "MXI": "-7,03 kA.",
-        "STR": "0",
-        "SMA": "0,181 Km.",
-        "SMI": "0,16600007 Km.",
-        "CHI": "0,3",
-        "metvlc_time_utc": "2026-07-16T19:15:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_last_seen_utc": "2026-07-17T08:48:23+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9577,
-          39.4157
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "17/07/2026 19:31:22",
         "COORD": "-1,2576,38,6688",
         "DATE": "2026-07-17",
@@ -943,6 +160,3705 @@
         "coordinates": [
           -0.869,
           38.7773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:11:03",
+        "COORD": "-1,4204,38,9442",
+        "DATE": "2026-07-18",
+        "TIME": "19:11",
+        "MXI": "-29,32 kA.",
+        "STR": "0",
+        "SMA": "0,177 Km.",
+        "SMI": "0,12199998 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-18T17:11:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4204,
+          38.9442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:16:52",
+        "COORD": "-1,4021,39,0079",
+        "DATE": "2026-07-18",
+        "TIME": "19:16",
+        "MXI": "-29,98 kA.",
+        "STR": "0",
+        "SMA": "0,174 Km.",
+        "SMI": "0,116 Km.",
+        "CHI": "1,1",
+        "metvlc_time_utc": "2026-07-18T17:16:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4021,
+          39.0079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:19:46",
+        "COORD": "-1,3752,38,9973",
+        "DATE": "2026-07-18",
+        "TIME": "19:19",
+        "MXI": "-41,18 kA.",
+        "STR": "0",
+        "SMA": "0,177 Km.",
+        "SMI": "0,12 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-18T17:19:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3752,
+          38.9973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:19:46",
+        "COORD": "-1,3729,38,9989",
+        "DATE": "2026-07-18",
+        "TIME": "19:19",
+        "MXI": "-6,72 kA.",
+        "STR": "0",
+        "SMA": "0,285 Km.",
+        "SMI": "0,20600003 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-18T17:19:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3729,
+          38.9989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:20:40",
+        "COORD": "-1,3886,39,0115",
+        "DATE": "2026-07-18",
+        "TIME": "19:20",
+        "MXI": "-32,42 kA.",
+        "STR": "0",
+        "SMA": "0,172 Km.",
+        "SMI": "0,11800001 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-18T17:20:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3886,
+          39.0115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:20:40",
+        "COORD": "-1,3807,38,996",
+        "DATE": "2026-07-18",
+        "TIME": "19:20",
+        "MXI": "-22,96 kA.",
+        "STR": "0",
+        "SMA": "0,164 Km.",
+        "SMI": "0,114000045 Km.",
+        "CHI": "0,9",
+        "metvlc_time_utc": "2026-07-18T17:20:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3807,
+          38.996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:21:27",
+        "COORD": "-1,3549,39,0015",
+        "DATE": "2026-07-18",
+        "TIME": "19:21",
+        "MXI": "-38,41 kA.",
+        "STR": "0",
+        "SMA": "0,179 Km.",
+        "SMI": "0,12400004 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-18T17:21:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3549,
+          39.0015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:21:27",
+        "COORD": "-1,3551,39,0015",
+        "DATE": "2026-07-18",
+        "TIME": "19:21",
+        "MXI": "-16,55 kA.",
+        "STR": "0",
+        "SMA": "0,175 Km.",
+        "SMI": "0,11900002 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-18T17:21:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3551,
+          39.0015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:21:27",
+        "COORD": "-1,3738,38,9634",
+        "DATE": "2026-07-18",
+        "TIME": "19:21",
+        "MXI": "-27,52 kA.",
+        "STR": "0",
+        "SMA": "0,189 Km.",
+        "SMI": "0,12699999 Km.",
+        "CHI": "1,3",
+        "metvlc_time_utc": "2026-07-18T17:21:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3738,
+          38.9634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:21:27",
+        "COORD": "-1,3539,39,0044",
+        "DATE": "2026-07-18",
+        "TIME": "19:21",
+        "MXI": "-6,18 kA.",
+        "STR": "0",
+        "SMA": "0,311 Km.",
+        "SMI": "0,22299998 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-18T17:21:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3539,
+          39.0044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:22:17",
+        "COORD": "-1,3553,39,0386",
+        "DATE": "2026-07-18",
+        "TIME": "19:22",
+        "MXI": "-22,69 kA.",
+        "STR": "0",
+        "SMA": "0,174 Km.",
+        "SMI": "0,118000016 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-18T17:22:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3553,
+          39.0386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:22:17",
+        "COORD": "-1,3554,39,0378",
+        "DATE": "2026-07-18",
+        "TIME": "19:22",
+        "MXI": "-9,49 kA.",
+        "STR": "0",
+        "SMA": "0,179 Km.",
+        "SMI": "0,15499996 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-18T17:22:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3554,
+          39.0378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:22:17",
+        "COORD": "-1,3808,39,0297",
+        "DATE": "2026-07-18",
+        "TIME": "19:22",
+        "MXI": "-11,59 kA.",
+        "STR": "0",
+        "SMA": "0,291 Km.",
+        "SMI": "0,17800006 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-18T17:22:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3808,
+          39.0297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:24:00",
+        "COORD": "-1,3636,39,0062",
+        "DATE": "2026-07-18",
+        "TIME": "19:24",
+        "MXI": "-28,5 kA.",
+        "STR": "0",
+        "SMA": "0,182 Km.",
+        "SMI": "0,12299997 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-18T17:24:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3636,
+          39.0062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:24:00",
+        "COORD": "-1,34,38,9786",
+        "DATE": "2026-07-18",
+        "TIME": "19:24",
+        "MXI": "-21,64 kA.",
+        "STR": "0",
+        "SMA": "0,174 Km.",
+        "SMI": "0,116 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-18T17:24:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.34,
+          38.9786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:29:30",
+        "COORD": "-1,3054,39,0265",
+        "DATE": "2026-07-18",
+        "TIME": "19:29",
+        "MXI": "-42,47 kA.",
+        "STR": "0",
+        "SMA": "0,185 Km.",
+        "SMI": "0,134 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-18T17:29:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3054,
+          39.0265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18/07/2026 19:29:30",
+        "COORD": "-1,3097,39,0565",
+        "DATE": "2026-07-18",
+        "TIME": "19:29",
+        "MXI": "-12,28 kA.",
+        "STR": "0",
+        "SMA": "0,184 Km.",
+        "SMI": "0,13699996 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-18T17:29:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3097,
+          39.0565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:50:22",
+        "COORD": "-1,4185,38,9715",
+        "DATE": "2026-07-19",
+        "TIME": "16:50",
+        "MXI": "-20,04 kA.",
+        "STR": "0",
+        "SMA": "0,183 Km.",
+        "SMI": "0,124000035 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-19T14:50:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4185,
+          38.9715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:54:01",
+        "COORD": "-1,3537,38,9868",
+        "DATE": "2026-07-19",
+        "TIME": "16:54",
+        "MXI": "-11,97 kA.",
+        "STR": "0",
+        "SMA": "0,165 Km.",
+        "SMI": "0,12899998 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T14:54:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3537,
+          38.9868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:54:37",
+        "COORD": "-1,3626,38,9624",
+        "DATE": "2026-07-19",
+        "TIME": "16:54",
+        "MXI": "-8,42 kA.",
+        "STR": "0",
+        "SMA": "0,207 Km.",
+        "SMI": "0,15399998 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T14:54:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3626,
+          38.9624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:56:22",
+        "COORD": "-1,3366,38,9627",
+        "DATE": "2026-07-19",
+        "TIME": "16:56",
+        "MXI": "-16,75 kA.",
+        "STR": "0",
+        "SMA": "0,18 Km.",
+        "SMI": "0,124 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-19T14:56:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3366,
+          38.9627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:58:51",
+        "COORD": "-1,3271,38,9819",
+        "DATE": "2026-07-19",
+        "TIME": "16:58",
+        "MXI": "-21,3 kA.",
+        "STR": "0",
+        "SMA": "0,173 Km.",
+        "SMI": "0,117000036 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T14:58:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3271,
+          38.9819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:59:10",
+        "COORD": "-1,3296,38,9759",
+        "DATE": "2026-07-19",
+        "TIME": "16:59",
+        "MXI": "-15,87 kA.",
+        "STR": "0",
+        "SMA": "0,17 Km.",
+        "SMI": "0,109000005 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T14:59:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3296,
+          38.9759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:59:10",
+        "COORD": "-1,3252,38,9751",
+        "DATE": "2026-07-19",
+        "TIME": "16:59",
+        "MXI": "-23,12 kA.",
+        "STR": "0",
+        "SMA": "0,18 Km.",
+        "SMI": "0,13099998 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-19T14:59:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3252,
+          38.9751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:59:10",
+        "COORD": "-1,3254,38,9753",
+        "DATE": "2026-07-19",
+        "TIME": "16:59",
+        "MXI": "-16,41 kA.",
+        "STR": "0",
+        "SMA": "0,177 Km.",
+        "SMI": "0,124000035 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T14:59:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3254,
+          38.9753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:59:10",
+        "COORD": "-1,326,38,9744",
+        "DATE": "2026-07-19",
+        "TIME": "16:59",
+        "MXI": "-23,65 kA.",
+        "STR": "0",
+        "SMA": "0,181 Km.",
+        "SMI": "0,12099998 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T14:59:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.326,
+          38.9744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 16:59:11",
+        "COORD": "-1,3258,38,975",
+        "DATE": "2026-07-19",
+        "TIME": "16:59",
+        "MXI": "-17,8 kA.",
+        "STR": "0",
+        "SMA": "0,177 Km.",
+        "SMI": "0,12199998 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T14:59:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3258,
+          38.975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:04:59",
+        "COORD": "-1,4038,38,9184",
+        "DATE": "2026-07-19",
+        "TIME": "17:04",
+        "MXI": "-3,62 kA.",
+        "STR": "0",
+        "SMA": "0,309 Km.",
+        "SMI": "0,22300002 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-19T15:04:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4038,
+          38.9184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:07:10",
+        "COORD": "-1,3957,38,9141",
+        "DATE": "2026-07-19",
+        "TIME": "17:07",
+        "MXI": "-3,77 kA.",
+        "STR": "0",
+        "SMA": "0,306 Km.",
+        "SMI": "0,22300003 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:07:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3957,
+          38.9141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:08:31",
+        "COORD": "-1,4083,38,9149",
+        "DATE": "2026-07-19",
+        "TIME": "17:08",
+        "MXI": "-5,45 kA.",
+        "STR": "0",
+        "SMA": "0,302 Km.",
+        "SMI": "0,223 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-19T15:08:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.4083,
+          38.9149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:10:28",
+        "COORD": "-1,3845,38,9476",
+        "DATE": "2026-07-19",
+        "TIME": "17:10",
+        "MXI": "-5,09 kA.",
+        "STR": "0",
+        "SMA": "0,306 Km.",
+        "SMI": "0,22300003 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:10:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3845,
+          38.9476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:10:28",
+        "COORD": "-1,2866,38,9895",
+        "DATE": "2026-07-19",
+        "TIME": "17:10",
+        "MXI": "-2,9 kA.",
+        "STR": "0",
+        "SMA": "0,302 Km.",
+        "SMI": "0,22500002 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T15:10:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2866,
+          38.9895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:12:51",
+        "COORD": "-1,3788,38,9434",
+        "DATE": "2026-07-19",
+        "TIME": "17:12",
+        "MXI": "-15,72 kA.",
+        "STR": "0",
+        "SMA": "0,193 Km.",
+        "SMI": "0,14100005 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:12:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3788,
+          38.9434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:13:38",
+        "COORD": "-1,2474,38,889",
+        "DATE": "2026-07-19",
+        "TIME": "17:13",
+        "MXI": "19 kA.",
+        "STR": "0",
+        "SMA": "0,179 Km.",
+        "SMI": "0,13199997 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:13:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2474,
+          38.889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:15:37",
+        "COORD": "-1,3128,38,9373",
+        "DATE": "2026-07-19",
+        "TIME": "17:15",
+        "MXI": "-12,06 kA.",
+        "STR": "0",
+        "SMA": "0,174 Km.",
+        "SMI": "0,14300002 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-19T15:15:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3128,
+          38.9373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:16:49",
+        "COORD": "-1,2367,39,0105",
+        "DATE": "2026-07-19",
+        "TIME": "17:16",
+        "MXI": "-7,13 kA.",
+        "STR": "0",
+        "SMA": "0,31 Km.",
+        "SMI": "0,20200007 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:16:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2367,
+          39.0105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:17:37",
+        "COORD": "-1,3584,38,9704",
+        "DATE": "2026-07-19",
+        "TIME": "17:17",
+        "MXI": "-4,92 kA.",
+        "STR": "0",
+        "SMA": "0,255 Km.",
+        "SMI": "0,2080001 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:17:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3584,
+          38.9704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:19:26",
+        "COORD": "-1,1614,38,9933",
+        "DATE": "2026-07-19",
+        "TIME": "17:19",
+        "MXI": "-7,87 kA.",
+        "STR": "0",
+        "SMA": "1,913 Km.",
+        "SMI": "0,37 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:19:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1614,
+          38.9933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:19:42",
+        "COORD": "-1,2836,38,9124",
+        "DATE": "2026-07-19",
+        "TIME": "17:19",
+        "MXI": "-3,72 kA.",
+        "STR": "0",
+        "SMA": "6,787 Km.",
+        "SMI": "0,233 Km.",
+        "CHI": "0,1",
+        "metvlc_time_utc": "2026-07-19T15:19:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2836,
+          38.9124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:22:39",
+        "COORD": "-1,2568,38,9784",
+        "DATE": "2026-07-19",
+        "TIME": "17:22",
+        "MXI": "-6,46 kA.",
+        "STR": "0",
+        "SMA": "0,277 Km.",
+        "SMI": "0,20999993 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:22:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2568,
+          38.9784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:29:08",
+        "COORD": "-1,2256,38,9766",
+        "DATE": "2026-07-19",
+        "TIME": "17:29",
+        "MXI": "-6,12 kA.",
+        "STR": "0",
+        "SMA": "0,277 Km.",
+        "SMI": "0,17999999 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T15:29:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2256,
+          38.9766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:31:01",
+        "COORD": "-1,1898,38,9966",
+        "DATE": "2026-07-19",
+        "TIME": "17:31",
+        "MXI": "-20,1 kA.",
+        "STR": "0",
+        "SMA": "0,174 Km.",
+        "SMI": "0,12600003 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T15:31:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1898,
+          38.9966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:33:47",
+        "COORD": "-1,0434,39,0558",
+        "DATE": "2026-07-19",
+        "TIME": "17:33",
+        "MXI": "-6,96 kA.",
+        "STR": "0",
+        "SMA": "0,292 Km.",
+        "SMI": "0,18600005 Km.",
+        "CHI": "1,4",
+        "metvlc_time_utc": "2026-07-19T15:33:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0434,
+          39.0558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:34:41",
+        "COORD": "-1,0303,39,0907",
+        "DATE": "2026-07-19",
+        "TIME": "17:34",
+        "MXI": "27,3 kA.",
+        "STR": "0",
+        "SMA": "0,18 Km.",
+        "SMI": "0,121999994 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:34:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0303,
+          39.0907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:34:49",
+        "COORD": "-1,0342,39,0691",
+        "DATE": "2026-07-19",
+        "TIME": "17:34",
+        "MXI": "-3,53 kA.",
+        "STR": "0",
+        "SMA": "0,3 Km.",
+        "SMI": "0,23100005 Km.",
+        "CHI": "1,7",
+        "metvlc_time_utc": "2026-07-19T15:34:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0342,
+          39.0691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:35:24",
+        "COORD": "-0,9249,39,1133",
+        "DATE": "2026-07-19",
+        "TIME": "17:35",
+        "MXI": "-9,28 kA.",
+        "STR": "0",
+        "SMA": "5,718 Km.",
+        "SMI": "0,689 Km.",
+        "CHI": "1,1",
+        "metvlc_time_utc": "2026-07-19T15:35:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9249,
+          39.1133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:36:06",
+        "COORD": "-1,0094,39,1829",
+        "DATE": "2026-07-19",
+        "TIME": "17:36",
+        "MXI": "-5,74 kA.",
+        "STR": "0",
+        "SMA": "0,231 Km.",
+        "SMI": "0,165 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T15:36:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0094,
+          39.1829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:36:10",
+        "COORD": "-1,0825,38,9755",
+        "DATE": "2026-07-19",
+        "TIME": "17:36",
+        "MXI": "-4,16 kA.",
+        "STR": "0",
+        "SMA": "0,288 Km.",
+        "SMI": "0,236 Km.",
+        "CHI": "1,3",
+        "metvlc_time_utc": "2026-07-19T15:36:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0825,
+          38.9755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:39:09",
+        "COORD": "-1,2208,39,0711",
+        "DATE": "2026-07-19",
+        "TIME": "17:39",
+        "MXI": "-3,36 kA.",
+        "STR": "0",
+        "SMA": "5,64 Km.",
+        "SMI": "0,289 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T15:39:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2208,
+          39.0711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:39:59",
+        "COORD": "-0,9071,39,0818",
+        "DATE": "2026-07-19",
+        "TIME": "17:39",
+        "MXI": "56,59 kA.",
+        "STR": "0",
+        "SMA": "0,191 Km.",
+        "SMI": "0,13100003 Km.",
+        "CHI": "1,6",
+        "metvlc_time_utc": "2026-07-19T15:39:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9071,
+          39.0818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:40:34",
+        "COORD": "-0,9358,39,1862",
+        "DATE": "2026-07-19",
+        "TIME": "17:40",
+        "MXI": "-8,21 kA.",
+        "STR": "0",
+        "SMA": "0,374 Km.",
+        "SMI": "0,19499998 Km.",
+        "CHI": "0,9",
+        "metvlc_time_utc": "2026-07-19T15:40:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9358,
+          39.1862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:41:03",
+        "COORD": "-0,8685,39,0739",
+        "DATE": "2026-07-19",
+        "TIME": "17:41",
+        "MXI": "-23,45 kA.",
+        "STR": "0",
+        "SMA": "0,206 Km.",
+        "SMI": "0,15200002 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T15:41:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8685,
+          39.0739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:41:03",
+        "COORD": "-0,8597,39,1055",
+        "DATE": "2026-07-19",
+        "TIME": "17:41",
+        "MXI": "29,97 kA.",
+        "STR": "0",
+        "SMA": "0,184 Km.",
+        "SMI": "0,139 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:41:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8597,
+          39.1055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:43:39",
+        "COORD": "-0,9226,39,075",
+        "DATE": "2026-07-19",
+        "TIME": "17:43",
+        "MXI": "142,74 kA.",
+        "STR": "0",
+        "SMA": "0,238 Km.",
+        "SMI": "0,14699997 Km.",
+        "CHI": "1,5",
+        "metvlc_time_utc": "2026-07-19T15:43:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9226,
+          39.075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:43:56",
+        "COORD": "-0,8522,38,9893",
+        "DATE": "2026-07-19",
+        "TIME": "17:43",
+        "MXI": "-12,33 kA.",
+        "STR": "0",
+        "SMA": "0,656 Km.",
+        "SMI": "0,20700002 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T15:43:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8522,
+          38.9893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:44:17",
+        "COORD": "-0,9912,39,0923",
+        "DATE": "2026-07-19",
+        "TIME": "17:44",
+        "MXI": "33,51 kA.",
+        "STR": "0",
+        "SMA": "0,177 Km.",
+        "SMI": "0,12699999 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T15:44:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9912,
+          39.0923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:44:58",
+        "COORD": "-0,8999,39,1536",
+        "DATE": "2026-07-19",
+        "TIME": "17:44",
+        "MXI": "46,97 kA.",
+        "STR": "0",
+        "SMA": "0,171 Km.",
+        "SMI": "0,12999997 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T15:44:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8999,
+          39.1536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:45:25",
+        "COORD": "-0,9634,39,0783",
+        "DATE": "2026-07-19",
+        "TIME": "17:45",
+        "MXI": "-4,42 kA.",
+        "STR": "0",
+        "SMA": "0,298 Km.",
+        "SMI": "0,233 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:45:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9634,
+          39.0783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:45:30",
+        "COORD": "-0,7801,39,1135",
+        "DATE": "2026-07-19",
+        "TIME": "17:45",
+        "MXI": "73,47 kA.",
+        "STR": "0",
+        "SMA": "0,188 Km.",
+        "SMI": "0,134 Km.",
+        "CHI": "1,3",
+        "metvlc_time_utc": "2026-07-19T15:45:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7801,
+          39.1135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:46:36",
+        "COORD": "-0,9467,39,1122",
+        "DATE": "2026-07-19",
+        "TIME": "17:46",
+        "MXI": "74,16 kA.",
+        "STR": "0",
+        "SMA": "0,174 Km.",
+        "SMI": "0,123999976 Km.",
+        "CHI": "1,5",
+        "metvlc_time_utc": "2026-07-19T15:46:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9467,
+          39.1122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:47:34",
+        "COORD": "-0,7593,39,1111",
+        "DATE": "2026-07-19",
+        "TIME": "17:47",
+        "MXI": "46,99 kA.",
+        "STR": "0",
+        "SMA": "0,2 Km.",
+        "SMI": "0,13800004 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-19T15:47:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7593,
+          39.1111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:47:34",
+        "COORD": "-0,7765,39,0855",
+        "DATE": "2026-07-19",
+        "TIME": "17:47",
+        "MXI": "63,58 kA.",
+        "STR": "0",
+        "SMA": "0,179 Km.",
+        "SMI": "0,13700004 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T15:47:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7765,
+          39.0855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:00",
+        "COORD": "-0,975,39,0375",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "-10,25 kA.",
+        "STR": "0",
+        "SMA": "0,224 Km.",
+        "SMI": "0,15200002 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.975,
+          39.0375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:18",
+        "COORD": "-0,9265,39,1012",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "68,58 kA.",
+        "STR": "0",
+        "SMA": "0,194 Km.",
+        "SMI": "0,12900001 Km.",
+        "CHI": "1,7",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9265,
+          39.1012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:18",
+        "COORD": "-0,9246,39,0951",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "62,56 kA.",
+        "STR": "0",
+        "SMA": "0,176 Km.",
+        "SMI": "0,14199996 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9246,
+          39.0951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:28",
+        "COORD": "-0,8613,39,1213",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "-6,03 kA.",
+        "STR": "0",
+        "SMA": "0,268 Km.",
+        "SMI": "0,188 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8613,
+          39.1213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:31",
+        "COORD": "-1,0197,38,9961",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "-5,44 kA.",
+        "STR": "0",
+        "SMA": "9,741 Km.",
+        "SMI": "0,285 Km.",
+        "CHI": "0",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0197,
+          38.9961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:44",
+        "COORD": "-0,7202,39,0166",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "-8,73 kA.",
+        "STR": "0",
+        "SMA": "0,705 Km.",
+        "SMI": "0,22400002 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7202,
+          39.0166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:44",
+        "COORD": "-0,7865,39,0378",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "16,94 kA.",
+        "STR": "0",
+        "SMA": "0,275 Km.",
+        "SMI": "0,18499994 Km.",
+        "CHI": "1,1",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7865,
+          39.0378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:48:48",
+        "COORD": "-0,9368,39,1419",
+        "DATE": "2026-07-19",
+        "TIME": "17:48",
+        "MXI": "-4,18 kA.",
+        "STR": "0",
+        "SMA": "0,378 Km.",
+        "SMI": "0,21500006 Km.",
+        "CHI": "0,1",
+        "metvlc_time_utc": "2026-07-19T15:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9368,
+          39.1419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:49:05",
+        "COORD": "-0,8561,39,0836",
+        "DATE": "2026-07-19",
+        "TIME": "17:49",
+        "MXI": "-5,51 kA.",
+        "STR": "0",
+        "SMA": "0,421 Km.",
+        "SMI": "0,21200001 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:49:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8561,
+          39.0836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:49:18",
+        "COORD": "-0,9219,39,1173",
+        "DATE": "2026-07-19",
+        "TIME": "17:49",
+        "MXI": "25,92 kA.",
+        "STR": "0",
+        "SMA": "0,181 Km.",
+        "SMI": "0,14499998 Km.",
+        "CHI": "1,1",
+        "metvlc_time_utc": "2026-07-19T15:49:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9219,
+          39.1173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:49:41",
+        "COORD": "-0,919,39,1185",
+        "DATE": "2026-07-19",
+        "TIME": "17:49",
+        "MXI": "66,2 kA.",
+        "STR": "0",
+        "SMA": "0,178 Km.",
+        "SMI": "0,12600003 Km.",
+        "CHI": "1,3",
+        "metvlc_time_utc": "2026-07-19T15:49:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.919,
+          39.1185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:50:08",
+        "COORD": "-0,9125,39,1188",
+        "DATE": "2026-07-19",
+        "TIME": "17:50",
+        "MXI": "70,29 kA.",
+        "STR": "0",
+        "SMA": "0,169 Km.",
+        "SMI": "0,119 Km.",
+        "CHI": "1,3",
+        "metvlc_time_utc": "2026-07-19T15:50:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9125,
+          39.1188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:50:46",
+        "COORD": "-0,9034,39,1257",
+        "DATE": "2026-07-19",
+        "TIME": "17:50",
+        "MXI": "49,02 kA.",
+        "STR": "0",
+        "SMA": "0,171 Km.",
+        "SMI": "0,12899995 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-19T15:50:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9034,
+          39.1257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:51:12",
+        "COORD": "-0,8821,39,1124",
+        "DATE": "2026-07-19",
+        "TIME": "17:51",
+        "MXI": "115,57 kA.",
+        "STR": "0",
+        "SMA": "0,193 Km.",
+        "SMI": "0,13700001 Km.",
+        "CHI": "1,5",
+        "metvlc_time_utc": "2026-07-19T15:51:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8821,
+          39.1124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:51:29",
+        "COORD": "-1,2851,38,784",
+        "DATE": "2026-07-19",
+        "TIME": "17:51",
+        "MXI": "-32,93 kA.",
+        "STR": "0",
+        "SMA": "0,179 Km.",
+        "SMI": "0,12400004 Km.",
+        "CHI": "0,9",
+        "metvlc_time_utc": "2026-07-19T15:51:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2851,
+          38.784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:51:29",
+        "COORD": "-1,2856,38,7839",
+        "DATE": "2026-07-19",
+        "TIME": "17:51",
+        "MXI": "-17,66 kA.",
+        "STR": "0",
+        "SMA": "0,18 Km.",
+        "SMI": "0,14500004 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T15:51:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2856,
+          38.7839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:51:29",
+        "COORD": "-1,2855,38,7848",
+        "DATE": "2026-07-19",
+        "TIME": "17:51",
+        "MXI": "-6,21 kA.",
+        "STR": "0",
+        "SMA": "0,277 Km.",
+        "SMI": "0,23500009 Km.",
+        "CHI": "1,1",
+        "metvlc_time_utc": "2026-07-19T15:51:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2855,
+          38.7848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:53:17",
+        "COORD": "-0,851,39,1084",
+        "DATE": "2026-07-19",
+        "TIME": "17:53",
+        "MXI": "77,19 kA.",
+        "STR": "0",
+        "SMA": "0,19 Km.",
+        "SMI": "0,13700004 Km.",
+        "CHI": "1,6",
+        "metvlc_time_utc": "2026-07-19T15:53:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.851,
+          39.1084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:53:26",
+        "COORD": "-1,323,38,7954",
+        "DATE": "2026-07-19",
+        "TIME": "17:53",
+        "MXI": "-21,94 kA.",
+        "STR": "0",
+        "SMA": "0,197 Km.",
+        "SMI": "0,141 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T15:53:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.323,
+          38.7954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:53:43",
+        "COORD": "-0,7766,39,0583",
+        "DATE": "2026-07-19",
+        "TIME": "17:53",
+        "MXI": "-12,9 kA.",
+        "STR": "0",
+        "SMA": "0,191 Km.",
+        "SMI": "0,13999997 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T15:53:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7766,
+          39.0583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:54:35",
+        "COORD": "-1,3183,38,8276",
+        "DATE": "2026-07-19",
+        "TIME": "17:54",
+        "MXI": "-8,74 kA.",
+        "STR": "0",
+        "SMA": "0,192 Km.",
+        "SMI": "0,15600003 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T15:54:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3183,
+          38.8276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:54:41",
+        "COORD": "-0,8283,39,1212",
+        "DATE": "2026-07-19",
+        "TIME": "17:54",
+        "MXI": "71,13 kA.",
+        "STR": "0",
+        "SMA": "0,193 Km.",
+        "SMI": "0,13599996 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T15:54:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8283,
+          39.1212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:54:47",
+        "COORD": "-1,2962,38,7887",
+        "DATE": "2026-07-19",
+        "TIME": "17:54",
+        "MXI": "-25,31 kA.",
+        "STR": "0",
+        "SMA": "0,183 Km.",
+        "SMI": "0,124000035 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T15:54:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2962,
+          38.7887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:55:05",
+        "COORD": "-1,3086,38,8089",
+        "DATE": "2026-07-19",
+        "TIME": "17:55",
+        "MXI": "-22,66 kA.",
+        "STR": "0",
+        "SMA": "0,184 Km.",
+        "SMI": "0,125 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T15:55:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3086,
+          38.8089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:55:05",
+        "COORD": "-1,3258,38,8138",
+        "DATE": "2026-07-19",
+        "TIME": "17:55",
+        "MXI": "-18,48 kA.",
+        "STR": "0",
+        "SMA": "0,173 Km.",
+        "SMI": "0,11900004 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T15:55:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3258,
+          38.8138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:55:05",
+        "COORD": "-1,294,38,7986",
+        "DATE": "2026-07-19",
+        "TIME": "17:55",
+        "MXI": "-9,86 kA.",
+        "STR": "0",
+        "SMA": "0,765 Km.",
+        "SMI": "0,21300001 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T15:55:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.294,
+          38.7986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:55:05",
+        "COORD": "-1,3259,38,8139",
+        "DATE": "2026-07-19",
+        "TIME": "17:55",
+        "MXI": "-14,28 kA.",
+        "STR": "0",
+        "SMA": "0,168 Km.",
+        "SMI": "0,11899997 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T15:55:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3259,
+          38.8139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:55:05",
+        "COORD": "-1,3256,38,8137",
+        "DATE": "2026-07-19",
+        "TIME": "17:55",
+        "MXI": "-16,6 kA.",
+        "STR": "0",
+        "SMA": "0,173 Km.",
+        "SMI": "0,11900004 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T15:55:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3256,
+          38.8137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:55:05",
+        "COORD": "-1,3261,38,8139",
+        "DATE": "2026-07-19",
+        "TIME": "17:55",
+        "MXI": "-4,55 kA.",
+        "STR": "0",
+        "SMA": "0,288 Km.",
+        "SMI": "0,23200004 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-19T15:55:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.3261,
+          38.8139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:55:34",
+        "COORD": "-0,7701,39,0431",
+        "DATE": "2026-07-19",
+        "TIME": "17:55",
+        "MXI": "-6,33 kA.",
+        "STR": "0",
+        "SMA": "0,65 Km.",
+        "SMI": "0,19299997 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T15:55:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7701,
+          39.0431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:56:02",
+        "COORD": "-1,2868,38,7918",
+        "DATE": "2026-07-19",
+        "TIME": "17:56",
+        "MXI": "-14,58 kA.",
+        "STR": "0",
+        "SMA": "0,181 Km.",
+        "SMI": "0,12599999 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T15:56:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2868,
+          38.7918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:56:02",
+        "COORD": "-1,2792,38,7827",
+        "DATE": "2026-07-19",
+        "TIME": "17:56",
+        "MXI": "-14,08 kA.",
+        "STR": "0",
+        "SMA": "0,181 Km.",
+        "SMI": "0,13300003 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:56:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2792,
+          38.7827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:56:16",
+        "COORD": "-0,6166,39,1282",
+        "DATE": "2026-07-19",
+        "TIME": "17:56",
+        "MXI": "-11,57 kA.",
+        "STR": "0",
+        "SMA": "0,198 Km.",
+        "SMI": "0,13799997 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T15:56:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6166,
+          39.1282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:56:28",
+        "COORD": "-0,7551,39,1426",
+        "DATE": "2026-07-19",
+        "TIME": "17:56",
+        "MXI": "43,23 kA.",
+        "STR": "0",
+        "SMA": "0,187 Km.",
+        "SMI": "0,13800006 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-19T15:56:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7551,
+          39.1426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:57:26",
+        "COORD": "-0,8936,39,1836",
+        "DATE": "2026-07-19",
+        "TIME": "17:57",
+        "MXI": "-6,79 kA.",
+        "STR": "0",
+        "SMA": "0,337 Km.",
+        "SMI": "0,22299996 Km.",
+        "CHI": "1,4",
+        "metvlc_time_utc": "2026-07-19T15:57:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8936,
+          39.1836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:57:52",
+        "COORD": "-0,8746,39,1115",
+        "DATE": "2026-07-19",
+        "TIME": "17:57",
+        "MXI": "-18,59 kA.",
+        "STR": "0",
+        "SMA": "0,178 Km.",
+        "SMI": "0,14300002 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:57:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8746,
+          39.1115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:58:23",
+        "COORD": "-1,2381,38,8377",
+        "DATE": "2026-07-19",
+        "TIME": "17:58",
+        "MXI": "16,25 kA.",
+        "STR": "0",
+        "SMA": "0,191 Km.",
+        "SMI": "0,14600003 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T15:58:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2381,
+          38.8377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 17:59:40",
+        "COORD": "-0,6176,39,1187",
+        "DATE": "2026-07-19",
+        "TIME": "17:59",
+        "MXI": "-12,3 kA.",
+        "STR": "0",
+        "SMA": "0,237 Km.",
+        "SMI": "0,12600003 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T15:59:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6176,
+          39.1187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:00:20",
+        "COORD": "-1,269,38,8404",
+        "DATE": "2026-07-19",
+        "TIME": "18:00",
+        "MXI": "-10,43 kA.",
+        "STR": "0",
+        "SMA": "0,175 Km.",
+        "SMI": "0,138 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:00:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.269,
+          38.8404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:01:07",
+        "COORD": "-1,2167,38,844",
+        "DATE": "2026-07-19",
+        "TIME": "18:01",
+        "MXI": "-37,57 kA.",
+        "STR": "0",
+        "SMA": "0,186 Km.",
+        "SMI": "0,124000005 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T16:01:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2167,
+          38.844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:01:08",
+        "COORD": "-1,2027,38,8336",
+        "DATE": "2026-07-19",
+        "TIME": "18:01",
+        "MXI": "-17,11 kA.",
+        "STR": "0",
+        "SMA": "0,183 Km.",
+        "SMI": "0,13600002 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T16:01:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2027,
+          38.8336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:01:08",
+        "COORD": "-1,173,38,8614",
+        "DATE": "2026-07-19",
+        "TIME": "18:01",
+        "MXI": "-5,44 kA.",
+        "STR": "0",
+        "SMA": "7,81 Km.",
+        "SMI": "0,263 Km.",
+        "CHI": "0",
+        "metvlc_time_utc": "2026-07-19T16:01:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.173,
+          38.8614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:01:08",
+        "COORD": "-0,734,39,0784",
+        "DATE": "2026-07-19",
+        "TIME": "18:01",
+        "MXI": "-7,08 kA.",
+        "STR": "0",
+        "SMA": "0,291 Km.",
+        "SMI": "0,18699998 Km.",
+        "CHI": "0,8",
+        "metvlc_time_utc": "2026-07-19T16:01:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.734,
+          39.0784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:01:34",
+        "COORD": "-0,7707,39,1412",
+        "DATE": "2026-07-19",
+        "TIME": "18:01",
+        "MXI": "38,07 kA.",
+        "STR": "0",
+        "SMA": "0,184 Km.",
+        "SMI": "0,139 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T16:01:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7707,
+          39.1412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:02:18",
+        "COORD": "-1,2047,38,8357",
+        "DATE": "2026-07-19",
+        "TIME": "18:02",
+        "MXI": "-32,97 kA.",
+        "STR": "0",
+        "SMA": "0,178 Km.",
+        "SMI": "0,125 Km.",
+        "CHI": "1",
+        "metvlc_time_utc": "2026-07-19T16:02:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.2047,
+          38.8357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:02:49",
+        "COORD": "-1,1174,38,823",
+        "DATE": "2026-07-19",
+        "TIME": "18:02",
+        "MXI": "-26,68 kA.",
+        "STR": "0",
+        "SMA": "0,177 Km.",
+        "SMI": "0,131 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T16:02:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1174,
+          38.823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:02:49",
+        "COORD": "-1,1152,38,8407",
+        "DATE": "2026-07-19",
+        "TIME": "18:02",
+        "MXI": "-10,65 kA.",
+        "STR": "0",
+        "SMA": "0,179 Km.",
+        "SMI": "0,13899998 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:02:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1152,
+          38.8407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:02:50",
+        "COORD": "-1,1148,38,8407",
+        "DATE": "2026-07-19",
+        "TIME": "18:02",
+        "MXI": "-18,34 kA.",
+        "STR": "0",
+        "SMA": "0,183 Km.",
+        "SMI": "0,12899996 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T16:02:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1148,
+          38.8407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:04:07",
+        "COORD": "-0,5164,39,1959",
+        "DATE": "2026-07-19",
+        "TIME": "18:04",
+        "MXI": "-10,22 kA.",
+        "STR": "0",
+        "SMA": "0,289 Km.",
+        "SMI": "0,18100001 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T16:04:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5164,
+          39.1959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:05:48",
+        "COORD": "-1,1491,38,8602",
+        "DATE": "2026-07-19",
+        "TIME": "18:05",
+        "MXI": "-11,82 kA.",
+        "STR": "0",
+        "SMA": "0,188 Km.",
+        "SMI": "0,14399993 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T16:05:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1491,
+          38.8602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:05:48",
+        "COORD": "-1,1462,38,856",
+        "DATE": "2026-07-19",
+        "TIME": "18:05",
+        "MXI": "-10,46 kA.",
+        "STR": "0",
+        "SMA": "0,194 Km.",
+        "SMI": "0,132 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T16:05:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1462,
+          38.856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:07:49",
+        "COORD": "-0,5468,39,1924",
+        "DATE": "2026-07-19",
+        "TIME": "18:07",
+        "MXI": "16,6 kA.",
+        "STR": "0",
+        "SMA": "0,184 Km.",
+        "SMI": "0,13400003 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T16:07:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5468,
+          39.1924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:11:16",
+        "COORD": "-0,5885,39,2116",
+        "DATE": "2026-07-19",
+        "TIME": "18:11",
+        "MXI": "38,28 kA.",
+        "STR": "0",
+        "SMA": "0,232 Km.",
+        "SMI": "0,15699999 Km.",
+        "CHI": "1,3",
+        "metvlc_time_utc": "2026-07-19T16:11:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5885,
+          39.2116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:11:43",
+        "COORD": "-1,0039,38,8654",
+        "DATE": "2026-07-19",
+        "TIME": "18:11",
+        "MXI": "-15,97 kA.",
+        "STR": "0",
+        "SMA": "0,18 Km.",
+        "SMI": "0,13299996 Km.",
+        "CHI": "0,5",
+        "metvlc_time_utc": "2026-07-19T16:11:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0039,
+          38.8654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:11:43",
+        "COORD": "-1,0038,38,8648",
+        "DATE": "2026-07-19",
+        "TIME": "18:11",
+        "MXI": "-27,93 kA.",
+        "STR": "0",
+        "SMA": "0,176 Km.",
+        "SMI": "0,11600003 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T16:11:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0038,
+          38.8648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:11:43",
+        "COORD": "-1,0041,38,8652",
+        "DATE": "2026-07-19",
+        "TIME": "18:11",
+        "MXI": "-7,74 kA.",
+        "STR": "0",
+        "SMA": "0,287 Km.",
+        "SMI": "0,21400009 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T16:11:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0041,
+          38.8652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:16:05",
+        "COORD": "-0,4485,39,2616",
+        "DATE": "2026-07-19",
+        "TIME": "18:16",
+        "MXI": "-8,84 kA.",
+        "STR": "0",
+        "SMA": "0,197 Km.",
+        "SMI": "0,147 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-07-19T16:16:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4485,
+          39.2616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:23:07",
+        "COORD": "-0,8408,39,1125",
+        "DATE": "2026-07-19",
+        "TIME": "18:23",
+        "MXI": "-3,5 kA.",
+        "STR": "0",
+        "SMA": "0,299 Km.",
+        "SMI": "0,23299995 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T16:23:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8408,
+          39.1125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:38:26",
+        "COORD": "-0,7352,39,1439",
+        "DATE": "2026-07-19",
+        "TIME": "18:38",
+        "MXI": "-20,17 kA.",
+        "STR": "0",
+        "SMA": "0,18 Km.",
+        "SMI": "0,13699996 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:38:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7352,
+          39.1439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:38:26",
+        "COORD": "-0,7357,39,1389",
+        "DATE": "2026-07-19",
+        "TIME": "18:38",
+        "MXI": "-16,34 kA.",
+        "STR": "0",
+        "SMA": "0,262 Km.",
+        "SMI": "0,13499999 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:38:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7357,
+          39.1389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:41:21",
+        "COORD": "-0,737,39,162",
+        "DATE": "2026-07-19",
+        "TIME": "18:41",
+        "MXI": "85,84 kA.",
+        "STR": "0",
+        "SMA": "0,19 Km.",
+        "SMI": "0,13700004 Km.",
+        "CHI": "1,1",
+        "metvlc_time_utc": "2026-07-19T16:41:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.737,
+          39.162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:46:10",
+        "COORD": "-0,6149,39,2188",
+        "DATE": "2026-07-19",
+        "TIME": "18:46",
+        "MXI": "-11,19 kA.",
+        "STR": "0",
+        "SMA": "0,191 Km.",
+        "SMI": "0,13499999 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:46:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6149,
+          39.2188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:46:10",
+        "COORD": "-0,5716,39,2051",
+        "DATE": "2026-07-19",
+        "TIME": "18:46",
+        "MXI": "-14,21 kA.",
+        "STR": "0",
+        "SMA": "0,182 Km.",
+        "SMI": "0,13500002 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:46:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5716,
+          39.2051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:46:10",
+        "COORD": "-0,5718,39,2057",
+        "DATE": "2026-07-19",
+        "TIME": "18:46",
+        "MXI": "-10,27 kA.",
+        "STR": "0",
+        "SMA": "0,285 Km.",
+        "SMI": "0,16300002 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T16:46:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5718,
+          39.2057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:47:42",
+        "COORD": "-0,5781,39,2357",
+        "DATE": "2026-07-19",
+        "TIME": "18:47",
+        "MXI": "-16,96 kA.",
+        "STR": "0",
+        "SMA": "0,181 Km.",
+        "SMI": "0,13400002 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T16:47:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5781,
+          39.2357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:48:18",
+        "COORD": "-0,5838,39,243",
+        "DATE": "2026-07-19",
+        "TIME": "18:48",
+        "MXI": "-14,29 kA.",
+        "STR": "0",
+        "SMA": "0,182 Km.",
+        "SMI": "0,13500002 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T16:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5838,
+          39.243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:48:18",
+        "COORD": "-0,5842,39,2429",
+        "DATE": "2026-07-19",
+        "TIME": "18:48",
+        "MXI": "-18,15 kA.",
+        "STR": "0",
+        "SMA": "0,185 Km.",
+        "SMI": "0,13600002 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:48:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5842,
+          39.2429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:49:30",
+        "COORD": "-0,603,39,2315",
+        "DATE": "2026-07-19",
+        "TIME": "18:49",
+        "MXI": "-10,55 kA.",
+        "STR": "0",
+        "SMA": "0,183 Km.",
+        "SMI": "0,13999999 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T16:49:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.603,
+          39.2315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:50:16",
+        "COORD": "-0,5809,39,2476",
+        "DATE": "2026-07-19",
+        "TIME": "18:50",
+        "MXI": "-16,08 kA.",
+        "STR": "0",
+        "SMA": "0,189 Km.",
+        "SMI": "0,12900002 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:50:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5809,
+          39.2476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:50:16",
+        "COORD": "-0,6195,39,2166",
+        "DATE": "2026-07-19",
+        "TIME": "18:50",
+        "MXI": "-15,43 kA.",
+        "STR": "0",
+        "SMA": "0,192 Km.",
+        "SMI": "0,12900001 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-07-19T16:50:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6195,
+          39.2166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:54:14",
+        "COORD": "-1,1027,38,8183",
+        "DATE": "2026-07-19",
+        "TIME": "18:54",
+        "MXI": "-11,69 kA.",
+        "STR": "0",
+        "SMA": "0,188 Km.",
+        "SMI": "0,16 Km.",
+        "CHI": "0,7",
+        "metvlc_time_utc": "2026-07-19T16:54:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1027,
+          38.8183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:54:35",
+        "COORD": "-0,5321,39,2716",
+        "DATE": "2026-07-19",
+        "TIME": "18:54",
+        "MXI": "-8,6 kA.",
+        "STR": "0",
+        "SMA": "0,291 Km.",
+        "SMI": "0,19300002 Km.",
+        "CHI": "1,2",
+        "metvlc_time_utc": "2026-07-19T16:54:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5321,
+          39.2716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:58:44",
+        "COORD": "-0,4398,39,2861",
+        "DATE": "2026-07-19",
+        "TIME": "18:58",
+        "MXI": "-9,7 kA.",
+        "STR": "0",
+        "SMA": "0,201 Km.",
+        "SMI": "0,15299995 Km.",
+        "CHI": "0,3",
+        "metvlc_time_utc": "2026-07-19T16:58:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4398,
+          39.2861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:58:44",
+        "COORD": "-0,4394,39,2859",
+        "DATE": "2026-07-19",
+        "TIME": "18:58",
+        "MXI": "-29,09 kA.",
+        "STR": "0",
+        "SMA": "0,183 Km.",
+        "SMI": "0,13899997 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T16:58:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4394,
+          39.2859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/07/2026 18:58:44",
+        "COORD": "-0,4386,39,2765",
+        "DATE": "2026-07-19",
+        "TIME": "18:58",
+        "MXI": "-20,64 kA.",
+        "STR": "0",
+        "SMA": "0,183 Km.",
+        "SMI": "0,12899996 Km.",
+        "CHI": "0,4",
+        "metvlc_time_utc": "2026-07-19T16:58:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_last_seen_utc": "2026-07-19T17:11:46+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4386,
+          39.2765
         ]
       }
     }
