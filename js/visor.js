@@ -623,7 +623,6 @@ legendRayos.addTo(map);
 
 // ===============================
 // LEYENDAS DINÁMICAS DE CAPAS RÁSTER
-// Igual que en el visor de puntos calientes
 // Combustible · Pendiente · NDMI
 // ===============================
 
@@ -670,87 +669,197 @@ async function cargarLeyendasRasteres() {
   actualizarLeyendasCapasRaster();
 }
 
-function primerColorGrupo(grupo) {
-  if (!grupo) return "#999999";
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
 
-  if (grupo.color || grupo.colour || grupo.fill || grupo.hex || grupo.rgb) {
-    return grupo.color || grupo.colour || grupo.fill || grupo.hex || grupo.rgb;
+function rgbaArrayToCss(value) {
+  if (!Array.isArray(value) || value.length < 3) {
+    return null;
   }
 
-  if (Array.isArray(grupo.items) && grupo.items.length) {
-    const item = grupo.items.find(x => x.color || x.colour || x.fill || x.hex || x.rgb);
-    if (item) {
-      return item.color || item.colour || item.fill || item.hex || item.rgb;
+  const r = Number(value[0]);
+  const g = Number(value[1]);
+  const b = Number(value[2]);
+
+  if ([r, g, b].some(v => Number.isNaN(v))) {
+    return null;
+  }
+
+  if (value.length >= 4) {
+    const aRaw = Number(value[3]);
+
+    if (!Number.isNaN(aRaw)) {
+      const alpha = aRaw > 1 ? Math.max(0, Math.min(1, aRaw / 255)) : Math.max(0, Math.min(1, aRaw));
+      return `rgba(${r}, ${g}, ${b}, ${alpha.toFixed(2)})`;
     }
+  }
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function colorToCss(item) {
+  if (!item) {
+    return "#999999";
+  }
+
+  const directo =
+    item.color ||
+    item.colour ||
+    item.fill ||
+    item.hex ||
+    item.rgb ||
+    item.color_hex;
+
+  if (typeof directo === "string" && directo.trim()) {
+    return directo.trim();
+  }
+
+  const colorArray =
+    item.color_rgba ||
+    item.color_rgb ||
+    item.rgba ||
+    item.rgb_array ||
+    item.colorArray;
+
+  const cssColor = rgbaArrayToCss(colorArray);
+
+  if (cssColor) {
+    return cssColor;
   }
 
   return "#999999";
 }
 
 function textoItemLeyenda(item) {
+  if (!item) {
+    return "";
+  }
+
+  if (item.nombre) {
+    return item.nombre;
+  }
+
+  if (item.modelo && item.nombre_corto) {
+    return `${item.modelo} · ${item.nombre_corto}`;
+  }
+
   return (
-    item?.label ||
-    item?.nombre ||
-    item?.name ||
-    item?.clase ||
-    item?.valor ||
-    item?.descripcion ||
-    item?.texto ||
+    item.label ||
+    item.name ||
+    item.clase ||
+    item.valor ||
+    item.descripcion ||
+    item.texto ||
+    item.modelo ||
     ""
   );
 }
 
-function colorItemLeyenda(item) {
-  return (
-    item?.color ||
-    item?.colour ||
-    item?.fill ||
-    item?.hex ||
-    item?.rgb ||
-    "#999999"
-  );
-}
-
 function htmlItemLeyenda(label, color) {
+  const safeLabel = escapeHtml(label);
+  const safeColor = escapeHtml(color);
   const borde = color === "transparent" ? "border:1px dashed #666;" : "";
 
   return `
     <div class="legend-item">
-      <span class="legend-color" style="background:${color};${borde}"></span>
-      <span>${label}</span>
+      <span class="legend-color" style="background:${safeColor};${borde}"></span>
+      <span>${safeLabel}</span>
+    </div>
+  `;
+}
+
+function htmlItemCombustible(item) {
+  const color = colorToCss(item);
+  const nombre = textoItemLeyenda(item);
+  const descripcion = item?.descripcion || "";
+  const modelo = item?.modelo || item?.valor || "";
+
+  return `
+    <div class="fuel-item">
+      <span class="legend-color fuel-color" style="background:${escapeHtml(color)}"></span>
+      <span class="fuel-text">
+        <span class="fuel-name">${escapeHtml(nombre)}</span>
+        ${descripcion ? `<span class="fuel-description">${escapeHtml(descripcion)}</span>` : ""}
+        ${modelo ? `<span class="fuel-code">${escapeHtml(modelo)}</span>` : ""}
+      </span>
     </div>
   `;
 }
 
 function htmlLeyendaCombustible(data) {
-  let html = `<div class="raster-legend-section">`;
-  html += `<div class="legend-title">${data?.titulo || "Modelo de combustible"}</div>`;
+  let html = `<div class="raster-legend-section fuel-legend">`;
+  html += `<div class="legend-title">${escapeHtml(data?.titulo || "Modelo de combustible")}</div>`;
+
+  if (data?.criterio) {
+    html += `<div class="measure-small">${escapeHtml(data.criterio)}</div>`;
+  }
 
   if (data && Array.isArray(data.grupos) && data.grupos.length) {
     data.grupos.forEach(grupo => {
-      const nombreGrupo = grupo.nombre || grupo.label || grupo.name || "Grupo";
-      const colorGrupo = primerColorGrupo(grupo);
-      html += htmlItemLeyenda(nombreGrupo, colorGrupo);
-    });
-  } else if (data && Array.isArray(data.items)) {
-    data.items.forEach(item => {
-      html += htmlItemLeyenda(textoItemLeyenda(item), colorItemLeyenda(item));
+      const nombreGrupo =
+        grupo.grupo ||
+        grupo.nombre ||
+        grupo.label ||
+        grupo.name ||
+        "Grupo";
+
+      const items = Array.isArray(grupo.items) ? grupo.items : [];
+      const abierto = grupo.plegado_por_defecto ? "" : "open";
+
+      html += `
+        <details class="fuel-group" ${abierto}>
+          <summary>
+            <span>${escapeHtml(nombreGrupo)}</span>
+            <span class="fuel-count">${items.length}</span>
+          </summary>
+      `;
+
+      if (grupo.descripcion) {
+        html += `<div class="fuel-group-description">${escapeHtml(grupo.descripcion)}</div>`;
+      }
+
+      if (items.length) {
+        html += `<div class="fuel-model-list">`;
+        items.forEach(item => {
+          html += htmlItemCombustible(item);
+        });
+        html += `</div>`;
+      } else {
+        html += `<div class="measure-small">Sin modelos en este grupo.</div>`;
+      }
+
+      html += `</details>`;
     });
   } else {
-    html += `<div class="measure-small">Leyenda de combustible no disponible.</div>`;
+    const items =
+      (Array.isArray(data?.valores) && data.valores) ||
+      (Array.isArray(data?.items) && data.items) ||
+      (Array.isArray(data?.leyenda) && data.leyenda) ||
+      [];
+
+    if (items.length) {
+      html += `<div class="fuel-model-list">`;
+      items.forEach(item => {
+        html += htmlItemCombustible(item);
+      });
+      html += `</div>`;
+    } else {
+      html += `<div class="measure-small">Leyenda de combustible no disponible.</div>`;
+    }
   }
 
-  if (data && Array.isArray(data.clases_no_representadas) && data.clases_no_representadas.length) {
-    html += `
-      <details class="legend-details">
-        <summary>Clases no representadas</summary>
-        <div class="measure-small">${data.clases_no_representadas.join("<br>")}</div>
-      </details>
-    `;
+  if (data?.nota_codigos) {
+    html += `<div class="measure-small">${escapeHtml(data.nota_codigos)}</div>`;
   }
 
-  if (data && data.ambito) {
-    html += `<div class="measure-small">${data.ambito}</div>`;
+  if (data?.ambito) {
+    html += `<div class="measure-small">${escapeHtml(data.ambito)}</div>`;
   }
 
   html += `</div>`;
@@ -759,20 +868,20 @@ function htmlLeyendaCombustible(data) {
 
 function htmlLeyendaPendiente(data) {
   let html = `<div class="raster-legend-section">`;
-  html += `<div class="legend-title">${data?.titulo || "Pendiente"}</div>`;
+  html += `<div class="legend-title">${escapeHtml(data?.titulo || "Pendiente")}</div>`;
 
   const items = data?.clases || data?.items || data?.leyenda || [];
 
   if (Array.isArray(items) && items.length) {
     items.forEach(item => {
-      html += htmlItemLeyenda(textoItemLeyenda(item), colorItemLeyenda(item));
+      html += htmlItemLeyenda(textoItemLeyenda(item), colorToCss(item));
     });
   } else {
     html += `<div class="measure-small">Leyenda de pendiente no disponible.</div>`;
   }
 
-  if (data && data.ambito) {
-    html += `<div class="measure-small">${data.ambito}</div>`;
+  if (data?.ambito) {
+    html += `<div class="measure-small">${escapeHtml(data.ambito)}</div>`;
   }
 
   html += `</div>`;
@@ -781,7 +890,7 @@ function htmlLeyendaPendiente(data) {
 
 function htmlLeyendaNdmi(data) {
   let html = `<div class="raster-legend-section">`;
-  html += `<div class="legend-title">${data?.titulo || "NDMI"}</div>`;
+  html += `<div class="legend-title">${escapeHtml(data?.titulo || "NDMI")}</div>`;
 
   html += `
     <div class="ndmi-gradient"></div>
@@ -798,14 +907,14 @@ function htmlLeyendaNdmi(data) {
       html += `
         <div class="legend-item ndmi-text-item">
           <span class="legend-dot"></span>
-          <span><strong>${texto}</strong>: ${significado}</span>
+          <span><strong>${escapeHtml(texto)}</strong>: ${escapeHtml(significado)}</span>
         </div>
       `;
     });
   }
 
-  if (data && data.tratamiento) {
-    html += `<div class="measure-small">${data.tratamiento}</div>`;
+  if (data?.tratamiento) {
+    html += `<div class="measure-small">${escapeHtml(data.tratamiento)}</div>`;
   }
 
   html += `</div>`;
@@ -848,7 +957,6 @@ map.on("overlayadd", function () {
 map.on("overlayremove", function () {
   actualizarLeyendasCapasRaster();
 });
-
 
 
 // ===============================
