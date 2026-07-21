@@ -1,14 +1,53 @@
 {
   "titulo": "NDMI provincia de Valencia",
-  "tratamiento": "Generado desde TIFF original y reproyectado a EPSG:3857 para Leaflet",
-  "interpretacion": [
+  "tipo": "leyenda_ndmi_sentinel_hub",
+  "descripcion": "Escala tipo Sentinel Hub usada para el PNG del visor.",
+  "tratamiento": "PNG generado con sldStyle y ColorMap tipo ramp.",
+  "escala": [
     {
-      "texto": "Tonos cálidos",
-      "significado": "menor humedad / más seco"
+      "valor": -0.8,
+      "label": "Muy seco",
+      "color": "#800000"
     },
     {
-      "texto": "Tonos fríos o azulados",
-      "significado": "mayor humedad / más húmedo"
+      "valor": -0.24,
+      "label": "Seco",
+      "color": "#ff0000"
+    },
+    {
+      "valor": -0.032,
+      "label": "Transición seca",
+      "color": "#ffff00"
+    },
+    {
+      "valor": 0.032,
+      "label": "Humedad baja-media",
+      "color": "#00ffff"
+    },
+    {
+      "valor": 0.24,
+      "label": "Húmedo",
+      "color": "#0000ff"
+    },
+    {
+      "valor": 0.8,
+      "label": "Muy húmedo",
+      "color": "#000080"
     }
-  ]
+  ],
+  "interpretacion": [
+    {
+      "texto": "Rojo / granate",
+      "significado": "menor humedad del combustible y vegetación más seca"
+    },
+    {
+      "texto": "Amarillo",
+      "significado": "zona de transición"
+    },
+    {
+      "texto": "Cian / azul",
+      "significado": "mayor humedad"
+    }
+  ],
+  "nota": "La escala no reparte los colores de forma uniforme; usa cortes concretos similares a Sentinel Hub."
 }
