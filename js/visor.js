@@ -264,6 +264,93 @@ function formatoFecha(valor) {
   });
 }
 
+function formatoFechaActualizacion(valor) {
+  const fecha = normalizarFecha(valor);
+
+  if (!fecha) {
+    return "Sin datos";
+  }
+
+  return fecha.toLocaleString("es-ES", {
+    timeZone: "Europe/Madrid",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+function obtenerUltimaActualizacionGeojson(geojson) {
+  const candidatos = [];
+
+  if (geojson && geojson.properties) {
+    [
+      "actualizado_utc",
+      "updated_utc",
+      "metvlc_actualizado_utc",
+      "metvlc_captura_utc",
+      "metvlc_last_seen_utc"
+    ].forEach(key => {
+      if (geojson.properties[key]) {
+        candidatos.push(geojson.properties[key]);
+      }
+    });
+  }
+
+  const features = geojson && Array.isArray(geojson.features)
+    ? geojson.features
+    : [];
+
+  features.forEach(feature => {
+    const p = feature.properties || {};
+
+    [
+      "metvlc_last_seen_utc",
+      "metvlc_captura_utc",
+      "actualizado_utc",
+      "updated_utc"
+    ].forEach(key => {
+      if (p[key]) {
+        candidatos.push(p[key]);
+      }
+    });
+  });
+
+  let ultima = null;
+
+  candidatos.forEach(valor => {
+    const fecha = normalizarFecha(valor);
+
+    if (!fecha) {
+      return;
+    }
+
+    if (!ultima || fecha.getTime() > ultima.getTime()) {
+      ultima = fecha;
+    }
+  });
+
+  return ultima ? ultima.toISOString() : null;
+}
+
+function actualizarPanelFechaActualizacion(valor, periodo) {
+  const el = document.getElementById("ultimaActualizacionDatos");
+
+  if (!el) {
+    return;
+  }
+
+  const etiqueta = periodo ? etiquetaPeriodoRayos(periodo) : "";
+  const fechaTexto = formatoFechaActualizacion(valor);
+
+  el.innerHTML = `
+    <strong>Última actualización:</strong>
+    ${fechaTexto}
+    ${etiqueta ? `<span class="update-period">Rayos ${etiqueta}</span>` : ""}
+  `;
+}
+
 function obtenerFechaRayo(props) {
   return getProp(props, [
     "metvlc_time_utc",
@@ -360,6 +447,33 @@ function popupRayo(feature) {
 }
 
 
+
+// ===============================
+// FECHA DE ÚLTIMA ACTUALIZACIÓN
+// ===============================
+
+const fechaActualizacionControl = L.control({
+  position: "topright"
+});
+
+fechaActualizacionControl.onAdd = function () {
+  const div = L.DomUtil.create("div", "legend update-box");
+  div.id = "ultimaActualizacionDatos";
+
+  div.innerHTML = `
+    <strong>Última actualización:</strong>
+    Cargando...
+  `;
+
+  L.DomEvent.disableClickPropagation(div);
+  L.DomEvent.disableScrollPropagation(div);
+
+  return div;
+};
+
+fechaActualizacionControl.addTo(map);
+
+
 // ===============================
 // SELECTOR DE PERIODO DE RAYOS
 // ===============================
@@ -429,6 +543,8 @@ async function cargarRayos(periodo = activeRayosPeriod) {
 
   try {
     const geojson = await fetchJson(url);
+    const ultimaActualizacion = obtenerUltimaActualizacionGeojson(geojson);
+    actualizarPanelFechaActualizacion(ultimaActualizacion, periodo);
 
     rayosLayer.clearLayers();
 
@@ -477,6 +593,7 @@ async function cargarRayos(periodo = activeRayosPeriod) {
   } catch (error) {
     console.error(error);
     setEstado(`Error cargando rayos ${etiqueta}`);
+    actualizarPanelFechaActualizacion(null, periodo);
   }
 }
 
@@ -785,16 +902,49 @@ function htmlLeyendaPendiente(data) {
 }
 
 function htmlLeyendaNdmi(data) {
-  let html = `<div class="raster-legend-section">`;
+  let html = `<div class="raster-legend-section ndmi-legend">`;
   html += `<div class="legend-title">${data?.titulo || "NDMI"}</div>`;
 
+  const escala =
+    (Array.isArray(data?.escala) && data.escala) ||
+    (Array.isArray(data?.items) && data.items) ||
+    (Array.isArray(data?.clases) && data.clases) ||
+    [];
+
+  if (data?.descripcion) {
+    html += `<div class="measure-small">${data.descripcion}</div>`;
+  }
+
   html += `
-    <div class="ndmi-gradient"></div>
-    <div class="ndmi-labels">
-      <span>Menor humedad<br><strong>más seco</strong></span>
-      <span>Mayor humedad<br><strong>más húmedo</strong></span>
+    <div class="ndmi-gradient-sentinel"></div>
+    <div class="ndmi-labels ndmi-labels-sentinel">
+      <span>Muy seco<br><strong>-0.800</strong></span>
+      <span>Transición<br><strong>-0.032 / 0.032</strong></span>
+      <span>Muy húmedo<br><strong>0.800</strong></span>
     </div>
   `;
+
+  if (escala.length) {
+    html += `<div class="ndmi-scale-list">`;
+
+    escala.forEach(item => {
+      const color = item.color || item.colour || item.hex || "#999999";
+      const label = item.label || item.nombre || item.name || item.texto || "";
+      const valor = item.valor ?? item.quantity ?? item.value ?? "";
+
+      html += `
+        <div class="legend-item">
+          <span class="legend-color" style="background:${color}"></span>
+          <span>
+            <strong>${label}</strong>
+            ${valor !== "" ? `<span class="ndmi-value">${valor}</span>` : ""}
+          </span>
+        </div>
+      `;
+    });
+
+    html += `</div>`;
+  }
 
   if (data && Array.isArray(data.interpretacion)) {
     data.interpretacion.forEach(item => {
@@ -809,7 +959,11 @@ function htmlLeyendaNdmi(data) {
     });
   }
 
-  if (data && data.tratamiento) {
+  if (data?.nota) {
+    html += `<div class="measure-small">${data.nota}</div>`;
+  }
+
+  if (data?.tratamiento) {
     html += `<div class="measure-small">${data.tratamiento}</div>`;
   }
 
