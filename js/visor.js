@@ -623,11 +623,12 @@ legendRayos.addTo(map);
 
 // ===============================
 // LEYENDAS DINÁMICAS DE CAPAS RÁSTER
+// Igual que en el visor de puntos calientes
 // Combustible · Pendiente · NDMI
 // ===============================
 
 const leyendaCapasControl = L.control({
-  position: "bottomright"
+  position: "bottomleft"
 });
 
 leyendaCapasControl.onAdd = function () {
