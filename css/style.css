@@ -223,3 +223,115 @@ body {
     max-width: 240px;
   }
 }
+
+
+/* Selector 24/48/72 h de rayos */
+.rayos-period-control {
+  min-width: 190px;
+}
+
+.rayos-period-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.rayos-period-btn {
+  padding: 6px 8px;
+  border: 1px solid #b8c9d6;
+  border-radius: 8px;
+  background: #f6f9fc;
+  color: #183044;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.rayos-period-btn:hover {
+  background: #e5f1f8;
+}
+
+.rayos-period-btn.active {
+  background: #0b5f83;
+  color: #ffffff;
+  border-color: #0b5f83;
+}
+
+.measure-small {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #596775;
+  line-height: 1.25;
+}
+
+/* Leyendas de combustible, pendiente y NDMI */
+.raster-legend {
+  max-height: 48vh;
+  overflow-y: auto;
+  min-width: 250px;
+}
+
+.raster-legend-section {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.raster-legend-section:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.legend-details {
+  margin-top: 6px;
+}
+
+.legend-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  color: #29465b;
+}
+
+.ndmi-gradient {
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.22);
+  background: linear-gradient(90deg, #8c510a 0%, #d8b365 25%, #f6e8c3 50%, #80cdc1 75%, #01665e 100%);
+  margin: 6px 0 5px 0;
+}
+
+.ndmi-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px;
+  line-height: 1.15;
+  color: #34495a;
+  margin-bottom: 7px;
+}
+
+.ndmi-labels span:last-child {
+  text-align: right;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #607d8b;
+  flex: 0 0 auto;
+  margin-top: 3px;
+}
+
+.ndmi-text-item {
+  align-items: flex-start;
+}
+
+@media (max-width: 780px) {
+  .rayos-period-control,
+  .raster-legend {
+    max-width: 240px;
+  }
+}
