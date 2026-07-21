@@ -623,6 +623,7 @@ legendRayos.addTo(map);
 
 // ===============================
 // LEYENDAS DINÁMICAS DE CAPAS RÁSTER
+// Igual que en el visor de puntos calientes
 // Combustible · Pendiente · NDMI
 // ===============================
 
@@ -725,12 +726,15 @@ function htmlLeyendaCombustible(data) {
   let html = `<div class="raster-legend-section">`;
   html += `<div class="legend-title">${data?.titulo || "Modelo de combustible"}</div>`;
 
+  if (data && data.descripcion) {
+    html += `<div class="measure-small">${data.descripcion}</div>`;
+  }
+
   if (data && Array.isArray(data.grupos) && data.grupos.length) {
     data.grupos.forEach(grupo => {
-      const nombreGrupo = grupo.nombre || grupo.label || grupo.name || "Grupo";
-      const colorGrupo = primerColorGrupo(grupo);
+      const nombreGrupo = grupo.nombre || grupo.grupo || grupo.label || grupo.name || "Grupo";
+      const colorGrupo = grupo.color || primerColorGrupo(grupo);
 
-      // Leyenda simplificada: un color por agrupación operativa.
       html += htmlItemLeyenda(nombreGrupo, colorGrupo);
     });
   } else if (data && Array.isArray(data.items)) {
@@ -784,8 +788,6 @@ function htmlLeyendaNdmi(data) {
   let html = `<div class="raster-legend-section">`;
   html += `<div class="legend-title">${data?.titulo || "NDMI"}</div>`;
 
-  // NDMI no viene como clases de color, sino como interpretación.
-  // Por eso se representa con barra gradual: cálido/seco -> frío/húmedo.
   html += `
     <div class="ndmi-gradient"></div>
     <div class="ndmi-labels">
@@ -809,28 +811,6 @@ function htmlLeyendaNdmi(data) {
 
   if (data && data.tratamiento) {
     html += `<div class="measure-small">${data.tratamiento}</div>`;
-  }
-
-  html += `</div>`;
-  return html;
-}
-
-function htmlLeyendaGenerica(titulo, data) {
-  let html = `<div class="raster-legend-section">`;
-  html += `<div class="legend-title">${titulo}</div>`;
-
-  const items =
-    (Array.isArray(data?.items) && data.items) ||
-    (Array.isArray(data?.clases) && data.clases) ||
-    (Array.isArray(data?.leyenda) && data.leyenda) ||
-    [];
-
-  if (items.length) {
-    items.forEach(item => {
-      html += htmlItemLeyenda(textoItemLeyenda(item), colorItemLeyenda(item));
-    });
-  } else {
-    html += `<div class="measure-small">Leyenda no disponible.</div>`;
   }
 
   html += `</div>`;
@@ -873,6 +853,7 @@ map.on("overlayadd", function () {
 map.on("overlayremove", function () {
   actualizarLeyendasCapasRaster();
 });
+
 
 
 // ===============================
