@@ -16,12 +16,16 @@
 // datos/rayos/rayos_48h.geojson
 // datos/rayos/rayos_72h.geojson
 // datos/rayos/rayos_historico.geojson
-const RAYOS_CANDIDATOS = [
-  "datos/rayos/rayos_24h.geojson",
-  "datos/rayos/rayos_48h.geojson",
-  "datos/rayos/rayos_72h.geojson",
-  "datos/rayos/rayos_historico.geojson"
-];
+//
+// Importante: antes se cargaba el primer archivo existente.
+// Como rayos_24h.geojson existe siempre, nunca se veía el histórico 48/72 h.
+// Ahora el visor carga explícitamente el periodo elegido.
+const RAYOS_FILES = {
+  "24h": "datos/rayos/rayos_24h.geojson",
+  "48h": "datos/rayos/rayos_48h.geojson",
+  "72h": "datos/rayos/rayos_72h.geojson",
+  "historico": "datos/rayos/rayos_historico.geojson"
+};
 
 const LIMITE_CV = "datos/limites/comunitat_valenciana.geojson";
 
@@ -166,6 +170,11 @@ let combustibleLayer = null;
 let pendienteLayer = null;
 let ndmiLayer = null;
 
+let combustibleLegendData = null;
+let pendienteLegendData = null;
+let ndmiLegendData = null;
+
+let activeRayosPeriod = "24h";
 let rayosOverlayRegistrado = false;
 
 
@@ -352,15 +361,74 @@ function popupRayo(feature) {
 
 
 // ===============================
+// SELECTOR DE PERIODO DE RAYOS
+// ===============================
+
+const periodosRayosControl = L.control({
+  position: "topleft"
+});
+
+periodosRayosControl.onAdd = function () {
+  const div = L.DomUtil.create("div", "legend rayos-period-control");
+
+  div.innerHTML = `
+    <div class="legend-title">Periodo rayos</div>
+    <div class="rayos-period-grid">
+      <button class="rayos-period-btn active" data-period="24h">24 h</button>
+      <button class="rayos-period-btn" data-period="48h">48 h</button>
+      <button class="rayos-period-btn" data-period="72h">72 h</button>
+    </div>
+    <div class="measure-small">
+      El histórico se genera acumulando las descargas de SIGIF/GVA hasta 72 h.
+    </div>
+  `;
+
+  L.DomEvent.disableClickPropagation(div);
+  L.DomEvent.disableScrollPropagation(div);
+
+  return div;
+};
+
+periodosRayosControl.addTo(map);
+
+function activarControlPeriodosRayos() {
+  document.querySelectorAll(".rayos-period-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      cargarRayos(btn.dataset.period);
+    });
+  });
+}
+
+function actualizarBotonesPeriodoRayos(periodo) {
+  document.querySelectorAll(".rayos-period-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.period === periodo);
+  });
+}
+
+function etiquetaPeriodoRayos(periodo) {
+  if (periodo === "24h") return "24 h";
+  if (periodo === "48h") return "48 h";
+  if (periodo === "72h") return "72 h";
+  if (periodo === "historico") return "histórico";
+  return periodo;
+}
+
+
+// ===============================
 // RAYOS
 // ===============================
 
-async function cargarRayos() {
-  setEstado("Cargando rayos...");
+async function cargarRayos(periodo = activeRayosPeriod) {
+  activeRayosPeriod = periodo;
+  actualizarBotonesPeriodoRayos(periodo);
+
+  const url = RAYOS_FILES[periodo] || RAYOS_FILES["24h"];
+  const etiqueta = etiquetaPeriodoRayos(periodo);
+
+  setEstado(`Cargando rayos ${etiqueta}...`);
 
   try {
-    const result = await fetchJsonCandidatos(RAYOS_CANDIDATOS);
-    const geojson = result.data;
+    const geojson = await fetchJson(url);
 
     rayosLayer.clearLayers();
 
@@ -389,13 +457,7 @@ async function cargarRayos() {
     layer.addTo(rayosLayer);
 
     const total = geojson.features ? geojson.features.length : 0;
-
-    let periodo = "rayos";
-    if (result.url.includes("24h")) periodo = "rayos 24 h";
-    if (result.url.includes("48h")) periodo = "rayos 48 h";
-    if (result.url.includes("72h")) periodo = "rayos 72 h";
-
-    setEstado(`${total} ${periodo} cargados`);
+    setEstado(`${total} rayos cargados · ${etiqueta}`);
 
     if (!rayosOverlayRegistrado) {
       layerControl.addOverlay(rayosLayer, "Últimos rayos");
@@ -414,7 +476,7 @@ async function cargarRayos() {
 
   } catch (error) {
     console.error(error);
-    setEstado("Error cargando rayos");
+    setEstado(`Error cargando rayos ${etiqueta}`);
   }
 }
 
@@ -560,6 +622,235 @@ legendRayos.addTo(map);
 
 
 // ===============================
+// LEYENDAS DINÁMICAS DE CAPAS RÁSTER
+// Combustible · Pendiente · NDMI
+// ===============================
+
+const leyendaCapasControl = L.control({
+  position: "bottomright"
+});
+
+leyendaCapasControl.onAdd = function () {
+  const div = L.DomUtil.create("div", "legend raster-legend");
+  div.id = "leyendaCapasRaster";
+
+  div.innerHTML = `
+    <div class="legend-title">Leyenda capas</div>
+    <div class="measure-small">Activa combustible, pendiente o NDMI para ver su leyenda.</div>
+  `;
+
+  L.DomEvent.disableClickPropagation(div);
+  L.DomEvent.disableScrollPropagation(div);
+
+  return div;
+};
+
+leyendaCapasControl.addTo(map);
+
+async function cargarLeyendasRasteres() {
+  try {
+    combustibleLegendData = await fetchJson(COMBUSTIBLE_LEYENDA);
+  } catch (error) {
+    console.warn("No se pudo cargar leyenda de combustible", error);
+  }
+
+  try {
+    pendienteLegendData = await fetchJson(PENDIENTE_LEYENDA);
+  } catch (error) {
+    console.warn("No se pudo cargar leyenda de pendiente", error);
+  }
+
+  try {
+    ndmiLegendData = await fetchJson(NDMI_LEYENDA);
+  } catch (error) {
+    console.warn("No se pudo cargar leyenda NDMI", error);
+  }
+
+  actualizarLeyendasCapasRaster();
+}
+
+function primerColorGrupo(grupo) {
+  if (!grupo) return "#999999";
+
+  if (grupo.color || grupo.colour || grupo.fill || grupo.hex || grupo.rgb) {
+    return grupo.color || grupo.colour || grupo.fill || grupo.hex || grupo.rgb;
+  }
+
+  if (Array.isArray(grupo.items) && grupo.items.length) {
+    const item = grupo.items.find(x => x.color || x.colour || x.fill || x.hex || x.rgb);
+    if (item) {
+      return item.color || item.colour || item.fill || item.hex || item.rgb;
+    }
+  }
+
+  return "#999999";
+}
+
+function textoItemLeyenda(item) {
+  return (
+    item?.label ||
+    item?.nombre ||
+    item?.name ||
+    item?.clase ||
+    item?.valor ||
+    item?.descripcion ||
+    item?.texto ||
+    ""
+  );
+}
+
+function colorItemLeyenda(item) {
+  return (
+    item?.color ||
+    item?.colour ||
+    item?.fill ||
+    item?.hex ||
+    item?.rgb ||
+    "#999999"
+  );
+}
+
+function htmlItemLeyenda(label, color) {
+  const borde = color === "transparent" ? "border:1px dashed #666;" : "";
+
+  return `
+    <div class="legend-item">
+      <span class="legend-color" style="background:${color};${borde}"></span>
+      <span>${label}</span>
+    </div>
+  `;
+}
+
+function htmlLeyendaCombustible(data) {
+  let html = `<div class="raster-legend-section">`;
+  html += `<div class="legend-title">${data?.titulo || "Modelo de combustible"}</div>`;
+
+  if (data && Array.isArray(data.grupos) && data.grupos.length) {
+    data.grupos.forEach(grupo => {
+      const nombreGrupo = grupo.nombre || grupo.label || grupo.name || "Grupo";
+      const colorGrupo = primerColorGrupo(grupo);
+      html += htmlItemLeyenda(nombreGrupo, colorGrupo);
+    });
+  } else if (data && Array.isArray(data.items)) {
+    data.items.forEach(item => {
+      html += htmlItemLeyenda(textoItemLeyenda(item), colorItemLeyenda(item));
+    });
+  } else {
+    html += `<div class="measure-small">Leyenda de combustible no disponible.</div>`;
+  }
+
+  if (data && Array.isArray(data.clases_no_representadas) && data.clases_no_representadas.length) {
+    html += `
+      <details class="legend-details">
+        <summary>Clases no representadas</summary>
+        <div class="measure-small">${data.clases_no_representadas.join("<br>")}</div>
+      </details>
+    `;
+  }
+
+  if (data && data.ambito) {
+    html += `<div class="measure-small">${data.ambito}</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function htmlLeyendaPendiente(data) {
+  let html = `<div class="raster-legend-section">`;
+  html += `<div class="legend-title">${data?.titulo || "Pendiente"}</div>`;
+
+  const items = data?.clases || data?.items || data?.leyenda || [];
+
+  if (Array.isArray(items) && items.length) {
+    items.forEach(item => {
+      html += htmlItemLeyenda(textoItemLeyenda(item), colorItemLeyenda(item));
+    });
+  } else {
+    html += `<div class="measure-small">Leyenda de pendiente no disponible.</div>`;
+  }
+
+  if (data && data.ambito) {
+    html += `<div class="measure-small">${data.ambito}</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function htmlLeyendaNdmi(data) {
+  let html = `<div class="raster-legend-section">`;
+  html += `<div class="legend-title">${data?.titulo || "NDMI"}</div>`;
+
+  html += `
+    <div class="ndmi-gradient"></div>
+    <div class="ndmi-labels">
+      <span>Menor humedad<br><strong>más seco</strong></span>
+      <span>Mayor humedad<br><strong>más húmedo</strong></span>
+    </div>
+  `;
+
+  if (data && Array.isArray(data.interpretacion)) {
+    data.interpretacion.forEach(item => {
+      const texto = item.texto || "";
+      const significado = item.significado || "";
+      html += `
+        <div class="legend-item ndmi-text-item">
+          <span class="legend-dot"></span>
+          <span><strong>${texto}</strong>: ${significado}</span>
+        </div>
+      `;
+    });
+  }
+
+  if (data && data.tratamiento) {
+    html += `<div class="measure-small">${data.tratamiento}</div>`;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+function actualizarLeyendasCapasRaster() {
+  const div = document.getElementById("leyendaCapasRaster");
+
+  if (!div) return;
+
+  let html = "";
+
+  if (combustibleLayer && map.hasLayer(combustibleLayer)) {
+    html += htmlLeyendaCombustible(combustibleLegendData);
+  }
+
+  if (pendienteLayer && map.hasLayer(pendienteLayer)) {
+    html += htmlLeyendaPendiente(pendienteLegendData);
+  }
+
+  if (ndmiLayer && map.hasLayer(ndmiLayer)) {
+    html += htmlLeyendaNdmi(ndmiLegendData);
+  }
+
+  if (!html) {
+    html = `
+      <div class="legend-title">Leyenda capas</div>
+      <div class="measure-small">Activa combustible, pendiente o NDMI para ver su leyenda.</div>
+    `;
+  }
+
+  div.innerHTML = html;
+}
+
+map.on("overlayadd", function () {
+  actualizarLeyendasCapasRaster();
+});
+
+map.on("overlayremove", function () {
+  actualizarLeyendasCapasRaster();
+});
+
+
+
+// ===============================
 // CONTROL DE OPACIDAD
 // ===============================
 
@@ -637,10 +928,12 @@ async function init() {
 
   await cargarLimiteCV();
   await cargarRasteres();
+  await cargarLeyendasRasteres();
 
   activarControlesOpacidad();
+  activarControlPeriodosRayos();
 
-  await cargarRayos();
+  await cargarRayos(activeRayosPeriod);
 }
 
 init();
