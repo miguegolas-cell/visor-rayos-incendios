@@ -1,29 +1,18 @@
 {
   "bounds": [
-    [
-      38.68709222314668,
-      -1.5298681640625
-    ],
-    [
-      40.213234261908966,
-      -0.02407815246589187
-    ]
+    [38.68655366688531, -1.52891558510685],
+    [40.21168266876426, -0.02479523737455949]
   ],
-  "origen": "NDMI provincia de Valencia generado desde TIFF original",
-  "imagen_proyectada_en": "EPSG:3857",
-  "bounds_en": "EPSG:4326",
-  "provincia": "Valencia",
-  "limite_usado": "VALENCIA.shp",
-  "raster_original": "2026-06-23-00_00_2026-06-23-23_59_Sentinel-2_L2A_Moisture_index.tiff",
-  "png_generado": {
-    "width": 467,
-    "height": 613
-  },
-  "bbox_limite_valencia": {
+  "bbox": {
     "lon_min": -1.52891558510685,
     "lat_min": 38.68655366688531,
     "lon_max": -0.02479523737455949,
     "lat_max": 40.21168266876426
   },
-  "nota": "Generado desde el TIFF original y reproyectado a Web Mercator para ajuste correcto en Leaflet."
+  "image_size": {
+    "width": 1500,
+    "height": 1521
+  },
+  "crs_salida": "EPSG:4326",
+  "nota": "Imagen PNG recortada a la provincia de Valencia. Misma plantilla que combustible y pendiente."
 }
