@@ -332,7 +332,7 @@ body {
   height: 14px;
   border-radius: 999px;
   border: 1px solid rgba(0,0,0,0.22);
-  background: linear-gradient(90deg, #8c510a 0%, #d8b365 25%, #f6e8c3 50%, #80cdc1 75%, #01665e 100%);
+  background: linear-gradient(90deg, #800000 0%, #ff0000 22%, #ffff00 42%, #00ffff 58%, #0000ff 78%, #000080 100%);
   margin: 6px 0 5px 0;
 }
 
@@ -379,4 +379,68 @@ body {
   font-weight: 700;
   font-size: 12px;
   color: #29465b;
+}
+
+
+/* Leyenda NDMI corregida: escala tipo Sentinel Hub */
+.ndmi-gradient-sentinel {
+  width: 100%;
+  height: 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.28);
+  background: linear-gradient(90deg, #800000 0%, #ff0000 22%, #ffff00 42%, #00ffff 58%, #0000ff 78%, #000080 100%);
+  margin: 7px 0 5px 0;
+}
+
+.ndmi-labels-sentinel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  font-size: 10.5px;
+  line-height: 1.15;
+  color: #34495a;
+  margin-bottom: 7px;
+}
+
+.ndmi-labels-sentinel span:nth-child(2) {
+  text-align: center;
+}
+
+.ndmi-labels-sentinel span:last-child {
+  text-align: right;
+}
+
+.ndmi-scale-list {
+  margin-top: 6px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.ndmi-value {
+  display: inline-block;
+  margin-left: 5px;
+  color: #526170;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ndmi-legend .legend-color {
+  width: 18px;
+  height: 13px;
+}
+
+
+/* Panel de última actualización */
+.update-box {
+  min-width: 230px;
+  max-width: 290px;
+  line-height: 1.3;
+}
+
+.update-period {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #596775;
+  font-weight: 700;
 }
