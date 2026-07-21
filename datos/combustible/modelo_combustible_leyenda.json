@@ -1,849 +1,113 @@
 {
-  "tipo": "leyenda_modelo_combustible_operativa",
-  "version": "2026-06-29",
-  "criterio": "Agrupación por modelo base de combustible, no por código ráster interno.",
-  "familias": [
-    "Pastos / herbáceos",
-    "Matorral",
-    "Arbolado con sotobosque",
-    "Restos vegetales",
-    "No combustible / usos especiales"
-  ],
+  "titulo": "Modelo de combustible agrupado",
+  "ambito": "Comunitat Valenciana · terreno forestal PATFOR",
+  "descripcion": "Leyenda operativa simplificada según agrupación solicitada.",
   "grupos": [
     {
-      "grupo": "Pastos / herbáceos",
-      "descripcion": "Modelos GR. El fuego lo conduce principalmente el combustible herbáceo.",
+      "nombre": "Pasto",
       "items": [
         {
+          "nombre": "GR2 · Pasto",
           "modelo": "GR2",
-          "valor": "GR2",
-          "nombre": "GR2 · Pasto bajo/medio",
-          "nombre_corto": "Pasto bajo/medio",
-          "descripcion": "Pastizal más o menos continuo, generalmente no superior a 1 m.",
-          "grupo": "Pastos / herbáceos",
-          "color_rgba": [
-            230,
-            245,
-            152,
-            170
-          ],
-          "codigo_sb": 102,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            1,
-            201,
-            202,
-            203,
-            204,
-            205,
-            206,
-            207,
-            208,
-            209,
-            210,
-            211,
-            212,
-            213,
-            214,
-            215,
-            217,
-            218
-          ]
+          "color": "#d6e571"
         },
         {
+          "nombre": "GR4 · Pasto",
           "modelo": "GR4",
-          "valor": "GR4",
-          "nombre": "GR4 · Pasto alto",
-          "nombre_corto": "Pasto alto",
-          "descripcion": "Pastizales de altura superior a 1 m, con continuidad horizontal.",
-          "grupo": "Pastos / herbáceos",
-          "color_rgba": [
-            254,
-            224,
-            139,
-            170
-          ],
-          "codigo_sb": 104,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            2
-          ]
+          "color": "#d6e571"
         },
         {
-          "modelo": "GR7",
-          "valor": "GR7",
+          "nombre": "Tierras arables SIGPAC · asimiladas a GR2",
+          "modelo": "GR2",
+          "color": "#d6e571"
+        }
+      ]
+    },
+    {
+      "nombre": "Cañas",
+      "items": [
+        {
           "nombre": "GR7 · Carrizal / marjal",
-          "nombre_corto": "Carrizal / marjal",
-          "descripcion": "Zonas húmedas o marjales con carrizal, juncos u otras herbáceas altas.",
-          "grupo": "Pastos / herbáceos",
-          "color_rgba": [
-            253,
-            174,
-            97,
-            170
-          ],
-          "codigo_sb": 107,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            3
-          ]
+          "modelo": "GR7",
+          "color": "#26a69a"
         },
         {
-          "modelo": "GR8",
-          "valor": "GR8",
           "nombre": "GR8 · Cañaveral",
-          "nombre_corto": "Cañaveral",
-          "descripcion": "Cañaverales de Arundo donax; combustible mayoritario formado por cañas.",
-          "grupo": "Pastos / herbáceos",
-          "color_rgba": [
-            244,
-            109,
-            67,
-            170
-          ],
-          "codigo_sb": 108,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            4
-          ]
+          "modelo": "GR8",
+          "color": "#26a69a"
         }
       ]
     },
     {
-      "grupo": "Matorral",
-      "descripcion": "Modelos SH. El fuego se propaga por matorral, hojarasca y restos asociados.",
+      "nombre": "Matorral",
       "items": [
         {
-          "modelo": "SH1",
-          "valor": "SH1",
           "nombre": "SH1 · Matorral disperso",
-          "nombre_corto": "Matorral disperso",
-          "descripcion": "Matorral disperso, baja carga o poca continuidad.",
-          "grupo": "Matorral",
-          "color_rgba": [
-            217,
-            240,
-            163,
-            170
-          ],
-          "codigo_sb": 141,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            6
-          ]
+          "modelo": "SH1",
+          "color": "#f57c00"
         },
         {
+          "nombre": "SH3 · Matorral medio",
           "modelo": "SH3",
-          "valor": "SH3",
-          "nombre": "SH3 · Matorral medio/disperso",
-          "nombre_corto": "Matorral medio/disperso",
-          "descripcion": "Matorral relativamente disperso, más continuo que SH1.",
-          "grupo": "Matorral",
-          "color_rgba": [
-            173,
-            221,
-            142,
-            170
-          ],
-          "codigo_sb": 143,
-          "tipo": "N/A",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            7
-          ]
+          "color": "#f57c00"
         },
         {
-          "modelo": "SH4",
-          "valor": "SH4",
           "nombre": "SH4 · Matorral continuo",
-          "nombre_corto": "Matorral continuo",
-          "descripcion": "Arbustos leñosos y hojarasca de arbusto con elevada continuidad.",
-          "grupo": "Matorral",
-          "color_rgba": [
-            120,
-            198,
-            121,
-            170
-          ],
-          "codigo_sb": 144,
-          "tipo": "N/A",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            8
-          ]
+          "modelo": "SH4",
+          "color": "#f57c00"
         },
         {
-          "modelo": "SH5",
-          "valor": "SH5",
           "nombre": "SH5 · Matorral con carga",
-          "nombre_corto": "Matorral con carga",
-          "descripcion": "Matorral con mayor carga de combustible y continuidad.",
-          "grupo": "Matorral",
-          "color_rgba": [
-            49,
-            163,
-            84,
-            170
-          ],
-          "codigo_sb": 145,
-          "tipo": "N/A",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            9
-          ]
+          "modelo": "SH5",
+          "color": "#f57c00"
         },
         {
+          "nombre": "SH9 · Matorral denso",
           "modelo": "SH9",
-          "valor": "SH9",
-          "nombre": "SH9 · Matorral denso/cargado",
-          "nombre_corto": "Matorral denso/cargado",
-          "descripcion": "Matorral denso o muy cargado.",
-          "grupo": "Matorral",
-          "color_rgba": [
-            0,
-            104,
-            55,
-            180
-          ],
-          "codigo_sb": 149,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            10
-          ]
+          "color": "#f57c00"
         }
       ]
     },
     {
-      "grupo": "Arbolado con sotobosque",
-      "descripcion": "Modelos TU. Arbolado adulto con matorral o combustible bajo el dosel.",
+      "nombre": "Matorral y arbolado",
       "items": [
         {
-          "modelo": "TU1",
-          "valor": "TU1",
           "nombre": "TU1 · Arbolado con combustible bajo",
-          "nombre_corto": "Arbolado con combustible bajo",
-          "descripcion": "Arbolado con combustible bajo o sotobosque ligero.",
-          "grupo": "Arbolado con sotobosque",
-          "color_rgba": [
-            199,
-            233,
-            192,
-            170
-          ],
-          "codigo_sb": 161,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            11
-          ]
+          "modelo": "TU1",
+          "color": "#2e7d32"
         },
         {
+          "nombre": "TU2 · Arbolado con matorral bajo",
           "modelo": "TU2",
-          "valor": "TU2",
-          "nombre": "TU2 · Arbolado + matorral bajo",
-          "nombre_corto": "Arbolado + matorral bajo",
-          "descripcion": "Matorral de menos de 1 m bajo dosel de arbolado adulto.",
-          "grupo": "Arbolado con sotobosque",
-          "color_rgba": [
-            116,
-            196,
-            118,
-            170
-          ],
-          "codigo_sb": 162,
-          "tipo": "N/A",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            12
-          ]
+          "color": "#2e7d32"
         },
         {
+          "nombre": "TU3 · Arbolado con matorral alto",
           "modelo": "TU3",
-          "valor": "TU3",
-          "nombre": "TU3 · Arbolado + matorral alto",
-          "nombre_corto": "Arbolado + matorral alto",
-          "descripcion": "Matorral de más de 1 m bajo dosel de arbolado adulto.",
-          "grupo": "Arbolado con sotobosque",
-          "color_rgba": [
-            35,
-            139,
-            69,
-            175
-          ],
-          "codigo_sb": 163,
-          "tipo": "Dinámico",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            13
-          ]
+          "color": "#2e7d32"
         },
         {
+          "nombre": "TU5 · Arbolado con matorral alto umbría",
           "modelo": "TU5",
-          "valor": "TU5",
-          "nombre": "TU5 · Arbolado + matorral alto en umbría",
-          "nombre_corto": "Arbolado + matorral alto en umbría",
-          "descripcion": "Similar a TU3, pero propio de exposiciones de umbría.",
-          "grupo": "Arbolado con sotobosque",
-          "color_rgba": [
-            0,
-            68,
-            27,
-            185
-          ],
-          "codigo_sb": 165,
-          "tipo": "N/A",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            14
-          ]
+          "color": "#2e7d32"
         }
       ]
     },
     {
-      "grupo": "Restos vegetales",
-      "descripcion": "Modelos SB. Restos vegetales, slash o acumulaciones de material muerto.",
+      "nombre": "Restos vegetales",
       "items": [
         {
-          "modelo": "SB3",
-          "valor": "SB3",
           "nombre": "SB3 · Restos vegetales",
-          "nombre_corto": "Restos vegetales",
-          "descripcion": "Restos de corta o acumulaciones de combustible vegetal.",
-          "grupo": "Restos vegetales",
-          "color_rgba": [
-            140,
-            81,
-            10,
-            175
-          ],
-          "codigo_sb": 203,
-          "tipo": "N/A",
-          "combustible_activo": true,
-          "codigos_raster_presentes": [
-            5
-          ]
-        }
-      ]
-    },
-    {
-      "grupo": "No combustible / usos especiales",
-      "descripcion": "Modelos NB y reclasificaciones SIGPAC/ICV. Se muestran aparte porque no representan combustible forestal activo.",
-      "plegado_por_defecto": true,
-      "items": [
-        {
-          "modelo": "NB1",
-          "valor": "NB1",
-          "nombre": "NB1 · Urbano / infraestructuras",
-          "nombre_corto": "Urbano / infraestructuras",
-          "descripcion": "Zonas no combustibles, urbano, autovías, trazado AVE o edificaciones.",
-          "grupo": "No combustible / usos especiales",
-          "color_rgba": [
-            189,
-            189,
-            189,
-            95
-          ],
-          "codigo_sb": 91,
-          "tipo": "",
-          "combustible_activo": false,
-          "codigos_raster_presentes": [
-            18,
-            20,
-            21
-          ]
-        },
-        {
-          "modelo": "NB3",
-          "valor": "NB3",
-          "nombre": "NB3 · Agrícola / arrozal",
-          "nombre_corto": "Agrícola / arrozal",
-          "descripcion": "Agrícola SIGPAC, arrozal u otros usos agrícolas reclasificados.",
-          "grupo": "No combustible / usos especiales",
-          "color_rgba": [
-            238,
-            238,
-            238,
-            70
-          ],
-          "codigo_sb": 93,
-          "tipo": "",
-          "combustible_activo": false,
-          "codigos_raster_presentes": [
-            15,
-            19,
-            101,
-            102,
-            103,
-            104,
-            105,
-            106,
-            107,
-            108,
-            109,
-            110,
-            111,
-            112,
-            113,
-            114,
-            115,
-            116,
-            117,
-            118
-          ]
-        },
-        {
-          "modelo": "NB8",
-          "valor": "NB8",
-          "nombre": "NB8 · Agua",
-          "nombre_corto": "Agua",
-          "descripcion": "Láminas de agua o zonas equivalentes no combustibles.",
-          "grupo": "No combustible / usos especiales",
-          "color_rgba": [
-            127,
-            127,
-            127,
-            95
-          ],
-          "codigo_sb": 98,
-          "tipo": "",
-          "combustible_activo": false,
-          "codigos_raster_presentes": [
-            16
-          ]
-        },
-        {
-          "modelo": "NB9",
-          "valor": "NB9",
-          "nombre": "NB9 · Suelo desnudo",
-          "nombre_corto": "Suelo desnudo",
-          "descripcion": "Suelo desnudo o improductivo no combustible.",
-          "grupo": "No combustible / usos especiales",
-          "color_rgba": [
-            37,
-            37,
-            37,
-            95
-          ],
-          "codigo_sb": 99,
-          "tipo": "",
-          "combustible_activo": false,
-          "codigos_raster_presentes": [
-            17
-          ]
+          "modelo": "SB3",
+          "color": "#795548"
         }
       ]
     }
   ],
-  "valores": [
-    {
-      "modelo": "GR2",
-      "valor": "GR2",
-      "nombre": "GR2 · Pasto bajo/medio",
-      "nombre_corto": "Pasto bajo/medio",
-      "descripcion": "Pastizal más o menos continuo, generalmente no superior a 1 m.",
-      "grupo": "Pastos / herbáceos",
-      "color_rgba": [
-        230,
-        245,
-        152,
-        170
-      ],
-      "codigo_sb": 102,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        1,
-        201,
-        202,
-        203,
-        204,
-        205,
-        206,
-        207,
-        208,
-        209,
-        210,
-        211,
-        212,
-        213,
-        214,
-        215,
-        217,
-        218
-      ]
-    },
-    {
-      "modelo": "GR4",
-      "valor": "GR4",
-      "nombre": "GR4 · Pasto alto",
-      "nombre_corto": "Pasto alto",
-      "descripcion": "Pastizales de altura superior a 1 m, con continuidad horizontal.",
-      "grupo": "Pastos / herbáceos",
-      "color_rgba": [
-        254,
-        224,
-        139,
-        170
-      ],
-      "codigo_sb": 104,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        2
-      ]
-    },
-    {
-      "modelo": "GR7",
-      "valor": "GR7",
-      "nombre": "GR7 · Carrizal / marjal",
-      "nombre_corto": "Carrizal / marjal",
-      "descripcion": "Zonas húmedas o marjales con carrizal, juncos u otras herbáceas altas.",
-      "grupo": "Pastos / herbáceos",
-      "color_rgba": [
-        253,
-        174,
-        97,
-        170
-      ],
-      "codigo_sb": 107,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        3
-      ]
-    },
-    {
-      "modelo": "GR8",
-      "valor": "GR8",
-      "nombre": "GR8 · Cañaveral",
-      "nombre_corto": "Cañaveral",
-      "descripcion": "Cañaverales de Arundo donax; combustible mayoritario formado por cañas.",
-      "grupo": "Pastos / herbáceos",
-      "color_rgba": [
-        244,
-        109,
-        67,
-        170
-      ],
-      "codigo_sb": 108,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        4
-      ]
-    },
-    {
-      "modelo": "SH1",
-      "valor": "SH1",
-      "nombre": "SH1 · Matorral disperso",
-      "nombre_corto": "Matorral disperso",
-      "descripcion": "Matorral disperso, baja carga o poca continuidad.",
-      "grupo": "Matorral",
-      "color_rgba": [
-        217,
-        240,
-        163,
-        170
-      ],
-      "codigo_sb": 141,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        6
-      ]
-    },
-    {
-      "modelo": "SH3",
-      "valor": "SH3",
-      "nombre": "SH3 · Matorral medio/disperso",
-      "nombre_corto": "Matorral medio/disperso",
-      "descripcion": "Matorral relativamente disperso, más continuo que SH1.",
-      "grupo": "Matorral",
-      "color_rgba": [
-        173,
-        221,
-        142,
-        170
-      ],
-      "codigo_sb": 143,
-      "tipo": "N/A",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        7
-      ]
-    },
-    {
-      "modelo": "SH4",
-      "valor": "SH4",
-      "nombre": "SH4 · Matorral continuo",
-      "nombre_corto": "Matorral continuo",
-      "descripcion": "Arbustos leñosos y hojarasca de arbusto con elevada continuidad.",
-      "grupo": "Matorral",
-      "color_rgba": [
-        120,
-        198,
-        121,
-        170
-      ],
-      "codigo_sb": 144,
-      "tipo": "N/A",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        8
-      ]
-    },
-    {
-      "modelo": "SH5",
-      "valor": "SH5",
-      "nombre": "SH5 · Matorral con carga",
-      "nombre_corto": "Matorral con carga",
-      "descripcion": "Matorral con mayor carga de combustible y continuidad.",
-      "grupo": "Matorral",
-      "color_rgba": [
-        49,
-        163,
-        84,
-        170
-      ],
-      "codigo_sb": 145,
-      "tipo": "N/A",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        9
-      ]
-    },
-    {
-      "modelo": "SH9",
-      "valor": "SH9",
-      "nombre": "SH9 · Matorral denso/cargado",
-      "nombre_corto": "Matorral denso/cargado",
-      "descripcion": "Matorral denso o muy cargado.",
-      "grupo": "Matorral",
-      "color_rgba": [
-        0,
-        104,
-        55,
-        180
-      ],
-      "codigo_sb": 149,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        10
-      ]
-    },
-    {
-      "modelo": "TU1",
-      "valor": "TU1",
-      "nombre": "TU1 · Arbolado con combustible bajo",
-      "nombre_corto": "Arbolado con combustible bajo",
-      "descripcion": "Arbolado con combustible bajo o sotobosque ligero.",
-      "grupo": "Arbolado con sotobosque",
-      "color_rgba": [
-        199,
-        233,
-        192,
-        170
-      ],
-      "codigo_sb": 161,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        11
-      ]
-    },
-    {
-      "modelo": "TU2",
-      "valor": "TU2",
-      "nombre": "TU2 · Arbolado + matorral bajo",
-      "nombre_corto": "Arbolado + matorral bajo",
-      "descripcion": "Matorral de menos de 1 m bajo dosel de arbolado adulto.",
-      "grupo": "Arbolado con sotobosque",
-      "color_rgba": [
-        116,
-        196,
-        118,
-        170
-      ],
-      "codigo_sb": 162,
-      "tipo": "N/A",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        12
-      ]
-    },
-    {
-      "modelo": "TU3",
-      "valor": "TU3",
-      "nombre": "TU3 · Arbolado + matorral alto",
-      "nombre_corto": "Arbolado + matorral alto",
-      "descripcion": "Matorral de más de 1 m bajo dosel de arbolado adulto.",
-      "grupo": "Arbolado con sotobosque",
-      "color_rgba": [
-        35,
-        139,
-        69,
-        175
-      ],
-      "codigo_sb": 163,
-      "tipo": "Dinámico",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        13
-      ]
-    },
-    {
-      "modelo": "TU5",
-      "valor": "TU5",
-      "nombre": "TU5 · Arbolado + matorral alto en umbría",
-      "nombre_corto": "Arbolado + matorral alto en umbría",
-      "descripcion": "Similar a TU3, pero propio de exposiciones de umbría.",
-      "grupo": "Arbolado con sotobosque",
-      "color_rgba": [
-        0,
-        68,
-        27,
-        185
-      ],
-      "codigo_sb": 165,
-      "tipo": "N/A",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        14
-      ]
-    },
-    {
-      "modelo": "SB3",
-      "valor": "SB3",
-      "nombre": "SB3 · Restos vegetales",
-      "nombre_corto": "Restos vegetales",
-      "descripcion": "Restos de corta o acumulaciones de combustible vegetal.",
-      "grupo": "Restos vegetales",
-      "color_rgba": [
-        140,
-        81,
-        10,
-        175
-      ],
-      "codigo_sb": 203,
-      "tipo": "N/A",
-      "combustible_activo": true,
-      "codigos_raster_presentes": [
-        5
-      ]
-    },
-    {
-      "modelo": "NB1",
-      "valor": "NB1",
-      "nombre": "NB1 · Urbano / infraestructuras",
-      "nombre_corto": "Urbano / infraestructuras",
-      "descripcion": "Zonas no combustibles, urbano, autovías, trazado AVE o edificaciones.",
-      "grupo": "No combustible / usos especiales",
-      "color_rgba": [
-        189,
-        189,
-        189,
-        95
-      ],
-      "codigo_sb": 91,
-      "tipo": "",
-      "combustible_activo": false,
-      "codigos_raster_presentes": [
-        18,
-        20,
-        21
-      ]
-    },
-    {
-      "modelo": "NB3",
-      "valor": "NB3",
-      "nombre": "NB3 · Agrícola / arrozal",
-      "nombre_corto": "Agrícola / arrozal",
-      "descripcion": "Agrícola SIGPAC, arrozal u otros usos agrícolas reclasificados.",
-      "grupo": "No combustible / usos especiales",
-      "color_rgba": [
-        238,
-        238,
-        238,
-        70
-      ],
-      "codigo_sb": 93,
-      "tipo": "",
-      "combustible_activo": false,
-      "codigos_raster_presentes": [
-        15,
-        19,
-        101,
-        102,
-        103,
-        104,
-        105,
-        106,
-        107,
-        108,
-        109,
-        110,
-        111,
-        112,
-        113,
-        114,
-        115,
-        116,
-        117,
-        118
-      ]
-    },
-    {
-      "modelo": "NB8",
-      "valor": "NB8",
-      "nombre": "NB8 · Agua",
-      "nombre_corto": "Agua",
-      "descripcion": "Láminas de agua o zonas equivalentes no combustibles.",
-      "grupo": "No combustible / usos especiales",
-      "color_rgba": [
-        127,
-        127,
-        127,
-        95
-      ],
-      "codigo_sb": 98,
-      "tipo": "",
-      "combustible_activo": false,
-      "codigos_raster_presentes": [
-        16
-      ]
-    },
-    {
-      "modelo": "NB9",
-      "valor": "NB9",
-      "nombre": "NB9 · Suelo desnudo",
-      "nombre_corto": "Suelo desnudo",
-      "descripcion": "Suelo desnudo o improductivo no combustible.",
-      "grupo": "No combustible / usos especiales",
-      "color_rgba": [
-        37,
-        37,
-        37,
-        95
-      ],
-      "codigo_sb": 99,
-      "tipo": "",
-      "combustible_activo": false,
-      "codigos_raster_presentes": [
-        17
-      ]
-    }
-  ],
-  "nota_codigos": "Los códigos 100-118 se agrupan como NB3; los códigos 200-218 se agrupan como GR2 según el archivo de códigos. Los valores NB se mantienen separados de los combustibles activos.",
-  "fuentes": [
-    "Clave fotográfica modelos combustible_20200430.pdf",
-    "Códigos Modelos Combustible.txt",
-    "MC_CV_ras.tif.vat.dbf"
+  "clases_no_representadas": [
+    "NB1 urbano/infraestructuras",
+    "NB3 agrícola/arrozal",
+    "NB8 agua",
+    "NB9 suelo desnudo"
   ]
 }
