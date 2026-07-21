@@ -21,7 +21,8 @@
           "modelo": "GR2",
           "color": "#d6e571"
         }
-      ]
+      ],
+      "color": "#d6e571"
     },
     {
       "nombre": "Cañas",
@@ -36,7 +37,8 @@
           "modelo": "GR8",
           "color": "#26a69a"
         }
-      ]
+      ],
+      "color": "#26a69a"
     },
     {
       "nombre": "Matorral",
@@ -66,7 +68,8 @@
           "modelo": "SH9",
           "color": "#f57c00"
         }
-      ]
+      ],
+      "color": "#f57c00"
     },
     {
       "nombre": "Matorral y arbolado",
@@ -91,7 +94,8 @@
           "modelo": "TU5",
           "color": "#2e7d32"
         }
-      ]
+      ],
+      "color": "#2e7d32"
     },
     {
       "nombre": "Restos vegetales",
@@ -101,7 +105,8 @@
           "modelo": "SB3",
           "color": "#795548"
         }
-      ]
+      ],
+      "color": "#795548"
     }
   ],
   "clases_no_representadas": [
