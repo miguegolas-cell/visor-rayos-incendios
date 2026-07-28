@@ -1,32 +1,4 @@
 {
   "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "24/07/2026 18:40:01",
-        "COORD": "-0,7442,38,7213",
-        "DATE": "2026-07-24",
-        "TIME": "18:40",
-        "MXI": "-4,67 kA.",
-        "STR": "0",
-        "SMA": "0,318 Km.",
-        "SMI": "0,23800008 Km.",
-        "CHI": "0,3",
-        "metvlc_time_utc": "2026-07-24T16:40:00+00:00",
-        "metvlc_time_source": "date+time",
-        "metvlc_has_real_time": true,
-        "metvlc_captura_utc": "2026-07-25T07:28:49+00:00",
-        "metvlc_last_seen_utc": "2026-07-25T15:20:05+00:00",
-        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.7442,
-          38.7213
-        ]
-      }
-    }
-  ]
+  "features": []
 }
