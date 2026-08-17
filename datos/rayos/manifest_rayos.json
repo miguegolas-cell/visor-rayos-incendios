@@ -1,7 +1,7 @@
 {
   "producto": "Rayos SIGIF/GVA KMZ 24h convertido a GeoJSON",
   "fuente": "https://prevencionincendiosgva.es/Meteorologia/GetRayos24hKML",
-  "actualizado_utc": "2026-08-17T05:51:14+00:00",
+  "actualizado_utc": "2026-08-17T14:45:01+00:00",
   "bbox_valencia": {
     "lon_min": -1.7,
     "lat_min": 38.6,
@@ -12,8 +12,8 @@
   "rayos_nuevos": 0,
   "rayos_repetidos": 0,
   "rayos_24h": 0,
-  "rayos_48h": 2569,
-  "rayos_72h": 3170,
+  "rayos_48h": 1690,
+  "rayos_72h": 2846,
   "archivos": [
     "rayos_24h.geojson",
     "rayos_48h.geojson",
