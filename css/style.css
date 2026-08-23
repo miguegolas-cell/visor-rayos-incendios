@@ -444,3 +444,93 @@ body {
   color: #596775;
   font-weight: 700;
 }
+
+
+/* =====================================================
+   Ajuste visual MetVlc · Visor rayos:
+   cajas del visor con la misma anchura
+   ===================================================== */
+
+:root {
+  --metvlc-control-width: 285px;
+  --metvlc-control-width-mobile: 245px;
+}
+
+/* Todas las cajas informativas/control del visor */
+.leaflet-control.legend,
+.leaflet-control.opacity-control,
+.leaflet-control.measure-box,
+.leaflet-control.update-box,
+.leaflet-control.rayos-period-control,
+.legend,
+.opacity-control,
+.measure-box,
+.update-box,
+.rayos-period-control,
+.raster-legend {
+  width: var(--metvlc-control-width) !important;
+  min-width: var(--metvlc-control-width) !important;
+  max-width: var(--metvlc-control-width) !important;
+}
+
+/* El control nativo de capas de Leaflet también se iguala */
+.leaflet-control-layers {
+  width: var(--metvlc-control-width) !important;
+  min-width: var(--metvlc-control-width) !important;
+  max-width: var(--metvlc-control-width) !important;
+}
+
+/* Evita desbordes en textos largos */
+.legend,
+.opacity-control,
+.measure-box,
+.update-box,
+.rayos-period-control,
+.raster-legend,
+.leaflet-control-layers {
+  overflow-wrap: anywhere;
+}
+
+/* Botones interiores ocupando todo el ancho */
+.rayos-period-grid,
+.rayos-period-btn,
+.update-btn,
+.measure-box button {
+  width: 100%;
+}
+
+/* Botones 24/48/72 h bien repartidos */
+.rayos-period-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+/* Opacidad más limpia dentro de la misma anchura */
+.opacity-row {
+  grid-template-columns: 92px 1fr;
+}
+
+/* En móvil, todas mantienen la misma anchura */
+@media (max-width: 780px) {
+  :root {
+    --metvlc-control-width: var(--metvlc-control-width-mobile);
+  }
+
+  .leaflet-control.legend,
+  .leaflet-control.opacity-control,
+  .leaflet-control.measure-box,
+  .leaflet-control.update-box,
+  .leaflet-control.rayos-period-control,
+  .leaflet-control-layers,
+  .legend,
+  .opacity-control,
+  .measure-box,
+  .update-box,
+  .rayos-period-control,
+  .raster-legend {
+    width: var(--metvlc-control-width-mobile) !important;
+    min-width: var(--metvlc-control-width-mobile) !important;
+    max-width: var(--metvlc-control-width-mobile) !important;
+  }
+}
