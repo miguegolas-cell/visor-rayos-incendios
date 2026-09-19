@@ -17,7 +17,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -44,7 +44,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -71,7 +71,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -98,7 +98,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -125,7 +125,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -152,7 +152,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -179,7 +179,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -206,7 +206,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -233,7 +233,7 @@
         "metvlc_time_source": "date+time",
         "metvlc_has_real_time": true,
         "metvlc_captura_utc": "2026-09-18T17:41:29+00:00",
-        "metvlc_last_seen_utc": "2026-09-18T17:41:29+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
         "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
       },
       "geometry": {
@@ -241,6 +241,33 @@
         "coordinates": [
           -0.9325,
           38.6
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19/09/2026 11:15:12",
+        "COORD": "0,0213,38,9117",
+        "DATE": "2026-09-19",
+        "TIME": "11:15",
+        "MXI": "-9,83 kA.",
+        "STR": "0",
+        "SMA": "0,241 Km.",
+        "SMI": "0,15900002 Km.",
+        "CHI": "0,2",
+        "metvlc_time_utc": "2026-09-19T09:15:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-09-19T09:32:41+00:00",
+        "metvlc_last_seen_utc": "2026-09-19T09:32:41+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0213,
+          38.9117
         ]
       }
     }
