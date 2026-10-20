@@ -21600,6 +21600,33 @@
           39.0609
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "20/10/2026 00:59:33",
+        "COORD": "-0,1992,38,6651",
+        "DATE": "2026-10-20",
+        "TIME": "00:59",
+        "MXI": "-7,45 kA.",
+        "STR": "0",
+        "SMA": "5,037 Km.",
+        "SMI": "0,553 Km.",
+        "CHI": "0,6",
+        "metvlc_time_utc": "2026-10-19T22:59:00+00:00",
+        "metvlc_time_source": "date+time",
+        "metvlc_has_real_time": true,
+        "metvlc_captura_utc": "2026-10-20T10:05:57+00:00",
+        "metvlc_last_seen_utc": "2026-10-20T10:05:57+00:00",
+        "metvlc_fuente": "SIGIF/GVA Rayos 24h KMZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1992,
+          38.6651
+        ]
+      }
     }
   ]
 }
